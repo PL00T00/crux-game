@@ -162,3 +162,7 @@ transform = Transform3D(0.05654829, 0, 0.03612934, 0.002531178, 0.08230312, -0.0
 
 [node name="island2" parent="." unique_id=1615275776 instance=ExtResource("11_erw1m")]
 transform = Transform3D(-0.14675622, 0, -0.13220377, 0, 0.1975227, 0, 0.13220377, 0, -0.14675622, 38.2716, -0.37727833, 18.82986)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1321416240]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=970539425]
