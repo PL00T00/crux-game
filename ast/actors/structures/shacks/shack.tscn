@@ -15,7 +15,7 @@ resource_name = "ShackColor"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.5251013, 0.5251013, 0.5251013, 1)
+albedo_color = Color(0.84473234, 0.63072765, 0.3591681, 1)
 albedo_texture = ExtResource("1_e88om")
 roughness = 0.0
 

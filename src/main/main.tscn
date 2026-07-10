@@ -146,8 +146,12 @@ transform = Transform3D(0.13501792, 0, 0, 0, 0.13501792, 0, 0, 0, 0.13501792, -0
 environment = ExtResource("3_ab7mr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="env" unique_id=386701490]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.9449489, 0.25212586, -0.20857657, 5.5725376e-08, 0.63742405, 0.77051336, 0.32721797, 0.7280957, -0.6023332, 0, 0, 0)
 shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_fade_start = 0.0
+directional_shadow_max_distance = 0.0
+directional_shadow_pancake_size = 0.0
 
 [node name="Player" parent="." unique_id=228418535 instance=ExtResource("9_2nke2")]
 transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 0.5876461, 2.7100337, -0.43563676)
