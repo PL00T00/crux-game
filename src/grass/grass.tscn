@@ -11,4 +11,5 @@ subdivide_depth = 200
 [node name="grass" type="Node3D" unique_id=2122121699]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1658289714]
+cast_shadow = 0
 mesh = SubResource("PlaneMesh_sb4vr")
