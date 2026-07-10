@@ -4,18 +4,20 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bv6liay2wclfc"
-path="res://.godot/imported/shack1.blend-e85bffb68cff0b5afe54d375ab446ef2.scn"
+path="res://.godot/imported/shack1.blend-6b7966b3e7dccd61c55bdea3e88fbd16.scn"
 
 [deps]
 
-source_file="res://ast/models/env/structures/shacks/shack1.blend"
-dest_files=["res://.godot/imported/shack1.blend-e85bffb68cff0b5afe54d375ab446ef2.scn"]
+source_file="res://ast/models/structures/shacks/shack1.blend"
+dest_files=["res://.godot/imported/shack1.blend-6b7966b3e7dccd61c55bdea3e88fbd16.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -52,10 +54,11 @@ blender/nodes/punctual_lights=true
 blender/nodes/cameras=true
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
-blender/meshes/colors=false
+blender/meshes/vertex_colors=2
 blender/meshes/uvs=true
 blender/meshes/normals=true
 blender/meshes/export_geometry_nodes_instances=false
+blender/meshes/gpu_instances=false
 blender/meshes/tangents=true
 blender/meshes/skins=2
 blender/meshes/export_bones_deforming_mesh_only=false
@@ -65,3 +68,4 @@ blender/animation/limit_playback=true
 blender/animation/always_sample=true
 blender/animation/group_tracks=true
 gltf/naming_version=0
+gltf/texture_map_mode=0
