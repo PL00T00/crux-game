@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cv1psfwtltsas"]
 
 [ext_resource type="Script" uid="uid://w8etymur1nmf" path="res://src/player/player.gd" id="1_4anbu"]
+[ext_resource type="Texture2D" uid="uid://cc148bem0xcl" path="res://ast/2d/cursor.png" id="2_rxibo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfyas"]
 
@@ -23,6 +24,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9551823, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/raycast" unique_id=355197411]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3772619)
 shape = SubResource("BoxShape3D_sb4vr")
+
+[node name="Sprite3D" type="Sprite3D" parent="Camera3D" unique_id=1545077028]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, -0.13895145)
+modulate = Color(0.19607843, 0.19607843, 0.19607843, 0.3764706)
+texture = ExtResource("2_rxibo")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=696841266]
 visible = false
