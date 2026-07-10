@@ -155,4 +155,4 @@ transform = Transform3D(0.028069349, -0.42474067, 0.90487987, 9.313226e-10, 0.90
 fov = 48.5
 
 [node name="PineTree1" parent="." unique_id=1713318891 instance=ExtResource("8_frqgp")]
-transform = Transform3D(0.19752719, 0, 0, 0, 0.19752719, 0, 0, 0, 0.19752719, -0.78131133, 1.6506029, 0.19590746)
+transform = Transform3D(0.13501792, 0, 0, 0, 0.13501792, 0, 0, 0, 0.13501792, -0.78131133, 1.614607, 0.19590746)
