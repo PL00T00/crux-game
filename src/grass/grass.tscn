@@ -3,7 +3,7 @@
 [ext_resource type="Material" uid="uid://ccaqllmchrt0x" path="res://res/shad mat/grass.tres" id="1_5i04s"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_5i04s"]
-radius = 1.42
+radius = 2.84
 height = 0.001
 radial_segments = 664
 rings = 173
