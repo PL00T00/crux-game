@@ -4,9 +4,12 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfyas"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sb4vr"]
+size = Vector3(0.05, 0.05, 4.5302734)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sb4vr"]
 
-[node name="Player" type="CharacterBody3D" unique_id=228418535]
+[node name="Player" type="CharacterBody3D" unique_id=228418535 groups=["player_body"]]
 script = ExtResource("1_4anbu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=588349903]
@@ -14,6 +17,12 @@ shape = SubResource("CapsuleShape3D_wfyas")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=326084241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9551823, 0)
+
+[node name="raycast" type="Area3D" parent="Camera3D" unique_id=1782305286 groups=["player_raycast"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/raycast" unique_id=355197411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3772619)
+shape = SubResource("BoxShape3D_sb4vr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=696841266]
 visible = false

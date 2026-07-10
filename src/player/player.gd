@@ -54,3 +54,11 @@ func _unhandled_input(event):
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+signal player_died
+# Die. What more is there to say
+func die():
+	queue_free()
+	player_died.emit()
+	await get_tree().create_timer(2.0).timeout
+    get_tree().reload_current_scene() # Restart the level

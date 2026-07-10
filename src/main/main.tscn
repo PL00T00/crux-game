@@ -78,6 +78,22 @@ _surfaces = [{
 [node name="world" type="Node3D" unique_id=1243497675]
 script = ExtResource("1_3eh75")
 
+[node name="env" type="Node3D" parent="." unique_id=660599315]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="env" unique_id=919607688]
+environment = ExtResource("3_ab7mr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="env" unique_id=386701490]
+transform = Transform3D(-0.987897, -0.11951556, 0.09887195, 6.547344e-08, 0.63742393, 0.7705133, -0.15511161, 0.76118773, -0.62970906, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_fade_start = 0.0
+directional_shadow_max_distance = 0.0
+directional_shadow_pancake_size = 0.0
+
+[node name="Player" parent="." unique_id=228418535 instance=ExtResource("9_2nke2")]
+transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 0.5876461, 2.7100337, -0.43563676)
+
 [node name="island1" type="Node3D" parent="." unique_id=247840648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10253525, 0, -0.1800195)
 
@@ -141,24 +157,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72400814, 1.5136398, 0.810
 [node name="PineTree1" parent="island1" unique_id=1713318891 instance=ExtResource("8_frqgp")]
 transform = Transform3D(0.13501792, 0, 0, 0, 0.13501792, 0, 0, 0, 0.13501792, -0.6787761, 1.614607, 0.37592697)
 
-[node name="env" type="Node3D" parent="." unique_id=660599315]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="env" unique_id=919607688]
-environment = ExtResource("3_ab7mr")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="env" unique_id=386701490]
-transform = Transform3D(-0.987897, -0.11951556, 0.09887195, 6.547344e-08, 0.63742393, 0.7705133, -0.15511161, 0.76118773, -0.62970906, 0, 0, 0)
-shadow_enabled = true
-directional_shadow_mode = 0
-directional_shadow_fade_start = 0.0
-directional_shadow_max_distance = 0.0
-directional_shadow_pancake_size = 0.0
-
-[node name="Player" parent="." unique_id=228418535 instance=ExtResource("9_2nke2")]
-transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 0.5876461, 2.7100337, -0.43563676)
-
-[node name="shack" parent="." unique_id=1734746455 instance=ExtResource("10_km7bn")]
-transform = Transform3D(0.05654829, 0, 0.03612934, 0.002531178, 0.08230312, -0.003961703, -0.03604057, 0.0057802573, 0.056409337, 0.490799, 1.6468275, -0.54259264)
+[node name="shack" parent="island1" unique_id=1734746455 instance=ExtResource("10_km7bn")]
+transform = Transform3D(0.05654829, 0, 0.03612934, 0.002531178, 0.08230312, -0.003961703, -0.03604057, 0.0057802573, 0.056409337, 0.59333426, 1.6468275, -0.36257315)
 
 [node name="island2" parent="." unique_id=1615275776 instance=ExtResource("11_erw1m")]
 transform = Transform3D(-0.14675622, 0, -0.13220377, 0, 0.1975227, 0, 0.13220377, 0, -0.14675622, 38.2716, -0.37727833, 18.82986)
