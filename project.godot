@@ -62,6 +62,12 @@ Interact={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="objects"
+3d_physics/layer_2="player"
+3d_physics/layer_8="checkpoints"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
