@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ca6bvcywib78g"]
+
+[ext_resource type="Material" uid="uid://ccaqllmchrt0x" path="res://res/shad mat/grass.tres" id="1_nh43j"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_5i04s"]
+radius = 0.71
+height = 0.001
+radial_segments = 332
+rings = 86
+
+[node name="grass" type="Node3D" unique_id=2122121699]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1658289714]
+material_override = ExtResource("1_nh43j")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_5i04s")
