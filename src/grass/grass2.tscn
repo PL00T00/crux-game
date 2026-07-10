@@ -2,11 +2,11 @@
 
 [ext_resource type="Material" uid="uid://ccaqllmchrt0x" path="res://res/shad mat/grass.tres" id="1_udpii"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_5i04s"]
-radius = 1.42
-height = 0.001
-radial_segments = 664
-rings = 173
+[sub_resource type="PlaneMesh" id="PlaneMesh_kiguc"]
+flip_faces = true
+size = Vector2(1, 1)
+subdivide_width = 100
+subdivide_depth = 100
 
 [node name="grass" type="Node3D" unique_id=2122121699]
 
@@ -14,4 +14,4 @@ rings = 173
 material_override = ExtResource("1_udpii")
 cast_shadow = 0
 visibility_range_end = 20.0
-mesh = SubResource("SphereMesh_5i04s")
+mesh = SubResource("PlaneMesh_kiguc")
