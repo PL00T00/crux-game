@@ -45,17 +45,17 @@ text = "[E]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlayerAreaBox" type="Area3D" parent="Contents" unique_id=1043785681]
+[node name="playerareabox" type="Area3D" parent="Contents" unique_id=1043785681]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Contents/PlayerAreaBox" unique_id=1552512058]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Contents/playerareabox" unique_id=1552512058]
 shape = SubResource("BoxShape3D_nyf0v")
 
-[node name="MimicRaycastBox" type="Area3D" parent="Contents" unique_id=660343027]
+[node name="raycastbox" type="Area3D" parent="Contents" unique_id=660343027]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Contents/MimicRaycastBox" unique_id=1294726771]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Contents/raycastbox" unique_id=1294726771]
 shape = SubResource("BoxShape3D_lutt7")
 
-[connection signal="body_entered" from="Contents/PlayerAreaBox" to="." method="_on_player_area_box_body_entered"]
-[connection signal="body_exited" from="Contents/PlayerAreaBox" to="." method="_on_player_area_box_body_exited"]
-[connection signal="area_entered" from="Contents/MimicRaycastBox" to="." method="_on_mimic_raycast_box_area_entered"]
-[connection signal="area_exited" from="Contents/MimicRaycastBox" to="." method="_on_mimic_raycast_box_area_exited"]
+[connection signal="body_entered" from="Contents/playerareabox" to="." method="_on_player_area_box_body_entered"]
+[connection signal="body_exited" from="Contents/playerareabox" to="." method="_on_player_area_box_body_exited"]
+[connection signal="area_entered" from="Contents/raycastbox" to="." method="_on_mimic_raycast_box_area_entered"]
+[connection signal="area_exited" from="Contents/raycastbox" to="." method="_on_mimic_raycast_box_area_exited"]

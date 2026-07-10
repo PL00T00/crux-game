@@ -39,9 +39,9 @@ func _on_player_area_box_body_exited(body: Node3D) -> void:
 		player_area_box_active = false
 
 func _on_mimic_raycast_box_area_entered(area: Area3D) -> void:
-	if area.is_in_group(&"raycast_mimic"):
+	if area.is_in_group(&"player_raycast"):
 		mimic_raycast_box_active = true
 
 func _on_mimic_raycast_box_area_exited(area: Area3D) -> void:
-	if area.is_in_group(&"raycast_mimic"):
+	if area.is_in_group(&"player_raycast"):
 		mimic_raycast_box_active = false
