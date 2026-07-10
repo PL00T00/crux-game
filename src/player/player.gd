@@ -60,3 +60,5 @@ signal player_died
 func die():
 	queue_free()
 	player_died.emit()
+	await get_tree().create_timer(2.0).timeout
+    get_tree().reload_current_scene() # Restart the level
