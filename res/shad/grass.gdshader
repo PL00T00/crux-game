@@ -3,44 +3,61 @@ render_mode unshaded, cull_back;
 
 uniform float blade_height = 0.5;
 uniform float blade_width = 0.005;
-uniform float density = 0.1; // scale from 0 to 1
-
+uniform float density = 0.1;
 
 // colors
-uniform vec3 base_color : source_color = vec3(0.0, 0.0, 0.0);
-uniform vec3 tip_color : source_color = vec3(0.0, 0.0, 0.0);
-
-varying float height_ratio; // scales the color of the blades based on height
+uniform vec3 base_color : source_color = vec3(0.0);
+uniform vec3 tip_color : source_color = vec3(0.0);
 
 uniform float wind_strength = 0.03;
-uniform float rnd_multiplier = 10.0; // acts as random value to generate grass
+uniform float rnd_multiplier = 10.0;
 
-// funtion that generate random value
-float rand(vec2 coordinates){
-	return fract(sin(dot(coordinates.xy, vec2(12.9898, 78.233))) * 43758.5453);
+varying float height_ratio;
+
+// Generates a random value from coordinates
+float rand(vec2 coordinates) {
+	return fract(sin(dot(coordinates, vec2(12.9898, 78.233))) * 43758.5453);
 }
 
-//called for ever vertex the material is visible on.
 void vertex() {
 	float rnd = rand(VERTEX.xz * rnd_multiplier);
-	
-	if (rnd > 1.0 - density){
-		float h = blade_height * (0.5 + rand(vec2(VERTEX.z, VERTEX.x)) * 0.5);
-		float sway = sin(TIME * 0.3 + VERTEX.x * 1.0 + rnd * 10.0) * wind_strength; // velocidad de movimiento
-		
+
+	// Extract the object's scale from the model matrix so the grass
+	// scales correctly with the mesh.
+	vec3 object_scale = vec3(
+		length(MODEL_MATRIX[0].xyz),
+		length(MODEL_MATRIX[1].xyz),
+		length(MODEL_MATRIX[2].xyz)
+	);
+
+	float scale_xz = max(object_scale.x, object_scale.z);
+
+	if (rnd > 1.0 - density) {
+		float h = blade_height * object_scale.y *
+			(0.5 + rand(vec2(VERTEX.z, VERTEX.x)) * 0.5);
+
+		float w = blade_width * scale_xz;
+
+		float sway = sin(
+			TIME * 0.3 +
+			VERTEX.x +
+			rnd * 10.0
+		) * wind_strength * scale_xz;
+
 		VERTEX.y += h;
-		VERTEX.x += sin(rnd * rnd_multiplier) * blade_width + sway * 0.1; // reduce el angulo de movimiento
-		VERTEX.z += sin(rnd * rnd_multiplier) * blade_width;
-		
-		height_ratio = clamp(VERTEX.y / (blade_height * 2.0), 0.2, 1.0);
-}
-else {
-	height_ratio = 0.0;
+		VERTEX.x += sin(rnd * rnd_multiplier) * w + sway * 0.1;
+		VERTEX.z += sin(rnd * rnd_multiplier) * w;
+
+		height_ratio = clamp(
+			VERTEX.y / (blade_height * object_scale.y * 2.0),
+			0.2,
+			1.0
+		);
+	} else {
+		height_ratio = 0.0;
+	}
 }
 
-}
-
-//called for ever pixel the material is visible on.
 void fragment() {
 	ALBEDO = mix(base_color, tip_color, height_ratio);
 }

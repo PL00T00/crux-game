@@ -70,7 +70,7 @@ shape = SubResource("ConcavePolygonShape3D_ab7mr")
 mesh = SubResource("ArrayMesh_ptidm")
 
 [node name="grass" parent="island1/island1" unique_id=2122121699 instance=ExtResource("4_djufw")]
-transform = Transform3D(0.99820924, 0.05981898, 0, -0.059739385, 0.996881, -0.071930595, -0.0030848575, 0.05147753, 1.392962, 0.2110771, 1.2611043, -0.25801533)
+transform = Transform3D(0.99820924, 0.059818972, 8.7494956e-11, -0.05980923, 0.99804646, -0.025180936, -0.0010799244, 0.018020876, 1.3945906, 0.2110771, 1.2557719, -0.25801533)
 
 [node name="env" type="Node3D" parent="." unique_id=660599315]
 
