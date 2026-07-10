@@ -4,6 +4,7 @@ render_mode unshaded, cull_back;
 uniform float blade_height = 0.5;
 uniform float blade_width = 0.005;
 uniform float density = 0.1;
+uniform float speed = 0.9;
 
 // colors
 uniform vec3 base_color : source_color = vec3(0.0);
@@ -39,7 +40,7 @@ void vertex() {
 		float w = blade_width * scale_xz;
 
 		float sway = sin(
-			TIME * 0.3 +
+			TIME * speed +
 			VERTEX.x +
 			rnd * 10.0
 		) * wind_strength * scale_xz;
