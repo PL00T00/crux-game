@@ -13,3 +13,5 @@ sky_material = SubResource("ProceduralSkyMaterial_3s6yk")
 [resource]
 background_mode = 2
 sky = SubResource("Sky_ab7mr")
+adjustment_enabled = true
+adjustment_saturation = 1.25
