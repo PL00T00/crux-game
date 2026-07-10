@@ -43,7 +43,8 @@ func _unhandled_input(event):
 		yaw -= event.relative.x * mouse_sensitivity
 		pitch -= event.relative.y * mouse_sensitivity
 		pitch = clamp(pitch, min_pitch, max_pitch)
-		rotation = Vector3(pitch, yaw, 0)
+		rotation = Vector3(0, yaw, 0)
+		$Camera3D.rotation = Vector3(pitch, 0, 0)
 
 #STop mouse capture
 func _input(event):
