@@ -70,7 +70,7 @@ shape = SubResource("ConcavePolygonShape3D_ab7mr")
 mesh = SubResource("ArrayMesh_ptidm")
 
 [node name="grass" parent="island1/island1" unique_id=2122121699 instance=ExtResource("4_djufw")]
-transform = Transform3D(0.99820924, 0.059818972, 8.7494956e-11, -0.05980923, 0.99804646, -0.025180936, -0.0010799244, 0.018020876, 1.3945906, 0.2110771, 1.2557719, -0.25801533)
+transform = Transform3D(0.99820924, 0.059818972, 8.7494956e-11, -0.05980923, 0.99804646, -0.025180936, -0.0010799244, 0.018020876, 1.3945906, 0.2110771, 1.4669269, -0.25801533)
 
 [node name="env" type="Node3D" parent="." unique_id=660599315]
 
@@ -81,6 +81,10 @@ environment = ExtResource("3_ab7mr")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1132733184]
-transform = Transform3D(0.26024693, 0, 0, 0, 0.26024693, 0, 0, 0, 0.26024693, 0, 1.8705392, 0)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="env/DirectionalLight3D" unique_id=1132733184]
+transform = Transform3D(-0.22538045, -3.8779815e-09, -0.13012348, -0.11269025, 0.13012347, 0.1951852, 0.06506173, 0.22538047, -0.11269022, -2.7873206e-08, 0.9352696, 1.6199346)
 mesh = SubResource("CapsuleMesh_sb4vr")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2147020921]
+transform = Transform3D(0.028069347, 0, 0.999606, 0, 1, 0, -0.999606, 0, 0.028069347, 4.221645, 2.2410884, -0.7239288)
+fov = 48.5
