@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b2ra2gj0fghwc" path="res://src/main/main.gd" id="1_3eh75"]
 [ext_resource type="Texture2D" uid="uid://bm7rkrw4y5m8" path="res://ast/models/islands/textures/island1.png" id="2_ab7mr"]
 [ext_resource type="Environment" uid="uid://c41gu0xs8q63x" path="res://res/env/env_main.tres" id="3_ab7mr"]
+[ext_resource type="PackedScene" uid="uid://brbtya6kw0w2m" path="res://src/grass/grass4.tscn" id="4_30cu5"]
 [ext_resource type="PackedScene" uid="uid://06v0kldaajnb" path="res://src/grass/grass.tscn" id="4_djufw"]
 [ext_resource type="PackedScene" uid="uid://h15b8tpej1mo" path="res://src/grass/grass2.tscn" id="5_jkpqq"]
 [ext_resource type="PackedScene" uid="uid://ca6bvcywib78g" path="res://src/grass/grass3.tscn" id="6_jqarl"]
@@ -74,6 +75,9 @@ mesh = SubResource("ArrayMesh_ptidm")
 [node name="grass" parent="island1/island1" unique_id=2122121699 instance=ExtResource("4_djufw")]
 transform = Transform3D(0.99820924, 0.059818972, 8.7494956e-11, -0.05980923, 0.99804646, -0.025180936, -0.0010799244, 0.018020876, 1.3945906, 0.2110771, 1.4669269, -0.25801533)
 
+[node name="grass2" parent="island1/island1" unique_id=2102496936 instance=ExtResource("4_30cu5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2575223, 1.5355289, -2.007791)
+
 [node name="env" type="Node3D" parent="." unique_id=660599315]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="env" unique_id=919607688]
@@ -93,9 +97,6 @@ fov = 48.5
 
 [node name="grass2" parent="." unique_id=2068735958 instance=ExtResource("5_jkpqq")]
 transform = Transform3D(0.648477, 0, -0.7612342, 0, 1, 0, 0.7612342, 0, 0.648477, 1.4885592, 1.5043216, 0.37640098)
-
-[node name="grass3" parent="." unique_id=1447990342 instance=ExtResource("5_jkpqq")]
-transform = Transform3D(-0.10031885, 0, -0.9949553, -0.23787293, 0.97100013, 0.023984132, 0.9661017, 0.23907901, -0.09740961, 0.9408005, 1.5459917, -2.1261058)
 
 [node name="grass" parent="." unique_id=1865684194 instance=ExtResource("6_jqarl")]
 transform = Transform3D(0.99566907, -0.092968106, 0, 0.092968106, 0.99566907, 0, 0, 0, 1, 1.6876996, 1.5277172, -0.3919522)
