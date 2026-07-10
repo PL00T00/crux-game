@@ -6,7 +6,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0wra"]
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.5729883, 0.5729883, 0.5729883, 1)
+albedo_color = Color(0.8, 0.58431375, 0.50980395, 1)
 albedo_texture = ExtResource("2_c1hc2")
 roughness = 0.0
 
