@@ -64,6 +64,24 @@ script = ExtResource("1_3eh75")
 [node name="island1" type="Node3D" parent="." unique_id=247840648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10253525, 0, -0.1800195)
 
+[node name="grass" parent="island1" unique_id=2122121699 instance=ExtResource("4_djufw")]
+transform = Transform3D(0.99820924, 0.059818972, 8.7494956e-11, -0.05980923, 0.99804646, -0.025180936, -0.0010799244, 0.018020876, 1.3945906, 0.2110771, 1.4669269, -0.25801533)
+
+[node name="grass2" parent="island1" unique_id=2102496936 instance=ExtResource("4_30cu5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2575223, 1.5355289, -2.007791)
+
+[node name="grass3" parent="island1" unique_id=1396423547 instance=ExtResource("4_30cu5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2262435, 1.5765681, -0.44340014)
+
+[node name="grass4" parent="island1" unique_id=1472351091 instance=ExtResource("4_30cu5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.111472, 1.5412169, 0.07098074)
+
+[node name="grass5" parent="island1" unique_id=2068735958 instance=ExtResource("5_jkpqq")]
+transform = Transform3D(0.648477, 0, -0.7612342, 0, 1, 0, 0.7612342, 0, 0.648477, 1.5910945, 1.5043216, 0.55642045)
+
+[node name="grass6" parent="island1" unique_id=1865684194 instance=ExtResource("6_jqarl")]
+transform = Transform3D(0.99566907, -0.092968106, 0, 0.092968106, 0.99566907, 0, 0, 0, 1, 1.7902348, 1.5277172, -0.21193272)
+
 [node name="island1" type="StaticBody3D" parent="island1" unique_id=976190283]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="island1/island1" unique_id=1250300944]
@@ -71,12 +89,6 @@ shape = SubResource("ConcavePolygonShape3D_ab7mr")
 
 [node name="Icosphere" type="MeshInstance3D" parent="island1/island1" unique_id=785476247]
 mesh = SubResource("ArrayMesh_ptidm")
-
-[node name="grass" parent="island1/island1" unique_id=2122121699 instance=ExtResource("4_djufw")]
-transform = Transform3D(0.99820924, 0.059818972, 8.7494956e-11, -0.05980923, 0.99804646, -0.025180936, -0.0010799244, 0.018020876, 1.3945906, 0.2110771, 1.4669269, -0.25801533)
-
-[node name="grass2" parent="island1/island1" unique_id=2102496936 instance=ExtResource("4_30cu5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2575223, 1.5355289, -2.007791)
 
 [node name="env" type="Node3D" parent="." unique_id=660599315]
 
@@ -94,9 +106,3 @@ mesh = SubResource("CapsuleMesh_sb4vr")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2147020921]
 transform = Transform3D(0.028069349, -0.42474067, 0.90487987, 9.313226e-10, 0.9052365, 0.4249081, -0.999606, -0.011926892, 0.025409397, 4.221645, 3.0285232, -0.7239288)
 fov = 48.5
-
-[node name="grass2" parent="." unique_id=2068735958 instance=ExtResource("5_jkpqq")]
-transform = Transform3D(0.648477, 0, -0.7612342, 0, 1, 0, 0.7612342, 0, 0.648477, 1.4885592, 1.5043216, 0.37640098)
-
-[node name="grass" parent="." unique_id=1865684194 instance=ExtResource("6_jqarl")]
-transform = Transform3D(0.99566907, -0.092968106, 0, 0.092968106, 0.99566907, 0, 0, 0, 1, 1.6876996, 1.5277172, -0.3919522)
