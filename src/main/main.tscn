@@ -146,7 +146,7 @@ transform = Transform3D(0.13501792, 0, 0, 0, 0.13501792, 0, 0, 0, 0.13501792, -0
 environment = ExtResource("3_ab7mr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="env" unique_id=386701490]
-transform = Transform3D(-0.9449489, 0.25212586, -0.20857657, 5.5725376e-08, 0.63742405, 0.77051336, 0.32721797, 0.7280957, -0.6023332, 0, 0, 0)
+transform = Transform3D(-0.987897, -0.11951556, 0.09887195, 6.547344e-08, 0.63742393, 0.7705133, -0.15511161, 0.76118773, -0.62970906, 0, 0, 0)
 shadow_enabled = true
 directional_shadow_mode = 0
 directional_shadow_fade_start = 0.0

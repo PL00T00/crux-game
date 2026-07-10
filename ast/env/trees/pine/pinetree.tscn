@@ -479,7 +479,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="." unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.9357456e-08, 2.4819608, 0.033337507, 3.8728812, 0.012121356, -2.8005993, 0.0461016, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935746e-08, 2.4819608, 0.033337507, 3.8728814, 0.012121356, -2.8005993, 0.0461016, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -515,7 +515,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="." unique_id=332492370]
-transform = Transform3D(-0.5296072, 3.7403815e-08, 1.1438187, 0.0153637845, 1.7848532, 0.0055861613, -1.2906724, 0.021246351, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.740382e-08, 1.1438187, 0.0153637845, 1.7848533, 0.0055861613, -1.2906724, 0.021246353, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
