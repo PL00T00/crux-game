@@ -1,13 +1,27 @@
 extends CharacterBody3D
 
-@export var SPEED = 5.0
-@export var JUMP_VELOCITY = 5.0
-@export var GRAVITY = 10.0
+@export var SPEED = 1.0
+@export var JUMP_VELOCITY = 3.0
+@export var GRAVITY = 9.76
+var min_pitch: float = deg_to_rad(-80)
+var max_pitch: float = deg_to_rad(80)
+var mouse_sensitivity = 0.002
 
+# Don't change
+var yaw: float = 0.0
+var pitch: float = 0.0
+
+
+
+#mouse capture
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+#Movement
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		velocity.y -= GRAVITY * delta
-
+		velocity.y -= 10 * delta
+		
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
@@ -23,19 +37,15 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
-
-
-@export var camera : Camera3D #(please place in camera)
-var ray_length = 1000 #basecurrent
-
-func _input(event):
+#See if mouse move and change where look
+func _unhandled_input(event):
 	if event is InputEventMouseMotion:
-		var from = camera.project_ray_origin(event.position)
-		var to = from + camera.project_ray_normal(event.position) * ray_length
-		
-		var space_state = get_world_3d().direct_space_state
-		var result = space_state.intersect_ray(from, to)
-		
-		if result:
-			look_at(result.position, Vector3.UP)
+		yaw -= event.relative.x * mouse_sensitivity
+		pitch -= event.relative.y * mouse_sensitivity
+		pitch = clamp(pitch, min_pitch, max_pitch)
+		rotation = Vector3(pitch, yaw, 0)
+
+#STop mouse capture
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
