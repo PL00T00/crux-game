@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d2uj5pmw8aqgd"]
+
+[ext_resource type="PackedScene" uid="uid://ctfed8awaov23" path="res://ast/models/islands/island2.blend" id="1_jusbg"]
+
+[node name="island2" unique_id=1615275776 instance=ExtResource("1_jusbg")]
