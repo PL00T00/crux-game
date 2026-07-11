@@ -7,7 +7,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ky84g"]
 height = 18.302795
-radius = 8.2265625
+radius = 6.128418
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qlmsr"]
 
@@ -32,10 +32,6 @@ collision_mask = 131
 [node name="CollisionShape3D" type="CollisionShape3D" parent="enemysmol/Area3D" unique_id=668390081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8628845, 0)
 shape = SubResource("CylinderShape3D_ky84g")
-
-[node name="Sprite3D" type="Sprite3D" parent="enemysmol/Area3D/CollisionShape3D" unique_id=2066969789]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.4928107)
-texture = ExtResource("2_2q7ve")
 
 [node name="collide with pusher" type="Area3D" parent="enemysmol" unique_id=2007032980]
 

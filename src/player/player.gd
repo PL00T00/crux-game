@@ -10,6 +10,9 @@ var max_pitch: float = deg_to_rad(80)
 var mouse_sensitivity = 0.002
 var speed_timser = 1
 var current_spawn_position : Vector3 = Vector3(0.568, 2.419, -0.59)
+var allowed_push = true
+
+
 
 @export var camera: Camera3D
 
@@ -54,9 +57,13 @@ func _physics_process(delta: float) -> void:
 			#Global.checkpoint = self.global_position
 		
 		if Input.is_action_just_pressed('ui_g'):
-			$Path3D/PathFollow3D.progress_ratio = 0.9999999
-			await get_tree().create_timer(1).timeout
-			$Path3D/PathFollow3D.progress_ratio = 0.0
+			if allowed_push == true:
+				allowed_push = false
+				$Path3D/PathFollow3D.progress_ratio = 0.9999999
+				await get_tree().create_timer(0.6).timeout
+				$Path3D/PathFollow3D.progress_ratio = 0.0
+				await get_tree().create_timer(1).timeout
+				allowed_push = true
 
 #See if mouse move and change where look
 func _unhandled_input(event):
