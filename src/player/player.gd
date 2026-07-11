@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var SPEED = 1.0
+@export var SPEED = 1.5
 @export var JUMP_VELOCITY = 3.0
 @export var GRAVITY = 9.76
 var min_pitch: float = deg_to_rad(-80)
