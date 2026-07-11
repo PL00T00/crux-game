@@ -311,14 +311,16 @@ transform = Transform3D(-3.9634562e-09, 0, -0.090673305, 0, 0.090673305, 0, 0.09
 [node name="island2" parent="." unique_id=1615275776 instance=ExtResource("11_erw1m")]
 transform = Transform3D(-0.046985563, 0, 0.13017862, 0, 0.13839838, 0, -0.13017862, 0, -0.046985563, 11.787419, -0.06511164, -0.32042313)
 
-[node name="bridge_part3" parent="island2" unique_id=1447709683 instance=ExtResource("19_6iek0")]
-transform = Transform3D(0.2224241, 0, 0.61625004, 0, 0.6551615, 0, -0.61625004, 0, 0.2224241, -26.288532, 21.713488, -0.045043945)
+[node name="bridge" type="Node3D" parent="island2" unique_id=1446675162]
 
-[node name="bridge_posts4" parent="island2" unique_id=300411291 instance=ExtResource("19_v0ijp")]
-transform = Transform3D(-0.22034682, 0.16583912, -0.59429044, 0.024212763, 0.6328896, 0.16763298, 0.6165203, 0.03441593, -0.21898527, -68.466034, 35.376305, -20.452648)
+[node name="bridge_part3" parent="island2/bridge" unique_id=1447709683 instance=ExtResource("19_6iek0")]
+transform = Transform3D(0.22242409, 0, 0.61625004, 0, 0.65516144, 0, -0.61625004, 0, 0.22242409, -26.288532, 21.713486, -0.045036316)
 
-[node name="bridge_posts2" parent="island2" unique_id=1078676073 instance=ExtResource("19_v0ijp")]
-transform = Transform3D(0.21282479, -0.17483392, 0.5944532, -0.003264429, 0.62821513, 0.1859324, -0.6196219, -0.063360825, 0.2032004, -25.358494, 22.046833, 0.29063416)
+[node name="bridge_posts4" parent="island2/bridge" unique_id=300411291 instance=ExtResource("19_v0ijp")]
+transform = Transform3D(-0.22034682, 0.16583912, -0.59429044, 0.02421276, 0.63288957, 0.16763298, 0.6165203, 0.03441593, -0.21898527, -68.466034, 35.376305, -20.45264)
+
+[node name="bridge_posts2" parent="island2/bridge" unique_id=1078676073 instance=ExtResource("19_v0ijp")]
+transform = Transform3D(0.21282479, -0.17483392, 0.5944532, -0.0032644288, 0.6282151, 0.18593238, -0.6196219, -0.063360825, 0.20320041, -25.358494, 22.046831, 0.29064178)
 
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 11.445716, -1.80333, 15.163294)
