@@ -1,4 +1,17 @@
 extends Node3D
 
+const ISLAND_1_SNOW = preload("uid://drrl2x7wvpuw0")
+
+func _ready() -> void:
+	toggle_snow_islands()
+	
+
 func toggle_snow_islands() -> void:
-	pass
+	
+	$"../island1/grass".visible = false
+	$"../island1/PineTree1".visible = false
+	$"../island1/PineTree2".visible = false
+	$"../island1/island1/Icosphere".mesh.surface_get_material(0).albedo_texture = ISLAND_1_SNOW
+	
+	
+	
