@@ -96,15 +96,15 @@ shape = SubResource("BoxShape3D_1i3hq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004302904, 0.004043594, 0.021759063)
 shape = SubResource("BoxShape3D_m2f1o")
 
-[node name="note" parent="." unique_id=1500033932 instance=ExtResource("4_nb3pe")]
-transform = Transform3D(-2.8282647e-08, 0, 0.64703155, 0, 0.64703155, 0, -0.64703155, 0, -2.8282647e-08, 0, 0, -0.07189748)
-
 [node name="nail" parent="." unique_id=1797461265 instance=ExtResource("4_l04sq")]
 transform = Transform3D(0.9152708, -0.38911265, -0.104262434, 0, 0.25881907, -0.9659258, 0.40283906, 0.8840837, 0.23688954, 0.06779741, 0.4672398, -0.23076123)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="nail/Cube" parent_id_path=PackedInt32Array(1797461265, 2070352725) index="0" unique_id=1523671101]
 material_override = SubResource("StandardMaterial3D_hc2u7")
 mesh = SubResource("ArrayMesh_nb3pe")
+
+[node name="note" parent="." unique_id=1148623925 instance=ExtResource("4_nb3pe")]
+transform = Transform3D(-2.7774744e-08, 0, -0.6354121, 0, 0.6354121, 0, 0.6354121, 0, -2.7774744e-08, 0, 0, -0.02025482)
 
 [connection signal="body_entered" from="interactablecomponent/Contents/playerareabox" to="interactablecomponent" method="_on_player_area_box_body_entered"]
 [connection signal="body_exited" from="interactablecomponent/Contents/playerareabox" to="interactablecomponent" method="_on_player_area_box_body_exited"]
