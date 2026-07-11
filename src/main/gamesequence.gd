@@ -5,8 +5,8 @@ const ISLAND_2_SNOW = preload("uid://c251pyi2aijbk")
 const ISLAND_3_SNOW = preload("uid://dr21pg47mryy6")
 
 func _ready() -> void:
-	toggle_snow_islands()
-	
+	#toggle_snow_islands()
+	pass
 
 func toggle_snow_islands() -> void:
 	$"../island1/grass".queue_free()
