@@ -8,9 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://b57u88ln7xkfw" path="res://ast/actors/islands/island4.tscn" id="4_6iek0"]
 [ext_resource type="PackedScene" uid="uid://brbtya6kw0w2m" path="res://src/grass/grass4.tscn" id="4_30cu5"]
 [ext_resource type="PackedScene" uid="uid://h15b8tpej1mo" path="res://src/grass/grass2.tscn" id="5_jkpqq"]
-[ext_resource type="PackedScene" uid="uid://dmwlyfu7t1htk" path="res://src/cutscenes/cutscene 1/cutscene_1.tscn" id="6_6iek0"]
+[ext_resource type="PackedScene" uid="uid://dmwlyfu7t1htk" path="res://src/cutscenes/cutscene 1/cutscene2.tscn" id="6_6iek0"]
 [ext_resource type="PackedScene" uid="uid://ca6bvcywib78g" path="res://src/grass/grass3.tscn" id="6_jqarl"]
 [ext_resource type="PackedScene" uid="uid://cifhni2hwt4pr" path="res://ast/actors/env/rocks/rock_1.tscn" id="7_frqgp"]
+[ext_resource type="PackedScene" uid="uid://cpc7g8ybty7o1" path="res://src/cutscenes/cutscene 2/cutscene2.tscn" id="7_jf15o"]
 [ext_resource type="PackedScene" uid="uid://dsti02es4bfwp" path="res://ast/actors/env/trees/pine/pinetree.tscn" id="8_frqgp"]
 [ext_resource type="PackedScene" uid="uid://cv1psfwtltsas" path="res://src/player/player.tscn" id="9_2nke2"]
 [ext_resource type="PackedScene" uid="uid://d4b2x266lv7at" path="res://ast/actors/structures/shacks/shack.tscn" id="10_km7bn"]
@@ -160,6 +161,9 @@ height = 0.001
 radial_segments = 664
 rings = 173
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_jf15o"]
+viewport_path = NodePath("interactablecomponent/Contents/UI/SubViewport")
+
 [sub_resource type="SphereMesh" id="SphereMesh_jf15o"]
 radius = 2.84
 height = 0.001
@@ -172,10 +176,11 @@ size = Vector2(1, 1)
 subdivide_width = 100
 subdivide_depth = 100
 
-[node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1")]
+[node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1", "cutscene_2")]
 script = ExtResource("1_3eh75")
 fade = NodePath("gamesequence/sequence/fade")
 cutscene_1 = NodePath("cutscenelayer/cutscene1")
+cutscene_2 = NodePath("cutscenelayer/cutscene2")
 
 [node name="env" type="Node3D" parent="." unique_id=660599315]
 
@@ -228,6 +233,8 @@ transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 0.398
 [node name="cutscenelayer" type="CanvasLayer" parent="." unique_id=1773736947]
 
 [node name="cutscene1" parent="cutscenelayer" unique_id=90008933 instance=ExtResource("6_6iek0")]
+
+[node name="cutscene2" parent="cutscenelayer" unique_id=539576608 instance=ExtResource("7_jf15o")]
 
 [node name="Checkpoint1" type="Area3D" parent="." unique_id=1321416240]
 collision_layer = 128
@@ -399,6 +406,14 @@ transform = Transform3D(0.004232641, -1.1207988, 1.2848413, 1.7049947, 0.0027823
 [node name="rock5" parent="island2" unique_id=1299013634 instance=ExtResource("7_frqgp")]
 transform = Transform3D(0.004232641, -1.1207988, 1.2848413, 1.7049947, 0.002782377, -0.0031896117, -2.3283064e-10, 1.2848452, 1.1208023, -2.6459858, 24.25739, -18.42595)
 
+[node name="note2" parent="island2" unique_id=1177371846 instance=ExtResource("15_note")]
+transform = Transform3D(0.4789936, 0.07383996, -0.54751, -0.04923311, 0.7274625, 0.05503725, 0.55026877, 0.00081117434, 0.48151654, -5.214367, 31.008778, 20.59167)
+idx = 2
+
+[node name="UI" parent="island2/note2/interactablecomponent/Contents" parent_id_path=PackedInt32Array(1177371846, 2114968064) index="0" unique_id=897521712]
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, -0.4295025, 0.1793548, -0.07945037)
+texture = SubResource("ViewportTexture_jf15o")
+
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 11.445716, -1.80333, 15.163294)
 
@@ -526,3 +541,6 @@ transform = Transform3D(-0.07068988, 0, 0.48581702, 0, 0.49093303, 0, -0.4858170
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.821701, 25.07251, 9.767808)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
+
+[editable path="island2/note2"]
+[editable path="island2/note2/nail"]
