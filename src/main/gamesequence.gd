@@ -2,6 +2,7 @@ extends Node3D
 
 const ISLAND_1_SNOW = preload("uid://drrl2x7wvpuw0")
 const ISLAND_2_SNOW = preload("uid://c251pyi2aijbk")
+const ISLAND_3_SNOW = preload("uid://dr21pg47mryy6")
 
 func _ready() -> void:
 	toggle_snow_islands()
@@ -26,3 +27,4 @@ func toggle_snow_islands() -> void:
 	$"../island3/PineTree2".queue_free()
 	$"../island3/PineTree3".queue_free()
 	$"../island3/note".queue_free()
+	$"../island3/Icosphere".material_override.albedo_texture = ISLAND_3_SNOW
