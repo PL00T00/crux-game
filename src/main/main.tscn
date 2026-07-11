@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bm7rkrw4y5m8" path="res://ast/models/islands/textures/island1.png" id="2_ab7mr"]
 [ext_resource type="Environment" uid="uid://c41gu0xs8q63x" path="res://res/env/env_main.tres" id="3_ab7mr"]
 [ext_resource type="Script" uid="uid://cs7vbnkib0mr6" path="res://src/main/gamesequence.gd" id="3_nqfqj"]
+[ext_resource type="PackedScene" uid="uid://b57u88ln7xkfw" path="res://ast/actors/islands/island4.tscn" id="4_6iek0"]
 [ext_resource type="PackedScene" uid="uid://brbtya6kw0w2m" path="res://src/grass/grass4.tscn" id="4_30cu5"]
 [ext_resource type="PackedScene" uid="uid://h15b8tpej1mo" path="res://src/grass/grass2.tscn" id="5_jkpqq"]
 [ext_resource type="PackedScene" uid="uid://ca6bvcywib78g" path="res://src/grass/grass3.tscn" id="6_jqarl"]
@@ -14,9 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d2uj5pmw8aqgd" path="res://ast/actors/islands/island2.tscn" id="11_erw1m"]
 [ext_resource type="Script" uid="uid://4n8aumpb7ff0" path="res://src/main/checkpoint_1.gd" id="12_w0wra"]
 [ext_resource type="Script" uid="uid://crwoibkih3mw1" path="res://src/main/death_zone.gd" id="13_ibsor"]
-[ext_resource type="PackedScene" uid="uid://nxd6iqegtlbx" path="res://ast/models/trees/wood.blend" id="14_hc2u7"]
 [ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
-[ext_resource type="PackedScene" uid="uid://dg3tmddwea1av" path="res://ast/actors/structures/fence/fence.tscn" id="16_2jinp"]
 [ext_resource type="PackedScene" uid="uid://b06qwdvuh2dmg" path="res://ast/actors/islands/island3.tscn" id="17_hmxxs"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
@@ -176,6 +175,9 @@ libraries/ = SubResource("AnimationLibrary_nqfqj")
 [node name="fade" type="AnimationPlayer" parent="gamesequence/sequence" unique_id=1447689849]
 libraries/ = SubResource("AnimationLibrary_2jinp")
 
+[node name="island4" parent="gamesequence/sequence" unique_id=291031492 instance=ExtResource("4_6iek0")]
+transform = Transform3D(0.49093303, 0, 0, 0, 0.49093303, 0, 0, 0, 0.49093303, -3.4113407, 0, 13.411375)
+
 [node name="fade" type="Node3D" parent="gamesequence" unique_id=423990618]
 
 [node name="fadelayer" type="CanvasLayer" parent="gamesequence/fade" unique_id=466619127]
@@ -214,9 +216,6 @@ script = ExtResource("13_ibsor")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZone" unique_id=2141548779]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 shape = SubResource("WorldBoundaryShape3D_ibsor")
-
-[node name="wood" parent="." unique_id=1065090693 instance=ExtResource("14_hc2u7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 563.7729, 6056.7124, 205.58252)
 
 [node name="island1" type="Node3D" parent="." unique_id=247840648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10253525, 0, -0.1800195)
@@ -299,34 +298,10 @@ transform = Transform3D(0.05654829, 0, 0.03612934, 0.002531178, 0.08230312, -0.0
 [node name="note" parent="island1" unique_id=463558559 instance=ExtResource("15_note")]
 transform = Transform3D(0.058164734, 0.008749203, -0.08234771, -0.0053795413, 0.10081727, 0.006911803, 0.08263629, 0.00040485058, 0.058411583, 0.38497072, 2.1182375, 0.2861188)
 
-[node name="fence" parent="island1" unique_id=1452254616 instance=ExtResource("16_2jinp")]
-transform = Transform3D(0.15590373, -0.00060344225, 0.091850325, 0.0001388034, 0.18094724, 0.000953194, -0.09185219, -0.00075080176, 0.15590198, 10.7586155, 4.0829954, 0.22177336)
-
-[node name="fence7" parent="island1" unique_id=755565887 instance=ExtResource("16_2jinp")]
-transform = Transform3D(0.15590373, -0.00060344225, 0.091850325, 0.0001388034, 0.18094724, 0.000953194, -0.09185219, -0.00075080176, 0.15590198, 10.176108, 3.9959507, -0.7670661)
-
-[node name="fence8" parent="island1" unique_id=1267595684 instance=ExtResource("16_2jinp")]
-transform = Transform3D(0.10076424, -0.025897134, 0.14804971, 0.00013880339, 0.17825937, 0.031086985, -0.15029758, -0.017197631, 0.099285915, 9.573485, 3.9493558, -1.6262279)
-
-[node name="fence2" parent="island1" unique_id=181483111 instance=ExtResource("16_2jinp")]
-transform = Transform3D(0.115795456, -0.0006034422, 0.13904627, -0.0001907805, 0.18094726, 0.0009441653, -0.13904743, -0.00075080176, 0.11579318, 11.549748, 3.8916705, 0.94753206)
-
-[node name="fence3" parent="island1" unique_id=1431331732 instance=ExtResource("16_2jinp")]
-transform = Transform3D(0.08442302, -0.0006034422, 0.16004752, -0.00038254278, 0.18094727, 0.00088402844, -0.16004819, -0.00075080176, 0.08442054, 12.459324, 3.8779519, 1.4105111)
-
-[node name="fence4" parent="island1" unique_id=866293317 instance=ExtResource("16_2jinp")]
-transform = Transform3D(-0.012619689, -0.0006034422, 0.18050817, -0.0007910623, 0.18094729, 0.000549605, -0.18050744, -0.0007508017, -0.012622163, 13.459026, 3.7182612, 1.3986349)
-
-[node name="fence5" parent="island1" unique_id=631258341 instance=ExtResource("16_2jinp")]
-transform = Transform3D(-0.005401499, -0.0006034422, 0.18086813, -0.0007684843, 0.18094729, 0.00058075564, -0.1808675, -0.0007508017, -0.0054039997, 14.485827, 3.7213876, 1.3268352)
-
-[node name="fence6" parent="island1" unique_id=206910083 instance=ExtResource("16_2jinp")]
-transform = Transform3D(-0.005401499, -0.07566089, 0.16428353, -0.0007684843, 0.16436495, 0.07567306, -0.18086751, 0.0015612002, -0.005227769, 15.661322, 4.098099, 1.2717049)
-
 [node name="island2" parent="." unique_id=1615275776 instance=ExtResource("11_erw1m")]
-transform = Transform3D(0.0022811368, 0, -0.1383796, 0, 0.1383984, 0, 0.1383796, 0, 0.0022811368, 13.654629, 0.2917428, -1.395613)
+transform = Transform3D(-0.046985563, 0, 0.13017862, 0, 0.13839838, 0, -0.13017862, 0, -0.046985563, 10.098973, 0.0572896, -1.395613)
 
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
-transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 12.968742, -0.8947029, 14.535828)
+transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 12.336294, -1.4006605, 14.535828)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
