@@ -7,14 +7,15 @@ var min_pitch: float = deg_to_rad(-80)
 var max_pitch: float = deg_to_rad(80)
 var mouse_sensitivity = 0.002
 var speed_timser = 1
-var current_spawn_position : Vector3 = Vector3(0.568, 2.419, -0.59)
+
+@export var health: int = 100
+@export var attack: int = 10
 
 # Don't change
 var yaw: float = 0.0
 var pitch: float = 0.0
 
-# Raycasting stuff
-@onready var interaction_ray: RayCast3D = $raycast
+@export var raycast: Area3D
 
 #mouse capture
 func _ready() -> void:
@@ -44,17 +45,6 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, SPEED)
 		
 	move_and_slide()
-	
-	check_note_interaction()
-	
-# checks for notes
-
-func check_note_interaction() -> void:
-	if interaction_ray.is_colliding():
-		var target = interaction_ray.get_collider()
-		if target and target.has_method("Interact"):
-			if Input.is_action_just_pressed("Interact"):
-				target.interact()
 
 #See if mouse move and change where look
 func _unhandled_input(event):
@@ -76,8 +66,7 @@ func _input(event):
 signal player_died
 # Die. What more is there to say
 func die():
-	print("im dieded cro")
+	queue_free()
 	player_died.emit()
-	# queue_free()
 	await get_tree().create_timer(2.0).timeout
-	self.position = current_spawn_position
+	get_tree().reload_current_scene() # Restart the level

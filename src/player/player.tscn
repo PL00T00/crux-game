@@ -10,13 +10,11 @@ size = Vector3(0.05, 0.05, 4.5302734)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sb4vr"]
 
-[node name="Player" type="CharacterBody3D" unique_id=228418535 groups=["player_body"]]
+[node name="Player" type="CharacterBody3D" unique_id=228418535 node_paths=PackedStringArray("raycast") groups=["player_body"]]
 collision_layer = 2
 collision_mask = 129
 script = ExtResource("1_4anbu")
-SPEED = null
-JUMP_VELOCITY = null
-GRAVITY = null
+raycast = NodePath("Camera3D/raycast")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=588349903]
 shape = SubResource("CapsuleShape3D_wfyas")
