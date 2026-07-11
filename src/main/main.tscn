@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bflgybv8enrx4" path="res://ast/actors/structures/bridge/bridge_posts.tscn" id="19_v0ijp"]
 [ext_resource type="Material" uid="uid://dyqd6c2dr2n7x" path="res://res/shad mat/grass_dessert.tres" id="20_v0ijp"]
 [ext_resource type="Material" uid="uid://c6qa5abjfa0n2" path="res://res/shad mat/grass_forrest.tres" id="22_lpaod"]
+[ext_resource type="PackedScene" uid="uid://ofjpbvgrxwdp" path="res://src/owl/owl.tscn" id="25_jf15o"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -539,6 +540,8 @@ transform = Transform3D(-0.07068988, 0, 0.48581702, 0, 0.49093303, 0, -0.4858170
 
 [node name="enemy" parent="enemy" unique_id=1181526048 instance=ExtResource("18_2jinp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.821701, 25.07251, 9.767808)
+
+[node name="owl" parent="." unique_id=2117577853 instance=ExtResource("25_jf15o")]
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 

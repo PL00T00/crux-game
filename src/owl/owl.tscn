@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ofjpbvgrxwdp"]
+
+[ext_resource type="PackedScene" uid="uid://y4tcd7co4a5a" path="res://ast/actors/owl.blend" id="1_lvc7t"]
+
+[node name="owl" unique_id=2117577853 instance=ExtResource("1_lvc7t")]
+
+[node name="metarig" parent="." index="6" unique_id=1676567469]
+visible = false
