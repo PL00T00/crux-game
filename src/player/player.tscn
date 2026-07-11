@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://cv1psfwtltsas"]
 
 [ext_resource type="Script" uid="uid://w8etymur1nmf" path="res://src/player/player.gd" id="1_4anbu"]
-[ext_resource type="Texture2D" uid="uid://cc148bem0xcl" path="res://ast/2d/cursor.png" id="2_rxibo"]
 [ext_resource type="Texture2D" uid="uid://dk81nli4w7aht" path="res://icon.svg" id="3_mf2ua"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfyas"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sb4vr"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_sb4vr"]
 size = Vector3(0.05, 0.05, 4.5302734)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_sb4vr"]
 
 [sub_resource type="Curve3D" id="Curve3D_rxibo"]
 _data = {
@@ -28,6 +27,10 @@ script = ExtResource("1_4anbu")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=588349903]
 shape = SubResource("CapsuleShape3D_wfyas")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=696841266]
+visible = false
+mesh = SubResource("CapsuleMesh_sb4vr")
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=326084241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9551823, 0)
 
@@ -37,20 +40,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9551823, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3772619)
 shape = SubResource("BoxShape3D_sb4vr")
 
-[node name="Sprite3D" type="Sprite3D" parent="Camera3D" unique_id=1545077028]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, -0.13895145)
-modulate = Color(0.19607843, 0.19607843, 0.19607843, 0.3764706)
-texture = ExtResource("2_rxibo")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=696841266]
-visible = false
-mesh = SubResource("CapsuleMesh_sb4vr")
+[node name="hudlayer" type="CanvasLayer" parent="Camera3D" unique_id=1314478079]
 
 [node name="Path3D" type="Path3D" parent="." unique_id=1475349851]
 curve = SubResource("Curve3D_rxibo")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=943549759]
-transform = Transform3D(0.9984892, 0.0016910944, 0.054912146, 2.9103817e-10, 0.9995259, -0.030781765, -0.054938164, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
+transform = Transform3D(0.9984891, 0.0016910944, 0.054912146, 2.9103814e-10, 0.9995259, -0.030781765, -0.054938156, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
 
 [node name="fists" type="Area3D" parent="Path3D/PathFollow3D" unique_id=904130234]
 transform = Transform3D(0.999854, 5.8207675e-11, -0.017092397, -0.0002898888, 0.9998563, -0.016957624, 0.017089939, 0.016960101, 0.9997102, -0.00039792978, -0.008153896, 0.023142736)
