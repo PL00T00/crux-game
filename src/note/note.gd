@@ -1,5 +1,7 @@
 extends Node3D
 
+@export var idx : int = 1
+
 
 func _on_interactablecomponent_action_triggered() -> void:
-	CutsceneUi.start_cutscenes([Color(1, 0, 1)], ["hi"])
+	NotesManager.look(idx)
