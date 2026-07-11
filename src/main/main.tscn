@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://yuab7pujov7d"]
+[gd_scene format=4 uid="uid://c4cvbwdxkrycb"]
 
 [ext_resource type="Script" uid="uid://b2ra2gj0fghwc" path="res://src/main/main.gd" id="1_3eh75"]
 [ext_resource type="Texture2D" uid="uid://bm7rkrw4y5m8" path="res://ast/models/islands/textures/island1.png" id="2_ab7mr"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://dawtnx5f1pcud" path="res://ast/actors/structures/bridge/bridge_single.tscn" id="28_4iboa"]
 [ext_resource type="Script" uid="uid://ct7xo7ftjwkee" path="res://src/main/spawnpoints.gd" id="29_dsb4l"]
 [ext_resource type="Script" uid="uid://bmlwpkrav3q56" path="res://addons/maaacks_game_template/extras/scripts/win_lose_manager.gd" id="30_wt2p2"]
+[ext_resource type="PackedScene" uid="uid://bcweiufv3h0nj" path="res://ast/models/props/sword/Untitled.blend" id="31_40g5d"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -165,7 +166,7 @@ height = 0.001
 radial_segments = 664
 rings = 173
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_dsb4l"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_wt2p2"]
 viewport_path = NodePath("interactablecomponent/Contents/UI/SubViewport")
 
 [sub_resource type="SphereMesh" id="SphereMesh_jf15o"]
@@ -624,6 +625,9 @@ _surfaces = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_ky84g"]
 size = Vector3(1.5460205, 3.4320068, 4.371521)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ky84g"]
+radius = 0.7866211
+
 [node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1", "cutscene_2", "cutscene_3")]
 script = ExtResource("1_3eh75")
 fade = NodePath("gamesequence/sequence/fade")
@@ -860,7 +864,7 @@ idx = 2
 
 [node name="UI" parent="island2/note/interactablecomponent/Contents" parent_id_path=PackedInt32Array(1177371846, 2114968064) index="0" unique_id=897521712]
 transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, -0.4295025, 0.1793548, -0.07945037)
-texture = SubResource("ViewportTexture_dsb4l")
+texture = SubResource("ViewportTexture_wt2p2")
 
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 11.445716, -1.80333, 15.163294)
@@ -1019,7 +1023,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.93576e-08, 2.4819608, 0.033337507, 3.872888, 0.012121356, -2.8005993, 0.046101682, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.93576e-08, 2.4819608, 0.033337507, 3.8728883, 0.012121356, -2.8005993, 0.046101682, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1105,7 +1109,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-transform = Transform3D(-1.1491821, 7.935759e-08, 2.4819608, 0.033337507, 3.8728878, 0.012121356, -2.8005993, 0.04610168, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.93576e-08, 2.4819608, 0.033337507, 3.872888, 0.012121356, -2.8005993, 0.046101682, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1191,7 +1195,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-transform = Transform3D(-1.1491821, 7.935759e-08, 2.4819608, 0.033337507, 3.8728878, 0.012121356, -2.8005993, 0.04610168, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.93576e-08, 2.4819608, 0.033337507, 3.872888, 0.012121356, -2.8005993, 0.046101682, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1376,6 +1380,17 @@ script = ExtResource("30_wt2p2")
 script = ExtResource("30_wt2p2")
 main_menu_scene_path = "uid://bqiki5gx5m2wg"
 ending_scene_path = "uid://bf6jjai5bul76"
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1232445041]
+
+[node name="Untitled" parent="Node3D" unique_id=1298264808 instance=ExtResource("31_40g5d")]
+transform = Transform3D(-4.371139e-08, -1, 0, -4.371139e-08, 1.9106855e-15, 1, -1, 4.371139e-08, -4.371139e-08, 13.696008, 4.984623, 14.569345)
+
+[node name="Area3D" type="Area3D" parent="Node3D" unique_id=1222147998]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D" unique_id=1904143322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.572502, 5.629921, 14.598804)
+shape = SubResource("CylinderShape3D_ky84g")
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
