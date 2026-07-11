@@ -6,11 +6,6 @@
 process_mode = 2
 script = ExtResource("1_13vpv")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1392691114]
-offset_right = 1180.0
-offset_bottom = 651.0
-color = Color(1, 0.45490196, 1, 1)
-
 [node name="DialogueBox" type="ColorRect" parent="." unique_id=1946808907]
 offset_left = 27.0
 offset_top = 509.0
