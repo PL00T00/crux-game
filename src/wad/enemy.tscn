@@ -17,6 +17,7 @@ collision_mask = 131
 script = ExtResource("1_7y8tt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=358319476]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ky84g")
 
 [node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D" unique_id=398815822]

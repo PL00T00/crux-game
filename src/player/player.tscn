@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://w8etymur1nmf" path="res://src/player/player.gd" id="1_4anbu"]
 [ext_resource type="Texture2D" uid="uid://cc148bem0xcl" path="res://ast/2d/cursor.png" id="2_rxibo"]
+[ext_resource type="Texture2D" uid="uid://dk81nli4w7aht" path="res://icon.svg" id="3_mf2ua"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfyas"]
 
@@ -10,9 +11,14 @@ size = Vector3(0.05, 0.05, 4.5302734)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sb4vr"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ky84g"]
-
 [sub_resource type="Curve3D" id="Curve3D_rxibo"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0.007760219, -0.023281097, 0, 0, 0, 0, 0, 0, -0.022949219, -0.015014648, -1.3657417),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ky84g"]
 
 [node name="Player" type="CharacterBody3D" unique_id=228418535 groups=["player_body"]]
 collision_layer = 2
@@ -40,13 +46,18 @@ texture = ExtResource("2_rxibo")
 visible = false
 mesh = SubResource("CapsuleMesh_sb4vr")
 
-[node name="fists" type="Area3D" parent="." unique_id=904130234]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="fists" unique_id=238822417]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_ky84g")
-
 [node name="Path3D" type="Path3D" parent="." unique_id=1475349851]
 curve = SubResource("Curve3D_rxibo")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=943549759]
+transform = Transform3D(0.9998538, -0.00028988876, 0.017089935, 2.910383e-11, 0.99985605, 0.0169601, -0.017092394, -0.016957622, 0.99970996, 0, 0.007760219, -0.023281097)
+
+[node name="fists" type="Area3D" parent="Path3D/PathFollow3D" unique_id=904130234]
+transform = Transform3D(0.999854, 5.8207675e-11, -0.017092397, -0.0002898888, 0.9998563, -0.016957624, 0.017089939, 0.016960101, 0.9997102, -0.00039792978, -0.008153896, 0.023142736)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/fists" unique_id=238822417]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_ky84g")
+
+[node name="Sprite3D" type="Sprite3D" parent="Path3D/PathFollow3D/fists" unique_id=1221347178]
+texture = ExtResource("3_mf2ua")

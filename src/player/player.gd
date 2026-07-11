@@ -47,6 +47,9 @@ func _physics_process(delta: float) -> void:
 	
 	#if Input.is_action_pressed('ui_p'):
 		#Global.checkpoint = self.global_position
+	
+	if Input.is_action_just_pressed('ui_g'):
+		$Path3D/PathFollow3D.progress_ratio = 0.9999999
 
 #See if mouse move and change where look
 func _unhandled_input(event):
