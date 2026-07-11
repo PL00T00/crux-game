@@ -26,11 +26,6 @@ point_count = 2
 collision_layer = 2
 collision_mask = 129
 script = ExtResource("1_4anbu")
-SPEED = null
-ACCELERATION = null
-DECELERATION = null
-JUMP_VELOCITY = null
-GRAVITY = null
 camera = NodePath("Camera")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=588349903]
