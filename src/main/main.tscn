@@ -27,6 +27,7 @@
 [ext_resource type="Material" uid="uid://dyqd6c2dr2n7x" path="res://res/shad mat/grass_dessert.tres" id="20_v0ijp"]
 [ext_resource type="Material" uid="uid://c6qa5abjfa0n2" path="res://res/shad mat/grass_forrest.tres" id="22_lpaod"]
 [ext_resource type="PackedScene" uid="uid://ofjpbvgrxwdp" path="res://src/owl/owl.tscn" id="25_jf15o"]
+[ext_resource type="PackedScene" uid="uid://dawtnx5f1pcud" path="res://ast/actors/structures/bridge/bridge_single.tscn" id="28_4iboa"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -1147,7 +1148,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 3.491023e-08, 1.1438187, 0.015363776, 1.7848533, 0.0055861603, -1.2906724, 0.021246342, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.491023e-08, 1.1438187, 0.015363775, 1.7848533, 0.00558616, -1.2906724, 0.02124634, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1233,7 +1234,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 3.491023e-08, 1.1438187, 0.015363776, 1.7848533, 0.0055861603, -1.2906724, 0.021246342, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.491023e-08, 1.1438187, 0.015363775, 1.7848533, 0.00558616, -1.2906724, 0.02124634, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1257,6 +1258,9 @@ idx = 3
 [node name="bridge_posts2" parent="island3" unique_id=596568303 instance=ExtResource("19_v0ijp")]
 transform = Transform3D(2.5504233e-08, -0.043046158, 0.19448961, 5.644822e-09, 0.19448961, 0.043046158, -0.19919634, 0, 2.6121446e-08, -7.557169, 14.661783, -0.22096252)
 
+[node name="bridge_posts3" parent="island3" unique_id=1215519316 instance=ExtResource("19_v0ijp")]
+transform = Transform3D(-4.2918526e-08, 0.043046158, -0.19448961, 5.6448215e-09, 0.19448961, 0.043046158, 0.19919634, 3.7632155e-09, -4.3124267e-08, -21.724277, 10.57063, -1.7251186)
+
 [node name="rock5" parent="island3" unique_id=496643386 instance=ExtResource("7_frqgp")]
 transform = Transform3D(0.6946261, 0, 0, 0, 0.6946261, 0, 0, 0, 0.6946261, -6.7677155, 13.8268795, -3.9673328)
 
@@ -1267,7 +1271,7 @@ transform = Transform3D(0.6946261, 0, 0, 0, 0.6946261, 0, 0, 0, 0.6946261, -5.71
 transform = Transform3D(-8.70715e-09, 0, -0.19919637, 0, 0.19919637, 0, 0.19919637, 0, -8.70715e-09, -21.635447, 10.48594, -1.7321739)
 
 [node name="island4" parent="." unique_id=291031492 instance=ExtResource("4_6iek0")]
-transform = Transform3D(-0.07068988, 0, 0.48581702, 0, 0.49093303, 0, -0.48581702, 0, -0.07068988, -6.1507583, 0, 13.411375)
+transform = Transform3D(-0.07068988, 0, 0.48581702, 0, 0.49093303, 0, -0.48581702, 0, -0.07068988, -6.546796, 0, 13.411375)
 
 [node name="enemy" type="Node3D" parent="." unique_id=244553395]
 
@@ -1275,7 +1279,67 @@ transform = Transform3D(-0.07068988, 0, 0.48581702, 0, 0.49093303, 0, -0.4858170
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.821701, 25.07251, 9.767808)
 
 [node name="owl" parent="." unique_id=2117577853 instance=ExtResource("25_jf15o")]
-transform = Transform3D(0.057676345, 0, -0.4966623, 0, 0.5, 0, 0.4966623, 0, 0.057676345, 1.6453457, 1.577131, -0.6123076)
+visible = false
+
+[node name="bridge_single" parent="." unique_id=355343766 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.02150425, 0, -0.103362374, 0, 0.105575636, 0, 0.103362374, 0, -0.02150425, 1.1197814, 3.068417, 14.706235)
+
+[node name="bridge_single2" parent="." unique_id=258737852 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.105406106, 0, -0.0059806444, 0, 0.10557563, 0, 0.0059806444, 0, -0.105406106, 1.447034, 3.3579588, 13.884043)
+
+[node name="bridge_single3" parent="." unique_id=406031543 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.105406106, 0, -0.0059806444, 0, 0.10557563, 0, 0.0059806444, 0, -0.105406106, 1.372805, 3.5365994, 13.442657)
+
+[node name="bridge_single4" parent="." unique_id=1317251674 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.105406106, 0, -0.0059806444, 0, 0.10557563, 0, 0.0059806444, 0, -0.105406106, 1.286436, 3.6641934, 12.954873)
+
+[node name="bridge_single5" parent="." unique_id=1164092163 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.105406106, 0, -0.0059806444, 0, 0.10557563, 0, 0.0059806444, 0, -0.105406106, 1.1696696, 3.8093174, 12.465592)
+
+[node name="bridge_single6" parent="." unique_id=1177795090 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.10444798, 0, -0.015389394, 0, 0.10557563, 0, 0.015389394, 0, -0.10444798, 1.1412559, 3.928037, 11.943429)
+
+[node name="bridge_single7" parent="." unique_id=1192234109 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.10444798, 0, -0.015389394, 0, 0.10557563, 0, 0.015389394, 0, -0.10444798, 1.0167087, 4.0786085, 11.305808)
+
+[node name="bridge_single8" parent="." unique_id=1265331704 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.10030895, 0, -0.032929193, 0, 0.10557564, 0, 0.032929193, 0, -0.10030895, 0.695583, 4.233301, 10.6870575)
+
+[node name="bridge_single9" parent="." unique_id=825653809 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.09530897, 0, -0.04541386, 0, 0.10557564, 0, 0.04541386, 0, -0.09530897, 0.29150844, 4.3933725, 10.104779)
+
+[node name="bridge_single10" parent="." unique_id=499047581 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.09530897, 0, -0.04541386, 0, 0.10557564, 0, 0.04541386, 0, -0.09530897, -0.045134578, 4.5862126, 9.554707)
+
+[node name="bridge_single11" parent="." unique_id=1765988208 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.09137573, 0, -0.05288377, 0, 0.10557564, 0, 0.05288377, 0, -0.09137573, -0.504652, 4.7614365, 8.988641)
+
+[node name="bridge_single12" parent="." unique_id=1276951865 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.085369706, 0, -0.062114656, 0, 0.10557564, 0, 0.062114656, 0, -0.085369706, -0.9536252, 4.9285893, 8.464625)
+
+[node name="bridge_single13" parent="." unique_id=1646681150 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.085369706, 0, -0.062114656, 0, 0.10557564, 0, 0.062114656, 0, -0.085369706, -1.4102342, 5.028861, 8.000397)
+
+[node name="bridge_single14" parent="." unique_id=545675534 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.085369706, 0, -0.062114656, 0, 0.10557564, 0, 0.062114656, 0, -0.085369706, -1.893913, 5.1719866, 7.400032)
+
+[node name="bridge_single15" parent="." unique_id=112241286 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.06694862, 0, -0.08163393, 0, 0.10557564, 0, 0.08163393, 0, -0.06694862, -2.4103172, 5.3386464, 6.917561)
+
+[node name="bridge_single16" parent="." unique_id=1970135471 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.06694862, 0, -0.08163393, 0, 0.10557564, 0, 0.08163393, 0, -0.06694862, -2.9839678, 5.387232, 6.5867143)
+
+[node name="bridge_single17" parent="." unique_id=647189991 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.040751226, 0, -0.09739382, 0, 0.10557564, 0, 0.09739382, 0, -0.040751226, -3.6095488, 5.442243, 6.438891)
+
+[node name="bridge_single18" parent="." unique_id=1309591432 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.040751226, 0, -0.09739382, 0, 0.10557564, 0, 0.09739382, 0, -0.040751226, -4.3420973, 5.5074897, 6.539554)
+
+[node name="bridge_single19" parent="." unique_id=436084612 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.040751226, 0, -0.09739382, 0, 0.10557564, 0, 0.09739382, 0, -0.040751226, -4.8820424, 5.69205, 6.8731627)
+
+[node name="bridge_single20" parent="." unique_id=970153118 instance=ExtResource("28_4iboa")]
+transform = Transform3D(-0.040751226, 0, -0.09739382, 0, 0.10557564, 0, 0.09739382, 0, -0.040751226, -5.569378, 5.7734303, 7.1854105)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 
