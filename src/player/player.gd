@@ -42,6 +42,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, SPEED)
 		
 	move_and_slide()
+	
+	
+	
+	if Input.is_action_pressed('ui_p'):
+		Global.checkpoint = self.global_position
 
 #See if mouse move and change where look
 func _unhandled_input(event):
@@ -65,3 +70,4 @@ func die():
 	# queue_free()
 	await get_tree().create_timer(2.0).timeout
 	self.global_position = Global.checkpoint
+	velocity.y = 0
