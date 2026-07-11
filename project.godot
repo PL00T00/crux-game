@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="crux game"
+config/name="Crux Game"
+config/version="v0.0.1"
 run/main_scene="uid://yuab7pujov7d"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://cilojgvyo1tjc"
 
 [autoload]
 

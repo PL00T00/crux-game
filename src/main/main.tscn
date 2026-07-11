@@ -542,6 +542,7 @@ transform = Transform3D(-0.07068988, 0, 0.48581702, 0, 0.49093303, 0, -0.4858170
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.821701, 25.07251, 9.767808)
 
 [node name="owl" parent="." unique_id=2117577853 instance=ExtResource("25_jf15o")]
+visible = false
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 
