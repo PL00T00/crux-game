@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cpc7g8ybty7o1"]
+[gd_scene format=3 uid="uid://dceb8x6ju87k2"]
 
-[ext_resource type="Script" uid="uid://cbyidq7ade5a" path="res://src/cutscenes/cutscene 2/cutscene_1.gd" id="1_fsdei"]
-[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_llp82"]
+[ext_resource type="Script" uid="uid://cwc5vc3hsglqx" path="res://src/cutscenes/cutscene 3/cutscene_3.gd" id="1_3xfnr"]
+[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_fikqc"]
 
 [sub_resource type="Animation" id="Animation_8ax1y"]
 length = 4.4
@@ -55,8 +55,8 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2.5, 5.9333334),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": ["The spirit of the islands have been disturbed...", "We are not sure what caused it but the
-south island is now covered in snow.", "That must have something to do with it."]
+"values": ["Yeah, that snow is not normal. ", "Even the smallest changes in the islands can
+cause catostrophic consequences.", " You'll have to fix this and quickly!"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -89,10 +89,10 @@ _data = {
 &"main": SubResource("Animation_e60i5")
 }
 
-[node name="cutscene2" type="Control" unique_id=90008933 node_paths=PackedStringArray("animation_player")]
+[node name="cutscene3" type="Control" unique_id=90008933 node_paths=PackedStringArray("animation_player")]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_fsdei")
+script = ExtResource("1_3xfnr")
 animation_player = NodePath("AnimationPlayer")
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=928835570]
@@ -110,7 +110,7 @@ offset_top = 497.0
 offset_right = 1106.0
 offset_bottom = 628.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_llp82")
+theme_override_fonts/font = ExtResource("2_fikqc")
 theme_override_font_sizes/font_size = 49
 visible_characters = 0
 visible_ratio = 0.0
