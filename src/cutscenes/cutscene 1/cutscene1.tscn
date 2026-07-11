@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://l54ebtetveyn" path="res://src/cutscenes/cutscene 1/cutscene1.gd" id="1_e60i5"]
 [ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_l7ba8"]
+[ext_resource type="Texture2D" uid="uid://dk81nli4w7aht" path="res://icon.svg" id="3_7xqli"]
 
 [sub_resource type="Animation" id="Animation_8ax1y"]
 length = 0.001
@@ -121,3 +122,7 @@ visible_ratio = 0.0
 libraries/ = SubResource("AnimationLibrary_l7ba8")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=312906373]
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1319045697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18911165, 0)
+texture = ExtResource("3_7xqli")

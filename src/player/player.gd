@@ -55,16 +55,19 @@ func _physics_process(delta: float) -> void:
 		
 		if Input.is_action_just_pressed('ui_g'):
 			$Path3D/PathFollow3D.progress_ratio = 0.9999999
+			await get_tree().create_timer(1).timeout
+			$Path3D/PathFollow3D.progress_ratio = 0.0
 
 #See if mouse move and change where look
 func _unhandled_input(event):
-	if event is InputEventMouseMotion:
-		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		yaw -= event.relative.x * mouse_sensitivity
-		pitch -= event.relative.y * mouse_sensitivity
-		pitch = clamp(pitch, min_pitch, max_pitch)
-		rotation = Vector3(0, yaw, 0)
-		camera.rotation = Vector3(pitch, 0, 0)
+	if Global.char_move == true:
+		if event is InputEventMouseMotion:
+			#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			yaw -= event.relative.x * mouse_sensitivity
+			pitch -= event.relative.y * mouse_sensitivity
+			pitch = clamp(pitch, min_pitch, max_pitch)
+			rotation = Vector3(0, yaw, 0)
+			camera.rotation = Vector3(pitch, 0, 0)
 
 #STop mouse capture
 func _input(event):
