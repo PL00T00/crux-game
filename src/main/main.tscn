@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://crwoibkih3mw1" path="res://src/main/death_zone.gd" id="13_ibsor"]
 [ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
 [ext_resource type="PackedScene" uid="uid://b06qwdvuh2dmg" path="res://ast/actors/islands/island3.tscn" id="17_hmxxs"]
+[ext_resource type="PackedScene" uid="uid://dkc0eaagsq61a" path="res://src/wad/enemy.tscn" id="18_2jinp"]
 [ext_resource type="PackedScene" uid="uid://5xe85ph6ag4x" path="res://ast/actors/bridge/bridge_part.tscn" id="19_6iek0"]
 [ext_resource type="PackedScene" uid="uid://bflgybv8enrx4" path="res://ast/actors/bridge/bridge_posts.tscn" id="19_v0ijp"]
 [ext_resource type="Material" uid="uid://dyqd6c2dr2n7x" path="res://res/shad mat/grass_dessert.tres" id="20_v0ijp"]
@@ -200,7 +201,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." unique_id=228418535 instance=ExtResource("9_2nke2")]
-transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, -0.011306167, 2.517175, 0.83538663)
+transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, -0.011306167, 16.92138, 15.782049)
 
 [node name="Checkpoint1" type="Area3D" parent="." unique_id=1321416240]
 collision_layer = 128
@@ -374,5 +375,10 @@ transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 11
 
 [node name="island4" parent="." unique_id=291031492 instance=ExtResource("4_6iek0")]
 transform = Transform3D(0.49093303, 0, 0, 0, 0.49093303, 0, 0, 0, 0.49093303, -3.4113407, 0, 13.411375)
+
+[node name="enemy" type="Node3D" parent="." unique_id=244553395]
+
+[node name="enemy" parent="enemy" unique_id=1181526048 instance=ExtResource("18_2jinp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.821701, 25.07251, 9.767808)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]

@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var SPEED = 1.0
+@export var SPEED = 1.5
 @export var JUMP_VELOCITY = 3.0
 @export var GRAVITY = 9.76
 var min_pitch: float = deg_to_rad(-80)
@@ -42,11 +42,14 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, SPEED)
 		
 	move_and_slide()
-	
+	Global.character_pos = self.global_position
 	
 	
 	#if Input.is_action_pressed('ui_p'):
 		#Global.checkpoint = self.global_position
+	
+	if Input.is_action_just_pressed('ui_g'):
+		$Path3D/PathFollow3D.progress_ratio = 0.9999999
 
 #See if mouse move and change where look
 func _unhandled_input(event):
