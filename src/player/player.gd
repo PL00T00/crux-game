@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, SPEED)
 		
 	move_and_slide()
-	
+	Global.character_pos = self.global_position
 	
 	
 	#if Input.is_action_pressed('ui_p'):
