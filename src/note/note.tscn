@@ -82,7 +82,7 @@ shape = SubResource("BoxShape3D_m2f1o")
 [node name="nail" parent="." unique_id=1797461265 instance=ExtResource("4_l04sq")]
 transform = Transform3D(0.9152708, -0.38911265, -0.104262434, 0, 0.25881907, -0.9659258, 0.40283906, 0.8840837, 0.23688954, 0.06779741, 0.4672398, -0.23076123)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="nail/Cube" parent_id_path=PackedInt32Array(1797461265, 2070352725) index="0" unique_id=1523671101]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="nail/Cube" parent_id_path=PackedInt32Array(1797461265, 628747441) index="0" unique_id=1523671101]
 material_override = SubResource("StandardMaterial3D_hc2u7")
 mesh = SubResource("ArrayMesh_nb3pe")
 

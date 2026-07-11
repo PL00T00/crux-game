@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://ljnkritrth7" path="res://src/wad/enemy.gd" id="1_7y8tt"]
 [ext_resource type="Texture2D" uid="uid://dk81nli4w7aht" path="res://icon.svg" id="2_2q7ve"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ky84g"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyd63"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ky84g"]
 height = 18.302795
-radius = 4.7177734
+radius = 8.2265625
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qlmsr"]
 
 [node name="enemy" type="Node3D" unique_id=1181526048]
 
@@ -18,7 +20,7 @@ script = ExtResource("1_7y8tt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="enemysmol" unique_id=358319476]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_ky84g")
+shape = SubResource("CapsuleShape3D_oyd63")
 
 [node name="Sprite3D" type="Sprite3D" parent="enemysmol" unique_id=398815822]
 texture = ExtResource("2_2q7ve")
@@ -38,8 +40,8 @@ texture = ExtResource("2_2q7ve")
 [node name="collide with pusher" type="Area3D" parent="enemysmol" unique_id=2007032980]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="enemysmol/collide with pusher" unique_id=2117517927]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_ky84g")
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.1999, 0)
+shape = SubResource("CapsuleShape3D_qlmsr")
 
 [connection signal="area_entered" from="enemysmol/Area3D" to="enemysmol" method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="enemysmol/Area3D" to="enemysmol" method="_on_area_3d_area_exited"]

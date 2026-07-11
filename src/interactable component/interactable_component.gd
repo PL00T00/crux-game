@@ -29,6 +29,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if interacting:
 		if Input.is_action_just_pressed(ActionToPress.action):
 			action_triggered.emit()
+			Global.char_move = false
 
 func _on_player_area_box_body_entered(body: Node3D) -> void:
 	if body.is_in_group(&"player_body"):

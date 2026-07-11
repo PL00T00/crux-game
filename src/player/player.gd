@@ -25,35 +25,36 @@ func _ready() -> void:
 
 #Movement
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity.y -= GRAVITY * delta
-		
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if Global.char_move == true:
+		if not is_on_floor():
+			velocity.y -= GRAVITY * delta
+			
+		if Input.is_action_just_pressed("Jump") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
 
-	var input_dir := Input.get_vector("Left", "Right", "Forward", "Back")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
-	speed_timser = 2 if Input.is_action_pressed("ui_shift") else 1
-	var target_speed : float = SPEED * speed_timser
-	var target_velocity := direction * target_speed
-	
-	if direction != Vector3.ZERO:
-		velocity.x = move_toward(velocity.x, target_velocity.x, ACCELERATION * delta)
-		velocity.z = move_toward(velocity.z, target_velocity.z, ACCELERATION * delta)
-	else:
-		velocity.x = move_toward(velocity.x, 0.0, DECELERATION * delta)
-		velocity.z = move_toward(velocity.z, 0.0, DECELERATION * delta)
+		var input_dir := Input.get_vector("Left", "Right", "Forward", "Back")
+		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		
-	move_and_slide()
-	Global.character_pos = self.global_position
-	
-	
-	#if Input.is_action_pressed('ui_p'):
-		#Global.checkpoint = self.global_position
-	
-	if Input.is_action_just_pressed('ui_g'):
-		$Path3D/PathFollow3D.progress_ratio = 0.9999999
+		speed_timser = 2 if Input.is_action_pressed("ui_shift") else 1
+		var target_speed : float = SPEED * speed_timser
+		var target_velocity := direction * target_speed
+		
+		if direction != Vector3.ZERO:
+			velocity.x = move_toward(velocity.x, target_velocity.x, ACCELERATION * delta)
+			velocity.z = move_toward(velocity.z, target_velocity.z, ACCELERATION * delta)
+		else:
+			velocity.x = move_toward(velocity.x, 0.0, DECELERATION * delta)
+			velocity.z = move_toward(velocity.z, 0.0, DECELERATION * delta)
+			
+		move_and_slide()
+		Global.character_pos = self.global_position
+		
+		
+		#if Input.is_action_pressed('ui_p'):
+			#Global.checkpoint = self.global_position
+		
+		if Input.is_action_just_pressed('ui_g'):
+			$Path3D/PathFollow3D.progress_ratio = 0.9999999
 
 #See if mouse move and change where look
 func _unhandled_input(event):
