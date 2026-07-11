@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://brwpnclwdykde" path="res://ast/models/islands/island3.blend" id="1_t1ewa"]
 [ext_resource type="Texture2D" uid="uid://b68ps1mfjycxx" path="res://ast/models/islands/textures/island3.png" id="2_gla2c"]
 [ext_resource type="PackedScene" uid="uid://bfeu7067uva0n" path="res://ast/actors/env/trees/normal/tree1.tscn" id="3_tcmpl"]
+[ext_resource type="PackedScene" uid="uid://cifhni2hwt4pr" path="res://ast/actors/env/rocks/rock_1.tscn" id="4_e8uoy"]
+[ext_resource type="PackedScene" uid="uid://c855wuotwp7n7" path="res://ast/models/env/shrubs/shrub1.blend" id="5_hupic"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gla2c"]
 diffuse_mode = 3
@@ -53,4 +55,16 @@ transform = Transform3D(7.2809663, 0, 0, 0, 13.680486, 0, 0, 0, 8.433503, 0, 0, 
 shape = SubResource("ConcavePolygonShape3D_tcmpl")
 
 [node name="tree1" parent="." index="2" unique_id=890076586 instance=ExtResource("3_tcmpl")]
-transform = Transform3D(0.22968203, 0, 0, 0, 0.22968203, 0, 0, 0, 0.22968203, 3.2218318, 14.98667, -2.1739178)
+transform = Transform3D(0.22968203, 0, 0, 0, 0.22968203, 0, 0, 0, 0.22968203, -1.7301021, 15.336922, -2.1739178)
+
+[node name="tree2" parent="." index="3" unique_id=555956544 instance=ExtResource("3_tcmpl")]
+transform = Transform3D(-1.003972e-08, 0.22968203, 0, -0.22968203, -1.003972e-08, 0, 0, 0, 0.22968203, 3.0178947, 14.930313, -2.1739178)
+
+[node name="rock1" parent="." index="4" unique_id=1455276671 instance=ExtResource("4_e8uoy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.694815, 13.754812, -1.1595249)
+
+[node name="rock2" parent="." index="5" unique_id=659521132 instance=ExtResource("4_e8uoy")]
+transform = Transform3D(-0.7523171, -8.881784e-16, 0.65880114, 0.27521664, -0.90856034, 0.31428325, 0.5985606, 0.41775367, 0.68352544, 9.178952, 15.093409, -0.8731186)
+
+[node name="shrub1" parent="." index="6" unique_id=156251602 instance=ExtResource("5_hupic")]
+transform = Transform3D(0.6083791, 0, 0, 0, 0.35762063, 0, 0, 0, 0.6083791, 0.91820306, 15.403263, 1.2755629)
