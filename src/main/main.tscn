@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b57u88ln7xkfw" path="res://ast/actors/islands/island4.tscn" id="4_6iek0"]
 [ext_resource type="PackedScene" uid="uid://brbtya6kw0w2m" path="res://src/grass/grass4.tscn" id="4_30cu5"]
 [ext_resource type="PackedScene" uid="uid://h15b8tpej1mo" path="res://src/grass/grass2.tscn" id="5_jkpqq"]
+[ext_resource type="PackedScene" uid="uid://dmwlyfu7t1htk" path="res://src/cutscenes/cutscene 1/cutscene_1.tscn" id="6_6iek0"]
 [ext_resource type="PackedScene" uid="uid://ca6bvcywib78g" path="res://src/grass/grass3.tscn" id="6_jqarl"]
 [ext_resource type="PackedScene" uid="uid://cifhni2hwt4pr" path="res://ast/actors/rocks/rock_1.tscn" id="7_frqgp"]
 [ext_resource type="PackedScene" uid="uid://dsti02es4bfwp" path="res://ast/env/trees/pine/pinetree.tscn" id="8_frqgp"]
@@ -196,6 +197,10 @@ color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." unique_id=228418535 instance=ExtResource("9_2nke2")]
 transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, -0.011306167, 16.92138, 15.782049)
+
+[node name="cutscenelayer" type="CanvasLayer" parent="." unique_id=1773736947]
+
+[node name="cutscene1" parent="cutscenelayer" unique_id=90008933 instance=ExtResource("6_6iek0")]
 
 [node name="Checkpoint1" type="Area3D" parent="." unique_id=1321416240]
 collision_layer = 128
