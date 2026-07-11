@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cv1psfwtltsas"]
 
 [ext_resource type="Script" uid="uid://w8etymur1nmf" path="res://src/player/player.gd" id="1_4anbu"]
-[ext_resource type="Texture2D" uid="uid://dk81nli4w7aht" path="res://icon.svg" id="3_mf2ua"]
+[ext_resource type="Texture2D" uid="uid://88h5uq5r1kt4" path="res://ast/2d/hand-modified.png" id="2_rxibo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfyas"]
 
@@ -69,7 +69,7 @@ mesh = SubResource("SphereMesh_8xryq")
 curve = SubResource("Curve3D_rxibo")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=943549759]
-transform = Transform3D(0.9984888, 0.0016910944, 0.054912146, 2.9103805e-10, 0.9995259, -0.030781765, -0.05493814, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
+transform = Transform3D(0.99848855, 0.0016910944, 0.054912146, 2.9103797e-10, 0.9995259, -0.030781765, -0.054938126, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
 
 [node name="fists" type="Area3D" parent="Path3D/PathFollow3D" unique_id=904130234]
 transform = Transform3D(0.999854, 5.8207675e-11, -0.017092397, -0.0002898888, 0.9998563, -0.016957624, 0.017089939, 0.016960101, 0.9997102, -0.00039792978, -0.008153896, 0.023142736)
@@ -78,9 +78,17 @@ transform = Transform3D(0.999854, 5.8207675e-11, -0.017092397, -0.0002898888, 0.
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ky84g")
 
-[node name="Sprite3D2" type="Sprite3D" parent="Path3D/PathFollow3D/fists" unique_id=1768802804]
-visible = false
-texture = ExtResource("3_mf2ua")
+[node name="Node3D" type="Node3D" parent="Path3D/PathFollow3D/fists" unique_id=787800864]
+transform = Transform3D(0.50000006, -5.820766e-11, 0, 0, 0.5, -1.1175871e-08, 0, 1.3038516e-08, 0.50000006, 0.014416944, 0.73964304, 0.9620177)
+
+[node name="Sprite3D3" type="Sprite3D" parent="Path3D/PathFollow3D/fists/Node3D" unique_id=800800159]
+transform = Transform3D(0.10000003, -1.4551915e-11, 4.656613e-10, 0, 0.1, -1.3969839e-09, -1.3969839e-09, 9.313226e-10, 0.10000003, 0.4593955, -0.06816281, -1.4345449)
+flip_h = true
+texture = ExtResource("2_rxibo")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Path3D/PathFollow3D/fists/Node3D" unique_id=1768802804]
+transform = Transform3D(0.100000024, -1.4551915e-11, 4.656613e-10, 1.4551915e-11, 0.1, -1.3969839e-09, -9.313226e-10, 9.313226e-10, 0.100000024, -0.34651044, -0.070277564, -1.4650307)
+texture = ExtResource("2_rxibo")
 
 [node name="collidereadewxd" type="Area3D" parent="." unique_id=721214766]
 
