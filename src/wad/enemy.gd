@@ -25,14 +25,14 @@ func _physics_process(delta: float) -> void:
 		# Get the input direction and handle the movement/deceleration.
 		var input_dir = Vector3(0, 1, 0)
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-		if pushback == true:
+		if pushback == false:
 			velocity.x = -direction.x * SPEED* 0.1
 			velocity.z = -direction.z * SPEED* 0.1
 		else:
 			velocity -= get_gravity() * delta 
-			velocity.x = -direction.x * SPEED* 0.2
-			velocity.z = -direction.z * SPEED* 0.2
-			velocity.y = -direction.y * SPEED* 0.8
+			velocity.x = direction.x * SPEED* 0.2
+			velocity.z = direction.z * SPEED* 0.2
+			velocity.y = direction.y * SPEED* 0.8
 
 	move_and_slide()
 
@@ -61,8 +61,18 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
-	if (area.name == "sword") or (area.name == "fists"):
+	pass
+
+
+func _on_collide_with_pusher_area_entered(area: Area3D) -> void:
+	if (area.name == "sword"):
+		pass
+	elif area.name == "fists":
 		print('yes')
 		pushback = true
 		await get_tree().create_timer(1).timeout
 		pushback = false
+
+
+func _on_collide_with_pusher_area_exited(area: Area3D) -> void:
+	pass # Replace with function body.

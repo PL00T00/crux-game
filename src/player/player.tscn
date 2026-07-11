@@ -13,7 +13,7 @@ size = Vector3(0.05, 0.05, 4.5302734)
 
 [sub_resource type="Curve3D" id="Curve3D_rxibo"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0.007760219, -0.023281097, 0, 0, 0, 0, 0, 0, -0.022949219, -0.015014648, -1.3657417),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0.007760219, -0.023281097, 0, 0, 0, 0, 0, 0, -0.032104492, 0.025756836, -0.6067734),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -50,7 +50,7 @@ mesh = SubResource("CapsuleMesh_sb4vr")
 curve = SubResource("Curve3D_rxibo")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=943549759]
-transform = Transform3D(0.9998538, -0.00028988876, 0.017089935, 2.910383e-11, 0.99985605, 0.0169601, -0.017092394, -0.016957622, 0.99970996, 0, 0.007760219, -0.023281097)
+transform = Transform3D(0.9984893, 0.0016910941, 0.054912142, 2.9103822e-10, 0.9995258, -0.03078176, -0.05493817, 0.030735273, 0.99801624, 0, 0.007760219, -0.023281097)
 
 [node name="fists" type="Area3D" parent="Path3D/PathFollow3D" unique_id=904130234]
 transform = Transform3D(0.999854, 5.8207675e-11, -0.017092397, -0.0002898888, 0.9998563, -0.016957624, 0.017089939, 0.016960101, 0.9997102, -0.00039792978, -0.008153896, 0.023142736)
@@ -60,4 +60,7 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ky84g")
 
 [node name="Sprite3D" type="Sprite3D" parent="Path3D/PathFollow3D/fists" unique_id=1221347178]
+texture = ExtResource("3_mf2ua")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Path3D/PathFollow3D/fists" unique_id=1768802804]
 texture = ExtResource("3_mf2ua")
