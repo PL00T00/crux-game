@@ -17,4 +17,4 @@ func toggle_snow_islands() -> void:
 	$"../island2/note".visible = false
 	$"../island2".cacti.process_mode = ProcessMode.PROCESS_MODE_DISABLED
 	$"../island2".cacti.visible = false
-	$"../island2/Icosphere".mesh.surface_get_material(0).albedo_texture = ISLAND_2_SNOW
+	$"../island2/Icosphere".material_override.albedo_texture = ISLAND_2_SNOW
