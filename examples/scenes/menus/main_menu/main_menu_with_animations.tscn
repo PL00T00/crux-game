@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bqiki5gx5m2wg"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_f6vo5"]
-[ext_resource type="Script" path="res://examples/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_ojfib"]
-[ext_resource type="PackedScene" path="res://examples/scenes/windows/main_menu_options_window.tscn" id="3_gtqgk"]
-[ext_resource type="PackedScene" path="res://examples/scenes/windows/main_menu_credits_window.tscn" id="4_wd3ic"]
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_f6vo5"]
+[ext_resource type="Script" uid="uid://bmkl3n60vv3ye" path="res://examples/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_ojfib"]
+[ext_resource type="PackedScene" uid="uid://c1ryhpqwimheb" path="res://examples/scenes/windows/main_menu_options_window.tscn" id="3_gtqgk"]
+[ext_resource type="PackedScene" uid="uid://d10omwb66yahm" path="res://examples/scenes/windows/main_menu_credits_window.tscn" id="4_wd3ic"]
+[ext_resource type="Texture2D" uid="uid://cilojgvyo1tjc" path="res://icon2.png" id="5_ojfib"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -319,6 +320,9 @@ game_scene_path = "res://examples/scenes/game_scene/game_ui.tscn"
 options_packed_scene = ExtResource("3_gtqgk")
 credits_packed_scene = ExtResource("4_wd3ic")
 
+[node name="BackgroundTextureRect" parent="." index="0" unique_id=1025367827]
+texture = ExtResource("5_ojfib")
+
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1108772180]
 libraries/ = SubResource("AnimationLibrary_2kqig")
 
@@ -329,6 +333,9 @@ parameters/conditions/intro_done = false
 
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" parent_id_path=PackedInt32Array(1189822984) index="0" unique_id=704939549]
 modulate = Color(1, 1, 1, 0)
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
+text = "Crux Game"
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
 modulate = Color(1, 1, 1, 0)
@@ -341,6 +348,12 @@ lock = true
 
 [node name="VersionContainer" parent="VersionMargin" parent_id_path=PackedInt32Array(115503069) index="0" unique_id=645412385]
 modulate = Color(1, 1, 1, 0)
+
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0" unique_id=321873498]
+text = "v0.0.1"
+
+[node name="ExitConfirmation" parent="." index="5" unique_id=1903054312]
+ignore_siblings = false
 
 [node name="MouseFilter" type="Control" parent="." index="6" unique_id=26695112]
 layout_mode = 1

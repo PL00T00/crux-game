@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Crux Game"
-config/version="v0.0.1"
+config/version="0.0.1"
 run/main_scene="res://examples/scenes/opening/opening.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://cilojgvyo1tjc"
@@ -34,6 +34,10 @@ window/stretch/aspect="expand"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
+
+[gui]
+
+theme/custom="res://examples/resources/themes/orangetheme.tres"
 
 [input]
 
