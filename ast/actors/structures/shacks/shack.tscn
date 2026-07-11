@@ -7,7 +7,7 @@ resource_name = "AlternateShackColor"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.42202476, 0.30410594, 0.26028207, 1)
+albedo_color = Color(0.29802272, 0.20929131, 0.17377585, 1)
 roughness = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2f5j3"]
