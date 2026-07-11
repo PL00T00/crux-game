@@ -7,6 +7,7 @@ var min_pitch: float = deg_to_rad(-80)
 var max_pitch: float = deg_to_rad(80)
 var mouse_sensitivity = 0.002
 var speed_timser = 1
+var current_spawn_position = null
 
 # Don't change
 var yaw: float = 0.0
