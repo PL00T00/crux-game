@@ -304,4 +304,6 @@ transform = Transform3D(-0.046985563, 0, 0.13017862, 0, 0.13839838, 0, -0.130178
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 12.336294, -1.4006605, 14.535828)
 
+[node name="enemy" type="Node3D" parent="." unique_id=244553395]
+
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
