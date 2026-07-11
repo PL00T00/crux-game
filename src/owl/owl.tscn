@@ -1,10 +1,18 @@
 [gd_scene format=3 uid="uid://ofjpbvgrxwdp"]
 
 [ext_resource type="PackedScene" uid="uid://y4tcd7co4a5a" path="res://ast/actors/owl.blend" id="1_lvc7t"]
+[ext_resource type="Script" uid="uid://c7oaddm4d0pvq" path="res://src/owl/owl.gd" id="2_vrsl7"]
 
 [node name="owl" unique_id=2117577853 instance=ExtResource("1_lvc7t")]
+script = ExtResource("2_vrsl7")
 
 [node name="Light" parent="." index="0" unique_id=364771980]
+visible = false
+
+[node name="Camera" parent="." index="1" unique_id=885823515]
+visible = false
+
+[node name="Empty" parent="." index="2" unique_id=1613479232]
 visible = false
 
 [node name="metarig" parent="." index="4" unique_id=1773560039]
