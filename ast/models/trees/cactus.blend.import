@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://th0niwnbajp2"
-path="res://.godot/imported/efa.blend-56b2f8fa988ff9e16fb30d31f92308b9.scn"
+uid="uid://b3cce4lq1qdg0"
+path="res://.godot/imported/cactus.blend-0bdc6998d354f14cd4ae66c1766b3a1d.scn"
 
 [deps]
 
-source_file="res://ast/env/beep/efa.blend"
-dest_files=["res://.godot/imported/efa.blend-56b2f8fa988ff9e16fb30d31f92308b9.scn"]
+source_file="res://ast/models/trees/cactus.blend"
+dest_files=["res://.godot/imported/cactus.blend-0bdc6998d354f14cd4ae66c1766b3a1d.scn"]
 
 [params]
 
