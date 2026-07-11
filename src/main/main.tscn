@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://ofjpbvgrxwdp" path="res://src/owl/owl.tscn" id="25_jf15o"]
 [ext_resource type="PackedScene" uid="uid://dawtnx5f1pcud" path="res://ast/actors/structures/bridge/bridge_single.tscn" id="28_4iboa"]
 [ext_resource type="Script" uid="uid://ct7xo7ftjwkee" path="res://src/main/spawnpoints.gd" id="29_dsb4l"]
+[ext_resource type="Script" uid="uid://cl7ymw3d2xhm8" path="res://src/main/swordpickup.gd" id="30_40g5d"]
 [ext_resource type="Script" uid="uid://bmlwpkrav3q56" path="res://addons/maaacks_game_template/extras/scripts/win_lose_manager.gd" id="30_wt2p2"]
 [ext_resource type="PackedScene" uid="uid://bcweiufv3h0nj" path="res://ast/models/props/sword/Untitled.blend" id="31_40g5d"]
 
@@ -1059,7 +1060,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363758, 1.7848533, 0.0055861543, -1.2906724, 0.021246318, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363757, 1.7848533, 0.005586154, -1.2906724, 0.021246316, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1145,7 +1146,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 3.3247836e-08, 1.1438187, 0.015363756, 1.7848533, 0.005586154, -1.2906724, 0.021246314, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.2416644e-08, 1.1438187, 0.015363755, 1.7848533, 0.005586154, -1.2906724, 0.021246312, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1231,7 +1232,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 3.3247836e-08, 1.1438187, 0.015363756, 1.7848533, 0.005586154, -1.2906724, 0.021246314, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.2416644e-08, 1.1438187, 0.015363755, 1.7848533, 0.005586154, -1.2906724, 0.021246312, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1382,13 +1383,14 @@ main_menu_scene_path = "uid://bqiki5gx5m2wg"
 ending_scene_path = "uid://bf6jjai5bul76"
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1232445041]
+script = ExtResource("30_40g5d")
 
 [node name="Untitled" parent="Node3D" unique_id=1298264808 instance=ExtResource("31_40g5d")]
 transform = Transform3D(-4.371139e-08, -1, 0, -4.371139e-08, 1.9106855e-15, 1, -1, 4.371139e-08, -4.371139e-08, 13.696008, 4.984623, 14.569345)
 
-[node name="Area3D" type="Area3D" parent="Node3D" unique_id=1222147998]
+[node name="collliswordujw" type="Area3D" parent="Node3D" unique_id=1222147998]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D" unique_id=1904143322]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/collliswordujw" unique_id=1904143322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.572502, 5.629921, 14.598804)
 shape = SubResource("CylinderShape3D_ky84g")
 
@@ -1396,6 +1398,8 @@ shape = SubResource("CylinderShape3D_ky84g")
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/secondbridge" to="spawnpoints" method="_on_secondbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/thirdbridge" to="spawnpoints" method="_on_thirdbridge_body_entered"]
+[connection signal="body_entered" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_entered"]
+[connection signal="body_exited" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_exited"]
 
 [editable path="island2/note"]
 [editable path="island2/note/nail"]
