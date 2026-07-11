@@ -142,7 +142,7 @@ size = Vector3(1.9230957, 2.1912842, 8.153931)
 script = ExtResource("2_x4bd1")
 cacti = NodePath("cacti")
 
-[node name="Icosphere" parent="." index="0" unique_id=1393296736]
+[node name="Icosphere" parent="." index="0" unique_id=493098974]
 material_override = SubResource("StandardMaterial3D_w0wra")
 cast_shadow = 0
 
@@ -157,7 +157,7 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere/StaticBody3D" index="0" unique_id=1016547509]
 shape = SubResource("ConcavePolygonShape3D_uy137")
 
-[node name="Torus" parent="." index="1" unique_id=1302608906]
+[node name="Torus" parent="." index="1" unique_id=1108573]
 material_override = SubResource("StandardMaterial3D_uiq76")
 cast_shadow = 0
 

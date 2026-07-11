@@ -1,6 +1,7 @@
 extends Node3D
 
 const ISLAND_1_SNOW = preload("uid://drrl2x7wvpuw0")
+const ISLAND_2_SNOW = preload("uid://c251pyi2aijbk")
 
 func _ready() -> void:
 	toggle_snow_islands()
@@ -16,3 +17,4 @@ func toggle_snow_islands() -> void:
 	$"../island2/note".visible = false
 	$"../island2".cacti.process_mode = ProcessMode.PROCESS_MODE_DISABLED
 	$"../island2".cacti.visible = false
+	$"../island2/Icosphere".mesh.surface_get_material(0).albedo_texture = ISLAND_2_SNOW
