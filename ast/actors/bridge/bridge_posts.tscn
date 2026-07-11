@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bflgybv8enrx4"]
+
+[ext_resource type="PackedScene" uid="uid://btnty57m0ys3j" path="res://ast/models/bridge/bridge_posts.blend" id="1_hsjll"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sb4vr"]
+size = Vector3(1.946228, 6.4658813, 1.8165894)
+
+[node name="bridge_posts" unique_id=1669786242 instance=ExtResource("1_hsjll")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1983632955]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1496436310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6595764, 3.3228455, 0.12020874)
+shape = SubResource("BoxShape3D_sb4vr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1737672841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8874283, 3.3228455, 0.12020874)
+shape = SubResource("BoxShape3D_sb4vr")

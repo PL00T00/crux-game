@@ -17,8 +17,8 @@
 [ext_resource type="Script" uid="uid://crwoibkih3mw1" path="res://src/main/death_zone.gd" id="13_ibsor"]
 [ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
 [ext_resource type="PackedScene" uid="uid://b06qwdvuh2dmg" path="res://ast/actors/islands/island3.tscn" id="17_hmxxs"]
-[ext_resource type="PackedScene" uid="uid://btnty57m0ys3j" path="res://ast/models/bridge/bridge_posts.blend" id="18_2jinp"]
-[ext_resource type="PackedScene" uid="uid://b4v2bai44kcas" path="res://ast/models/bridge/bridge_part.blend" id="19_6iek0"]
+[ext_resource type="PackedScene" uid="uid://5xe85ph6ag4x" path="res://ast/actors/bridge/bridge_part.tscn" id="19_6iek0"]
+[ext_resource type="PackedScene" uid="uid://bflgybv8enrx4" path="res://ast/actors/bridge/bridge_posts.tscn" id="19_v0ijp"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -306,13 +306,13 @@ transform = Transform3D(-0.046985563, 0, 0.13017862, 0, 0.13839838, 0, -0.130178
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 12.336294, -1.4006605, 14.535828)
 
-[node name="bridge_posts" parent="." unique_id=184824684 instance=ExtResource("18_2jinp")]
-transform = Transform3D(-3.963456e-09, 0, -0.090673305, 0, 0.090673305, 0, 0.090673305, 0, -3.963456e-09, 2.1088932, 1.7233771, -0.9025115)
-
-[node name="bridge_part" parent="." unique_id=34235699 instance=ExtResource("19_6iek0")]
+[node name="bridge_part2" parent="." unique_id=166099730 instance=ExtResource("19_6iek0")]
 transform = Transform3D(-3.9634562e-09, 0, -0.090673305, 0, 0.090673305, 0, 0.090673305, 0, -3.9634562e-09, 2.1088932, 1.7233771, -0.9025115)
 
-[node name="bridge_posts2" parent="." unique_id=1669786242 instance=ExtResource("18_2jinp")]
-transform = Transform3D(1.17096315e-08, -0.015749235, 0.08929506, 0.0033629453, 0.08923362, 0.0157384, -0.0906109, 0.0033118264, 0.0005841285, 8.524495, 3.6005616, -0.22761184)
+[node name="bridge_posts3" parent="." unique_id=1669786242 instance=ExtResource("19_v0ijp")]
+transform = Transform3D(1.0260198e-08, -0.015749233, 0.08929505, 0.0033629453, 0.08923362, 0.015738398, -0.09061089, 0.0033118273, 0.0005841272, 8.524495, 3.6005616, -0.22761184)
+
+[node name="bridge_posts" parent="." unique_id=1091528261 instance=ExtResource("19_v0ijp")]
+transform = Transform3D(-3.9634562e-09, 0, -0.090673305, 0, 0.090673305, 0, 0.090673305, 0, -3.9634562e-09, 2.1088932, 1.7233771, -0.9025115)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]

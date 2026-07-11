@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://5xe85ph6ag4x"]
+
+[ext_resource type="PackedScene" uid="uid://b4v2bai44kcas" path="res://ast/models/bridge/bridge_part.blend" id="1_q1n08"]
+[ext_resource type="Shape3D" uid="uid://sahr2fgsyqvy" path="res://res/collision shape/bridgecollision.tres" id="2_enil6"]
+
+[node name="bridge_part" unique_id=166099730 instance=ExtResource("1_q1n08")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=114416326]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1526465237]
+shape = ExtResource("2_enil6")
