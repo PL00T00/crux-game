@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://wv4m8djm2xq"]
+
+[ext_resource type="Script" uid="uid://be2nflna5yrmh" path="res://src/note/cutscene_ui.gd" id="1_13vpv"]
+
+[node name="CutsceneUI" type="CanvasLayer" unique_id=298124209]
+process_mode = 2
+script = ExtResource("1_13vpv")
+
+[node name="DialogueBox" type="ColorRect" parent="." unique_id=1946808907]
+offset_left = 27.0
+offset_top = 509.0
+offset_right = 1121.0
+offset_bottom = 645.0
+
+[node name="Label" type="Label" parent="DialogueBox" unique_id=1595627881]
+layout_mode = 0
+offset_right = 1069.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 46
+text = "I love that guy lolz"
