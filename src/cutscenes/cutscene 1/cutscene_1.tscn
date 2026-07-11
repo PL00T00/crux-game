@@ -32,7 +32,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_e60i5"]
 resource_name = "main"
-length = 6.0
+length = 14.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -40,11 +40,12 @@ tracks/0/path = NodePath("Label:text")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.95),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 2.5, 5.9333334),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": ["We've been expecting you for a while now.", "By the time your reading this we'll be long gone,
- but you can still save us."]
+ but you can still save us.", "Go island to island reading the pages we've left
+ behind. You must save the archipelligo."]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -53,10 +54,10 @@ tracks/1/path = NodePath("Label:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 2, 2.5, 3.02, 4.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.5, 2, 2.5, 3, 3.5, 5.4333334, 5.9333334, 6.9333334, 9.900001, 10.533334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 1.0, 0.0, 0.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l7ba8"]
@@ -72,16 +73,18 @@ script = ExtResource("1_e60i5")
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=928835570]
 layout_mode = 0
-offset_top = 526.0
-offset_right = 40.0
-offset_bottom = 575.6666
+offset_left = -5.0
+offset_top = 497.0
+offset_right = 35.0
+offset_bottom = 546.6666
 scale = Vector2(28.88, 3.0000012)
 
 [node name="Label" type="Label" parent="." unique_id=1711461132]
 layout_mode = 0
-offset_top = 526.0
-offset_right = 1151.0
-offset_bottom = 657.0
+offset_left = -5.0
+offset_top = 497.0
+offset_right = 1146.0
+offset_bottom = 628.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_l7ba8")
 theme_override_font_sizes/font_size = 49
