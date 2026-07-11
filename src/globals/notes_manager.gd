@@ -1,4 +1,12 @@
 extends Node
 
-var note_idx : int = 1
-# note 1, note 2, etc.
+
+var note1_looked : bool = false
+var note2_looked : bool = false
+var note3_looked : bool = false
+var note4_looked : bool = false
+var note5_looked : bool = false
+var note6_looked : bool = false
+var note7_looked : bool = false
+var note8_looked : bool = false
+var note9_looked : bool = false
