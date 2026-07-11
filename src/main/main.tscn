@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://nxd6iqegtlbx" path="res://ast/models/trees/wood.blend" id="14_hc2u7"]
 [ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
 [ext_resource type="PackedScene" uid="uid://b06qwdvuh2dmg" path="res://ast/actors/islands/island3.tscn" id="17_hmxxs"]
+[ext_resource type="PackedScene" uid="uid://d3x31t7tttq6y" path="res://ast/models/structures/fence/fence.blend" id="18_2jinp"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -290,5 +291,11 @@ transform = Transform3D(0.0022811368, 0, -0.1383796, 0, 0.1383984, 0, 0.1383796,
 
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 12.968742, -0.8947029, 14.535828)
+
+[node name="fence" parent="." unique_id=1452254616 instance=ExtResource("18_2jinp")]
+transform = Transform3D(0.16500679, 0.012683233, 0.18866691, -9.313226e-10, 0.2503996, -0.016833244, -0.18909274, 0.011067688, 0.1646352, 11.780048, 3.8776975, 0.9599121)
+
+[node name="fence2" parent="." unique_id=2026009469 instance=ExtResource("18_2jinp")]
+transform = Transform3D(0.21622762, -0.00083693216, 0.12738998, 0.00019251066, 0.25096124, 0.0013220136, -0.12739259, -0.0010413097, 0.2162252, 10.723906, 4.053551, 0.001974523)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
