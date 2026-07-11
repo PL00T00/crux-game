@@ -17,6 +17,7 @@ var pitch: float = 0.0
 
 #mouse capture
 func _ready() -> void:
+	Global.checkpoint = global_position
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 #Movement
@@ -63,4 +64,4 @@ func die():
 	player_died.emit()
 	# queue_free()
 	await get_tree().create_timer(2.0).timeout
-	self.position = current_spawn_position
+	self.global_position = Global.checkpoint
