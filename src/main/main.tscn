@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://d2uj5pmw8aqgd" path="res://ast/actors/islands/island2.tscn" id="11_erw1m"]
 [ext_resource type="Script" uid="uid://4n8aumpb7ff0" path="res://src/main/checkpoint_1.gd" id="12_w0wra"]
 [ext_resource type="Script" uid="uid://crwoibkih3mw1" path="res://src/main/death_zone.gd" id="13_ibsor"]
-[ext_resource type="PackedScene" uid="uid://nxd6iqegtlbx" path="res://ast/models/trees/wood.blend" id="14_hc2u7"]
 [ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
 [ext_resource type="PackedScene" uid="uid://b06qwdvuh2dmg" path="res://ast/actors/islands/island3.tscn" id="17_hmxxs"]
 
@@ -216,9 +215,6 @@ script = ExtResource("13_ibsor")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZone" unique_id=2141548779]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 shape = SubResource("WorldBoundaryShape3D_ibsor")
-
-[node name="wood" parent="." unique_id=1065090693 instance=ExtResource("14_hc2u7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 563.7729, 6056.7124, 205.58252)
 
 [node name="island1" type="Node3D" parent="." unique_id=247840648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10253525, 0, -0.1800195)
