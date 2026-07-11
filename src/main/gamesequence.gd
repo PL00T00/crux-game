@@ -21,6 +21,7 @@ func toggle_snow_islands() -> void:
 	$"../island2/Icosphere".material_override.albedo_texture = ISLAND_2_SNOW
 	$"../island2/Icosphere".material_override.albedo_color = Color(1, 1, 1, 1)
 	
+	$"../island3/PineTree".queue_free()
 	$"../island3".trees.queue_free()
 	$"../island3".shrubs.queue_free()
 	$"../island3/grass".queue_free()
