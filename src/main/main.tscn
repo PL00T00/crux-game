@@ -29,8 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://ofjpbvgrxwdp" path="res://src/owl/owl.tscn" id="25_jf15o"]
 [ext_resource type="PackedScene" uid="uid://dawtnx5f1pcud" path="res://ast/actors/structures/bridge/bridge_single.tscn" id="28_4iboa"]
 [ext_resource type="Script" uid="uid://ct7xo7ftjwkee" path="res://src/main/spawnpoints.gd" id="29_dsb4l"]
-[ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_game_template/base/nodes/utilities/pause_menu_controller.gd" id="30_wt2p2"]
-[ext_resource type="PackedScene" uid="uid://dohevau5tbon2" path="res://src/scenes/windows/pause_menu_layer.tscn" id="31_40g5d"]
+[ext_resource type="Script" uid="uid://bmlwpkrav3q56" path="res://addons/maaacks_game_template/extras/scripts/win_lose_manager.gd" id="30_wt2p2"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -1376,7 +1375,11 @@ shape = SubResource("BoxShape3D_ky84g")
 
 [node name="Pausemenu" type="Node" parent="." unique_id=961851713]
 script = ExtResource("30_wt2p2")
-pause_menu_packed = ExtResource("31_40g5d")
+
+[node name="WinLose" type="Node" parent="." unique_id=1236900022]
+script = ExtResource("30_wt2p2")
+main_menu_scene_path = "uid://bqiki5gx5m2wg"
+ending_scene_path = "uid://bf6jjai5bul76"
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
