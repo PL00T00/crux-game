@@ -159,9 +159,10 @@ height = 0.001
 radial_segments = 664
 rings = 173
 
-[node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade")]
+[node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1")]
 script = ExtResource("1_3eh75")
 fade = NodePath("gamesequence/sequence/fade")
+cutscene_1 = NodePath("cutscenelayer/cutscene1")
 
 [node name="env" type="Node3D" parent="." unique_id=660599315]
 
