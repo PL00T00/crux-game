@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://crwoibkih3mw1" path="res://src/main/death_zone.gd" id="13_ibsor"]
 [ext_resource type="PackedScene" uid="uid://nxd6iqegtlbx" path="res://ast/models/trees/wood.blend" id="14_hc2u7"]
 [ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
+[ext_resource type="PackedScene" uid="uid://b06qwdvuh2dmg" path="res://ast/actors/islands/island3.tscn" id="17_hmxxs"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -285,6 +286,9 @@ transform = Transform3D(0.05654829, 0, 0.03612934, 0.002531178, 0.08230312, -0.0
 transform = Transform3D(-0.09534083, -0.002023514, -0.033865336, -0.008004863, 0.099506356, 0.016590348, 0.03296784, 0.018309088, -0.093908094, 0.32199496, 2.1182375, -1.1575713)
 
 [node name="island2" parent="." unique_id=1615275776 instance=ExtResource("11_erw1m")]
-transform = Transform3D(0.0022811368, 0, -0.1383796, 0, 0.1383984, 0, 0.1383796, 0, 0.0022811368, 25.315926, -2.5544505, -1.395613)
+transform = Transform3D(0.0022811368, 0, -0.1383796, 0, 0.1383984, 0, 0.1383796, 0, 0.0022811368, 19.086954, 4.7062583, -1.395613)
+
+[node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
+transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 12.968742, -5.756715, 14.10866)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
