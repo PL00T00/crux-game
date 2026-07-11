@@ -29,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://ofjpbvgrxwdp" path="res://src/owl/owl.tscn" id="25_jf15o"]
 [ext_resource type="PackedScene" uid="uid://dawtnx5f1pcud" path="res://ast/actors/structures/bridge/bridge_single.tscn" id="28_4iboa"]
 [ext_resource type="Script" uid="uid://ct7xo7ftjwkee" path="res://src/main/spawnpoints.gd" id="29_dsb4l"]
+[ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_game_template/base/nodes/utilities/pause_menu_controller.gd" id="30_wt2p2"]
+[ext_resource type="PackedScene" uid="uid://dohevau5tbon2" path="res://examples/scenes/windows/pause_menu_layer.tscn" id="31_40g5d"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -1058,7 +1060,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 3.2416644e-08, 1.1438187, 0.015363766, 1.7848533, 0.0055861585, -1.2906724, 0.021246329, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.2416644e-08, 1.1438187, 0.015363765, 1.7848533, 0.005586158, -1.2906724, 0.021246325, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1144,7 +1146,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 3.3247836e-08, 1.1438187, 0.015363763, 1.7848533, 0.0055861576, -1.2906724, 0.021246323, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363762, 1.7848533, 0.005586156, -1.2906724, 0.021246323, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1230,7 +1232,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 3.3247836e-08, 1.1438187, 0.015363763, 1.7848533, 0.0055861576, -1.2906724, 0.021246323, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363762, 1.7848533, 0.005586156, -1.2906724, 0.021246323, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1369,6 +1371,10 @@ collision_mask = 131
 [node name="CollisionShape3D" type="CollisionShape3D" parent="spawnpoints/thirdbridge" unique_id=636746334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27301025, -0.6689215, -0.70736694)
 shape = SubResource("BoxShape3D_ky84g")
+
+[node name="Pausemenu" type="Node" parent="." unique_id=961851713]
+script = ExtResource("30_wt2p2")
+pause_menu_packed = ExtResource("31_40g5d")
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
