@@ -2,8 +2,19 @@
 
 [ext_resource type="Script" uid="uid://dqy8kl7uwf4an" path="res://src/note/note.gd" id="1_bljn1"]
 [ext_resource type="PackedScene" uid="uid://dbmsf23ymvvw2" path="res://src/interactable component/interactable_component.tscn" id="1_jf0q5"]
+[ext_resource type="Texture2D" uid="uid://dikdd5rvqbarn" path="res://ast/textures/oldpaper.png" id="3_nb3pe"]
+[ext_resource type="PackedScene" uid="uid://b851jlcy6oc5e" path="res://ast/models/props/nail.blend" id="4_l04sq"]
 
 [node name="note" type="Node3D" unique_id=463558559]
 script = ExtResource("1_bljn1")
 
 [node name="interactablecomponent" parent="." unique_id=1973211502 instance=ExtResource("1_jf0q5")]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=931622900]
+transform = Transform3D(-1.0434027e-08, 0.23870271, 0, -0.23870271, -1.0434027e-08, 0, 0, 0, 0.23870271, 0, 0, 0)
+texture = ExtResource("3_nb3pe")
+
+[node name="Decal" type="Decal" parent="." unique_id=155244082]
+
+[node name="nail" parent="." unique_id=1797461265 instance=ExtResource("4_l04sq")]
+transform = Transform3D(0.9152708, -0.38911265, -0.104262434, 0, 0.25881907, -0.9659258, 0.40283906, 0.8840837, 0.23688954, 0.06779741, 0.4672398, -0.23076123)
