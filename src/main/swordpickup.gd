@@ -15,8 +15,10 @@ func _process(delta: float) -> void:
 
 
 func _on_collliswordujw_body_entered(body: Node3D) -> void:
-	play_in = true
+	if body.name == "Player":
+		play_in = true
 
 
 func _on_collliswordujw_body_exited(body: Node3D) -> void:
-	play_in = false
+	if body.name == "Player":
+		play_in = false

@@ -28,6 +28,7 @@ func _ready() -> void:
 
 #Movement
 func _physics_process(delta: float) -> void:
+	print(Global.player_weapon)
 	if Global.char_move == true:
 		if not is_on_floor():
 			velocity.y -= 9.76 * delta
@@ -58,6 +59,7 @@ func _physics_process(delta: float) -> void:
 		
 		if spinning == true:
 			$Path3D/PathFollow3D/fists/Node3D2.rotation_degrees.y += ((delta/0.6) * 360)
+		
 		
 		if Input.is_action_just_pressed('ui_g'):
 			if allowed_push == true:

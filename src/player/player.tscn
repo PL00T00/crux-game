@@ -26,11 +26,6 @@ point_count = 2
 collision_layer = 2
 collision_mask = 129
 script = ExtResource("1_4anbu")
-SPEED = null
-ACCELERATION = null
-DECELERATION = null
-JUMP_VELOCITY = null
-GRAVITY = null
 camera = NodePath("Camera")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=588349903]
@@ -75,7 +70,7 @@ mesh = SubResource("SphereMesh_8xryq")
 curve = SubResource("Curve3D_rxibo")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=943549759]
-transform = Transform3D(0.9984882, 0.0016910944, 0.054912146, 2.910379e-10, 0.9995259, -0.030781765, -0.054938108, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
+transform = Transform3D(0.9984881, 0.0016910944, 0.054912146, 2.9103786e-10, 0.9995259, -0.030781765, -0.054938104, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
 
 [node name="fists" type="Area3D" parent="Path3D/PathFollow3D" unique_id=904130234]
 transform = Transform3D(0.999854, 5.8207675e-11, -0.017092397, -0.0002898888, 0.9998563, -0.016957624, 0.017089939, 0.016960101, 0.9997102, -0.00039792978, -0.008153896, 0.023142736)

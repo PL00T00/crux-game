@@ -627,7 +627,8 @@ _surfaces = [{
 size = Vector3(1.5460205, 3.4320068, 4.371521)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ky84g"]
-radius = 0.7866211
+height = 3.284668
+radius = 0.62890625
 
 [node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1", "cutscene_2", "cutscene_3")]
 script = ExtResource("1_3eh75")
@@ -1024,7 +1025,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.935762e-08, 2.4819608, 0.033337507, 3.872889, 0.012121356, -2.8005993, 0.046101693, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935762e-08, 2.4819608, 0.033337507, 3.8728893, 0.012121356, -2.8005993, 0.046101697, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1110,7 +1111,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-transform = Transform3D(-1.1491821, 7.935761e-08, 2.4819608, 0.033337507, 3.8728888, 0.012121356, -2.8005993, 0.04610169, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935762e-08, 2.4819608, 0.033337507, 3.872889, 0.012121356, -2.8005993, 0.046101693, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1196,7 +1197,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-transform = Transform3D(-1.1491821, 7.935761e-08, 2.4819608, 0.033337507, 3.8728888, 0.012121356, -2.8005993, 0.04610169, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935762e-08, 2.4819608, 0.033337507, 3.872889, 0.012121356, -2.8005993, 0.046101693, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1383,15 +1384,16 @@ main_menu_scene_path = "uid://bqiki5gx5m2wg"
 ending_scene_path = "uid://bf6jjai5bul76"
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1232445041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.620313, 5.5340033, 14.57113)
 script = ExtResource("30_40g5d")
 
 [node name="Untitled" parent="Node3D" unique_id=1298264808 instance=ExtResource("31_40g5d")]
-transform = Transform3D(-4.371139e-08, -1, 0, -4.371139e-08, 1.9106855e-15, 1, -1, 4.371139e-08, -4.371139e-08, 13.696008, 4.984623, 14.569345)
+transform = Transform3D(-4.371139e-08, -1, 0, -4.371139e-08, 1.9106855e-15, 1, -1, 4.371139e-08, -4.371139e-08, 0.07074642, -0.41661072, -0.04919529)
 
 [node name="collliswordujw" type="Area3D" parent="Node3D" unique_id=1222147998]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/collliswordujw" unique_id=1904143322]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.572502, 5.629921, 14.598804)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010565758, -0.79346466, 0.016806602)
 shape = SubResource("CylinderShape3D_ky84g")
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
