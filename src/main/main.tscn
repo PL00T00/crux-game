@@ -11,10 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://cv1psfwtltsas" path="res://src/player/player.tscn" id="9_2nke2"]
 [ext_resource type="PackedScene" uid="uid://d4b2x266lv7at" path="res://ast/actors/structures/shacks/shack.tscn" id="10_km7bn"]
 [ext_resource type="PackedScene" uid="uid://d2uj5pmw8aqgd" path="res://ast/actors/islands/island2.tscn" id="11_erw1m"]
-[ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
 [ext_resource type="Script" uid="uid://4n8aumpb7ff0" path="res://src/main/checkpoint_1.gd" id="12_w0wra"]
 [ext_resource type="Script" uid="uid://crwoibkih3mw1" path="res://src/main/death_zone.gd" id="13_ibsor"]
 [ext_resource type="PackedScene" uid="uid://nxd6iqegtlbx" path="res://ast/models/trees/wood.blend" id="14_hc2u7"]
+[ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f6ep0"]
 size = Vector3(5.2706757, 3.5420532, 11.314194)
