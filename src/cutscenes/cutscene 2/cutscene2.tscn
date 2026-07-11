@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://dmwlyfu7t1htk"]
+[gd_scene format=3 uid="uid://cpc7g8ybty7o1"]
 
-[ext_resource type="Script" uid="uid://l54ebtetveyn" path="res://src/cutscenes/cutscene 1/cutscene_1.gd" id="1_e60i5"]
-[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_l7ba8"]
+[ext_resource type="Script" uid="uid://cbyidq7ade5a" path="res://src/cutscenes/cutscene 2/cutscene2.gd" id="1_ld2c5"]
+[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_hp2ri"]
 
 [sub_resource type="Animation" id="Animation_8ax1y"]
-length = 0.001
+length = 4.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,7 +39,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_e60i5"]
@@ -55,9 +55,8 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2.5, 5.9333334),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": ["We've been expecting you for a while now.", "By the time your reading this we'll be long gone,
- but you can still save us.", "Go island to island reading the pages we've left
- behind. You must save the archipelligo."]
+"values": ["The spirit of the islands have been disturbed...", "We are not sure what caused it but the
+south island is now covered in snow.", "That must have something to do with it."]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -90,14 +89,13 @@ _data = {
 &"main": SubResource("Animation_e60i5")
 }
 
-[node name="cutscene1" type="Control" unique_id=90008933 node_paths=PackedStringArray("animation_player")]
+[node name="cutscene2" type="Control" unique_id=90008933 node_paths=PackedStringArray("animation_player")]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_e60i5")
+script = ExtResource("1_ld2c5")
 animation_player = NodePath("AnimationPlayer")
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=928835570]
-visible = false
 layout_mode = 0
 offset_left = -5.0
 offset_top = 497.0
@@ -112,7 +110,7 @@ offset_top = 497.0
 offset_right = 1106.0
 offset_bottom = 628.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_l7ba8")
+theme_override_fonts/font = ExtResource("2_hp2ri")
 theme_override_font_sizes/font_size = 49
 visible_characters = 0
 visible_ratio = 0.0
