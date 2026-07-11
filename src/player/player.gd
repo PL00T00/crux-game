@@ -77,9 +77,9 @@ func _unhandled_input(event):
 			camera.rotation = Vector3(pitch, 0, 0)
 
 #STop mouse capture
-#func _input(event):
-	#if event.is_action_pressed("ui_cancel"):
-		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 signal player_died
 # Die. What more is there to say

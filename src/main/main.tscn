@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://dawtnx5f1pcud" path="res://ast/actors/structures/bridge/bridge_single.tscn" id="28_4iboa"]
 [ext_resource type="Script" uid="uid://ct7xo7ftjwkee" path="res://src/main/spawnpoints.gd" id="29_dsb4l"]
 [ext_resource type="Script" uid="uid://bmlwpkrav3q56" path="res://addons/maaacks_game_template/extras/scripts/win_lose_manager.gd" id="30_wt2p2"]
+[ext_resource type="PackedScene" uid="uid://bcweiufv3h0nj" path="res://ast/models/props/sword/Untitled.blend" id="31_40g5d"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -166,7 +167,7 @@ height = 0.001
 radial_segments = 664
 rings = 173
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_wt2p2"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ts88a"]
 viewport_path = NodePath("interactablecomponent/Contents/UI/SubViewport")
 
 [sub_resource type="SphereMesh" id="SphereMesh_jf15o"]
@@ -864,7 +865,7 @@ idx = 2
 
 [node name="UI" parent="island2/note2/interactablecomponent/Contents" parent_id_path=PackedInt32Array(1177371846, 2114968064) index="0" unique_id=897521712]
 transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, -0.4295025, 0.1793548, -0.07945037)
-texture = SubResource("ViewportTexture_wt2p2")
+texture = SubResource("ViewportTexture_ts88a")
 
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 11.445716, -1.80333, 15.163294)
@@ -1023,7 +1024,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.935757e-08, 2.4819608, 0.033337507, 3.872887, 0.012121356, -2.8005993, 0.046101667, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935758e-08, 2.4819608, 0.033337507, 3.8728871, 0.012121356, -2.8005993, 0.04610167, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1059,7 +1060,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363762, 1.7848533, 0.005586156, -1.2906724, 0.021246323, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.491023e-08, 1.1438187, 0.015363761, 1.7848533, 0.005586155, -1.2906724, 0.021246323, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1109,7 +1110,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-transform = Transform3D(-1.1491821, 7.935757e-08, 2.4819608, 0.033337507, 3.8728867, 0.012121356, -2.8005993, 0.046101663, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935757e-08, 2.4819608, 0.033337507, 3.872887, 0.012121356, -2.8005993, 0.046101667, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1145,7 +1146,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363759, 1.7848533, 0.005586155, -1.2906724, 0.02124632, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363758, 1.7848533, 0.0055861543, -1.2906724, 0.021246318, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1195,7 +1196,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-transform = Transform3D(-1.1491821, 7.935757e-08, 2.4819608, 0.033337507, 3.8728867, 0.012121356, -2.8005993, 0.046101663, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935757e-08, 2.4819608, 0.033337507, 3.872887, 0.012121356, -2.8005993, 0.046101667, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1231,7 +1232,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363759, 1.7848533, 0.005586155, -1.2906724, 0.02124632, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363758, 1.7848533, 0.0055861543, -1.2906724, 0.021246318, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1380,6 +1381,12 @@ script = ExtResource("30_wt2p2")
 script = ExtResource("30_wt2p2")
 main_menu_scene_path = "uid://bqiki5gx5m2wg"
 ending_scene_path = "uid://bf6jjai5bul76"
+
+[node name="Untitled" parent="." unique_id=1313677574 instance=ExtResource("31_40g5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 739.412, 5644.0635, -338.68686)
+
+[node name="Untitled2" parent="." unique_id=907433891 instance=ExtResource("31_40g5d")]
+transform = Transform3D(-4.371139e-08, -1, 1.1924881e-08, 0, 1.1924881e-08, 1, -1, 4.371139e-08, -5.2125306e-16, 13.912451, 4.7038646, 14.619091)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
