@@ -14,4 +14,5 @@ var note9_looked : bool = false
 
 
 func look(idx : int) -> void:
-	print(str(idx))
+	if idx == 1:
+		get_tree().change_scene_to_file("res://src/cutscenes/cutscene 1/cutscene_1.tscn")
