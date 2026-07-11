@@ -1278,7 +1278,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.923267, 5.1838627, -1.4970
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.076202, 8.159668, -2.3851004)
 
 [node name="owl" parent="." unique_id=2117577853 instance=ExtResource("25_jf15o")]
-visible = false
+transform = Transform3D(0.75610346, 0, -0.65445215, 0, 1, 0, 0.65445215, 0, 0.75610346, 1.698811, 1.5695348, -1.0649471)
 
 [node name="bridge_single" parent="." unique_id=355343766 instance=ExtResource("28_4iboa")]
 transform = Transform3D(-0.02150425, 0, -0.103362374, 0, 0.105575636, 0, 0.103362374, 0, -0.02150425, 1.1197814, 3.068417, 14.706235)
