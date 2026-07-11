@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://uu8kxx6c0lf"
-path="res://.godot/imported/wood.blend-0fcd655e6a98b0e8c64bbd2ec89d33d3.scn"
+path="res://.godot/imported/wood.blend-eae24957ea6ee92e0c6caadc0b691740.scn"
 
 [deps]
 
-source_file="res://ast/models/trees/stump/wood.blend"
-dest_files=["res://.godot/imported/wood.blend-0fcd655e6a98b0e8c64bbd2ec89d33d3.scn"]
+source_file="res://ast/models/env/trees/stump/wood.blend"
+dest_files=["res://.godot/imported/wood.blend-eae24957ea6ee92e0c6caadc0b691740.scn"]
 
 [params]
 
