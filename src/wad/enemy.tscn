@@ -11,39 +11,39 @@ radius = 4.7177734
 
 [node name="enemy" type="Node3D" unique_id=1181526048]
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=660802447]
+[node name="enemysmol" type="CharacterBody3D" parent="." unique_id=660802447]
 collision_layer = 131
 collision_mask = 131
 script = ExtResource("1_7y8tt")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=358319476]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="enemysmol" unique_id=358319476]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ky84g")
 
-[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D" unique_id=398815822]
+[node name="Sprite3D" type="Sprite3D" parent="enemysmol" unique_id=398815822]
 texture = ExtResource("2_2q7ve")
 
-[node name="Area3D" type="Area3D" parent="CharacterBody3D" unique_id=1943936155]
+[node name="Area3D" type="Area3D" parent="enemysmol" unique_id=1943936155]
 collision_layer = 131
 collision_mask = 131
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/Area3D" unique_id=668390081]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="enemysmol/Area3D" unique_id=668390081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8628845, 0)
 shape = SubResource("CylinderShape3D_ky84g")
 
-[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D/Area3D/CollisionShape3D" unique_id=2066969789]
+[node name="Sprite3D" type="Sprite3D" parent="enemysmol/Area3D/CollisionShape3D" unique_id=2066969789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.4928107)
 texture = ExtResource("2_2q7ve")
 
-[node name="collide with pusher" type="Area3D" parent="CharacterBody3D" unique_id=2007032980]
+[node name="collide with pusher" type="Area3D" parent="enemysmol" unique_id=2007032980]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/collide with pusher" unique_id=2117517927]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="enemysmol/collide with pusher" unique_id=2117517927]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ky84g")
 
-[connection signal="area_entered" from="CharacterBody3D/Area3D" to="CharacterBody3D" method="_on_area_3d_area_entered"]
-[connection signal="area_exited" from="CharacterBody3D/Area3D" to="CharacterBody3D" method="_on_area_3d_area_exited"]
-[connection signal="body_entered" from="CharacterBody3D/Area3D" to="CharacterBody3D" method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="CharacterBody3D/Area3D" to="CharacterBody3D" method="_on_area_3d_body_exited"]
-[connection signal="area_entered" from="CharacterBody3D/collide with pusher" to="CharacterBody3D" method="_on_collide_with_pusher_area_entered"]
-[connection signal="area_exited" from="CharacterBody3D/collide with pusher" to="CharacterBody3D" method="_on_collide_with_pusher_area_exited"]
+[connection signal="area_entered" from="enemysmol/Area3D" to="enemysmol" method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="enemysmol/Area3D" to="enemysmol" method="_on_area_3d_area_exited"]
+[connection signal="body_entered" from="enemysmol/Area3D" to="enemysmol" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="enemysmol/Area3D" to="enemysmol" method="_on_area_3d_body_exited"]
+[connection signal="area_entered" from="enemysmol/collide with pusher" to="enemysmol" method="_on_collide_with_pusher_area_entered"]
+[connection signal="area_exited" from="enemysmol/collide with pusher" to="enemysmol" method="_on_collide_with_pusher_area_exited"]

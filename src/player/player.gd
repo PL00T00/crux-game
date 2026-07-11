@@ -71,6 +71,15 @@ func die():
 	print("im dieded cro")
 	player_died.emit()
 	# queue_free()
-	await get_tree().create_timer(2.0).timeout
+	#await get_tree().create_timer(2.0).timeout
 	self.global_position = Global.checkpoint
 	velocity.y = 0
+
+
+func _on_collidereadewxd_area_entered(area: Area3D) -> void:
+	pass # Replace with function body.
+
+
+func _on_collidereadewxd_body_entered(body: Node3D) -> void:
+	if body.name == "enemysmol":
+		die()
