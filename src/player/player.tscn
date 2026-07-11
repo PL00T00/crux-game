@@ -50,7 +50,7 @@ mesh = SubResource("CapsuleMesh_sb4vr")
 curve = SubResource("Curve3D_rxibo")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=943549759]
-transform = Transform3D(0.99985373, -0.00028988873, 0.017089933, 2.9103829e-11, 0.999856, 0.016960097, -0.017092392, -0.01695762, 0.9997099, 0, 0.007760219, -0.023281097)
+transform = Transform3D(0.9984893, 0.0016910944, 0.054912146, 2.9103822e-10, 0.9995259, -0.030781765, -0.05493817, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
 
 [node name="fists" type="Area3D" parent="Path3D/PathFollow3D" unique_id=904130234]
 transform = Transform3D(0.999854, 5.8207675e-11, -0.017092397, -0.0002898888, 0.9998563, -0.016957624, 0.017089939, 0.016960101, 0.9997102, -0.00039792978, -0.008153896, 0.023142736)
@@ -64,3 +64,12 @@ texture = ExtResource("3_mf2ua")
 
 [node name="Sprite3D2" type="Sprite3D" parent="Path3D/PathFollow3D/fists" unique_id=1768802804]
 texture = ExtResource("3_mf2ua")
+
+[node name="collidereadewxd" type="Area3D" parent="." unique_id=721214766]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collidereadewxd" unique_id=522919377]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_wfyas")
+
+[connection signal="area_entered" from="collidereadewxd" to="." method="_on_collidereadewxd_area_entered"]
+[connection signal="body_entered" from="collidereadewxd" to="." method="_on_collidereadewxd_body_entered"]
