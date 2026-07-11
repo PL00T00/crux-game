@@ -13,3 +13,9 @@ func look(idx : int) -> void:
 		
 		Global.world.cutscene_2.visible = true
 		Global.world.cutscene_2.animation_player.play(&"main")
+	
+	elif idx == 3:
+		await get_tree().create_timer(0.4).timeout
+		
+		Global.world.cutscene_3.visible = true
+		Global.world.cutscene_3.animation_player.play(&"main")

@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_hp2ri"]
 
 [sub_resource type="Animation" id="Animation_8ax1y"]
-length = 4.4
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
