@@ -1059,7 +1059,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 3.491023e-08, 1.1438187, 0.015363761, 1.7848533, 0.005586155, -1.2906724, 0.021246323, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363759, 1.7848533, 0.005586155, -1.2906724, 0.02124632, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1145,7 +1145,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363758, 1.7848533, 0.0055861543, -1.2906724, 0.021246318, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363757, 1.7848533, 0.005586154, -1.2906724, 0.021246316, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1231,7 +1231,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363758, 1.7848533, 0.0055861543, -1.2906724, 0.021246318, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363757, 1.7848533, 0.005586154, -1.2906724, 0.021246316, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")

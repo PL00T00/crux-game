@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh0v4s4uct11j"
-path="res://.godot/imported/islandview.png-6e7dd5ede5420acca1f03705937c5668.ctex"
+uid="uid://d0svbgbua78cr"
+path="res://.godot/imported/owl2.png-699e15a615c3a4da35732e5affee8a16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ast/2d/islandview.png"
-dest_files=["res://.godot/imported/islandview.png-6e7dd5ede5420acca1f03705937c5668.ctex"]
+source_file="res://ast/textures/owl2.png"
+dest_files=["res://.godot/imported/owl2.png-699e15a615c3a4da35732e5affee8a16.ctex"]
 
 [params]
 
