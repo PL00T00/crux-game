@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b6hnk77pbjfcd"]
+
+[ext_resource type="Script" uid="uid://dqy8kl7uwf4an" path="res://src/note/note.gd" id="1_bljn1"]
+[ext_resource type="PackedScene" uid="uid://dbmsf23ymvvw2" path="res://src/interactable component/interactable_component.tscn" id="1_jf0q5"]
+
+[node name="note" type="Node3D" unique_id=463558559]
+script = ExtResource("1_bljn1")
+
+[node name="interactablecomponent" parent="." unique_id=1973211502 instance=ExtResource("1_jf0q5")]
