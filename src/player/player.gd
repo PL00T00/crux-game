@@ -15,8 +15,7 @@ var speed_timser = 1
 var yaw: float = 0.0
 var pitch: float = 0.0
 
-# Raycasting stuff
-@onready var interaction_ray: RayCast3D = $raycast
+@export var raycast: Area3D
 
 #mouse capture
 func _ready() -> void:
@@ -46,17 +45,6 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, SPEED)
 		
 	move_and_slide()
-	
-	check_note_interaction()
-	
-# checks for notes
-
-func check_note_interaction() -> void:
-	if interaction_ray.is_colliding():
-		var target = interaction_ray.get_collider()
-		if target and target.has_method("Interact"):
-			if Input.is_action_just_pressed("Interact"):
-				target.interact()
 
 #See if mouse move and change where look
 func _unhandled_input(event):
