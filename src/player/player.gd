@@ -45,8 +45,8 @@ func _physics_process(delta: float) -> void:
 	
 	
 	
-	if Input.is_action_pressed('ui_p'):
-		Global.checkpoint = self.global_position
+	#if Input.is_action_pressed('ui_p'):
+		#Global.checkpoint = self.global_position
 
 #See if mouse move and change where look
 func _unhandled_input(event):
