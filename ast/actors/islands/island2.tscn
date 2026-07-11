@@ -134,6 +134,9 @@ size = Vector3(1.9230957, 2.1912842, 8.153931)
 [sub_resource type="BoxShape3D" id="BoxShape3D_x4bd1"]
 size = Vector3(1.9230957, 2.1912842, 8.153931)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8xryq"]
+size = Vector3(1, 8.686401, 36.865234)
+
 [node name="island2" unique_id=1615275776 instance=ExtResource("1_jusbg")]
 
 [node name="Icosphere" parent="." index="0" unique_id=1393296736]
@@ -230,3 +233,14 @@ shape = SubResource("BoxShape3D_x4bd1")
 
 [node name="cactus3" parent="." index="17" unique_id=2040709608 instance=ExtResource("4_vbfjy")]
 transform = Transform3D(0.2711616, 0, 0.830026, 0, 1.2343004, 0, -1.1079227, 0, 0.20314698, 3.0499191, 25.874462, 16.282711)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="18" unique_id=591607418]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=901495505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.574507, 31.972757, -3.2451172)
+shape = SubResource("BoxShape3D_8xryq")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=662953822]
+transform = Transform3D(0.77315444, 0, -0.6342178, 0, 1, 0, 0.6342178, 0, 0.77315444, 11.521948, 31.972757, 23.322472)
+shape = SubResource("BoxShape3D_8xryq")
