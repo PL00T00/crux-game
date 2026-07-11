@@ -80,8 +80,7 @@ _surfaces = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_f6ep0"]
 size = Vector3(5.2706757, 3.5420532, 11.314194)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wfyas"]
-size = Vector3(2469.4968, 1998.011, 1402.0176)
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ibsor"]
 
 [node name="world" type="Node3D" unique_id=1243497675]
 script = ExtResource("1_3eh75")
@@ -184,12 +183,12 @@ shape = SubResource("BoxShape3D_f6ep0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56834507, 2.4188356, -0.591542)
 
 [node name="DeathZone" type="Area3D" parent="." unique_id=482318359]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56834507, 2.4188356, -0.591542)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.770046, 0, 0)
 collision_mask = 2
 script = ExtResource("13_ibsor")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZone" unique_id=2141548779]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0012674, 998.5055, -104.01867)
-shape = SubResource("BoxShape3D_wfyas")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+shape = SubResource("WorldBoundaryShape3D_ibsor")
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
