@@ -8,13 +8,16 @@ func _ready() -> void:
 	
 
 func toggle_snow_islands() -> void:
-	$"../island1/grass".visible = false
-	$"../island1/PineTree1".visible = false
-	$"../island1/PineTree2".visible = false
+	$"../island1/grass".queue_free()
+	$"../island1/PineTree1".queue_free()
+	$"../island1/PineTree2".queue_free()
 	$"../island1/island1/Icosphere".mesh.surface_get_material(0).albedo_texture = ISLAND_1_SNOW
 	
-	$"../island2/grass".visible = false
-	$"../island2/note".visible = false
+	$"../island2/grass".queue_free()
+	$"../island2/note".queue_free()
 	$"../island2".cacti.process_mode = ProcessMode.PROCESS_MODE_DISABLED
-	$"../island2".cacti.visible = false
+	$"../island2".cacti.queue_free()
 	$"../island2/Icosphere".material_override.albedo_texture = ISLAND_2_SNOW
+	$"../island2/Icosphere".material_override.albedo_color = Color(1, 1, 1, 1)
+	
+	
