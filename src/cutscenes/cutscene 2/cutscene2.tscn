@@ -1,12 +1,7 @@
 [gd_scene format=3 uid="uid://cpc7g8ybty7o1"]
 
-<<<<<<<< HEAD:src/cutscenes/cutscene 2/cutscene_2.tscn
-[ext_resource type="Script" uid="uid://cbyidq7ade5a" path="res://src/cutscenes/cutscene 2/cutscene_2.gd" id="1_fsdei"]
-[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_llp82"]
-========
 [ext_resource type="Script" uid="uid://cbyidq7ade5a" path="res://src/cutscenes/cutscene 2/cutscene2.gd" id="1_ld2c5"]
 [ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_hp2ri"]
->>>>>>>> a80d02301b5558301ea4e34b3cf67cfdb662af61:src/cutscenes/cutscene 2/cutscene2.tscn
 
 [sub_resource type="Animation" id="Animation_8ax1y"]
 length = 4.4
