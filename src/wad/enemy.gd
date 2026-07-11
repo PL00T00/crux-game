@@ -60,7 +60,7 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 		print('exit')
 
 
-func _on_area_3d_area_entered(area: Area3D) -> void:
+func _on_area_3d_area_entered(_area: Area3D) -> void:
 	pass
 
 
@@ -74,5 +74,5 @@ func _on_collide_with_pusher_area_entered(area: Area3D) -> void:
 		pushback = false
 
 
-func _on_collide_with_pusher_area_exited(area: Area3D) -> void:
+func _on_collide_with_pusher_area_exited(_area: Area3D) -> void:
 	pass # Replace with function body.

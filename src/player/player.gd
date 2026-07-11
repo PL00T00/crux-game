@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
 @export var SPEED = 1.5
+@export var ACCELERATION = 10.0
+@export var DECELERATION = 12.0
 @export var JUMP_VELOCITY = 3.0
 @export var GRAVITY = 9.76
 var min_pitch: float = deg_to_rad(-80)
@@ -9,13 +11,14 @@ var mouse_sensitivity = 0.002
 var speed_timser = 1
 var current_spawn_position : Vector3 = Vector3(0.568, 2.419, -0.59)
 
+@export var camera: Camera3D
+
+
 # Don't change
 var yaw: float = 0.0
 var pitch: float = 0.0
 
-
-
-#mouse capture
+# mouse capture
 func _ready() -> void:
 	Global.checkpoint = global_position
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -23,7 +26,7 @@ func _ready() -> void:
 #Movement
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		velocity.y -= 10 * delta
+		velocity.y -= GRAVITY * delta
 		
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -31,15 +34,16 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("Left", "Right", "Forward", "Back")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	if Input.is_action_pressed('ui_shift'):
-		speed_timser = 2
+	speed_timser = 2 if Input.is_action_pressed("ui_shift") else 1
+	var target_speed : float = SPEED * speed_timser
+	var target_velocity := direction * target_speed
 	
 	if direction != Vector3.ZERO:
-		velocity.x = direction.x * SPEED * speed_timser
-		velocity.z = direction.z * SPEED * speed_timser
+		velocity.x = move_toward(velocity.x, target_velocity.x, ACCELERATION * delta)
+		velocity.z = move_toward(velocity.z, target_velocity.z, ACCELERATION * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0.0, SPEED)
-		velocity.z = move_toward(velocity.z, 0.0, SPEED)
+		velocity.x = move_toward(velocity.x, 0.0, DECELERATION * delta)
+		velocity.z = move_toward(velocity.z, 0.0, DECELERATION * delta)
 		
 	move_and_slide()
 	Global.character_pos = self.global_position
@@ -59,7 +63,7 @@ func _unhandled_input(event):
 		pitch -= event.relative.y * mouse_sensitivity
 		pitch = clamp(pitch, min_pitch, max_pitch)
 		rotation = Vector3(0, yaw, 0)
-		$Camera3D.rotation = Vector3(pitch, 0, 0)
+		camera.rotation = Vector3(pitch, 0, 0)
 
 #STop mouse capture
 func _input(event):
@@ -77,7 +81,7 @@ func die():
 	velocity.y = 0
 
 
-func _on_collidereadewxd_area_entered(area: Area3D) -> void:
+func _on_collidereadewxd_area_entered(_area: Area3D) -> void:
 	pass # Replace with function body.
 
 
