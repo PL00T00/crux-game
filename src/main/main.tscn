@@ -16,8 +16,8 @@
 [ext_resource type="Script" uid="uid://crwoibkih3mw1" path="res://src/main/death_zone.gd" id="13_ibsor"]
 [ext_resource type="PackedScene" uid="uid://nxd6iqegtlbx" path="res://ast/models/trees/wood.blend" id="14_hc2u7"]
 [ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
+[ext_resource type="PackedScene" uid="uid://dg3tmddwea1av" path="res://ast/actors/structures/fence/fence.tscn" id="16_2jinp"]
 [ext_resource type="PackedScene" uid="uid://b06qwdvuh2dmg" path="res://ast/actors/islands/island3.tscn" id="17_hmxxs"]
-[ext_resource type="PackedScene" uid="uid://d3x31t7tttq6y" path="res://ast/models/structures/fence/fence.blend" id="18_2jinp"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -191,7 +191,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." unique_id=228418535 instance=ExtResource("9_2nke2")]
-transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 0.64962196, 4.7901726, -0.1570425)
+transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 12.008703, 6.3226542, -0.1570425)
 
 [node name="Checkpoint1" type="Area3D" parent="." unique_id=1321416240]
 collision_layer = 128
@@ -280,22 +280,40 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72400814, 1.5136398, 0.810
 [node name="PineTree1" parent="island1" unique_id=1713318891 instance=ExtResource("8_frqgp")]
 transform = Transform3D(0.13501792, 0, 0, 0, 0.13501792, 0, 0, 0, 0.13501792, -0.6787761, 1.614607, 0.37592697)
 
+[node name="PineTree2" parent="island1" unique_id=808783130 instance=ExtResource("8_frqgp")]
+transform = Transform3D(0.13501792, 0, 0, 0, 0.13501792, 0, 0, 0, 0.13501792, 0.5545885, 1.614607, -1.9408739)
+
 [node name="shack" parent="island1" unique_id=1734746455 instance=ExtResource("10_km7bn")]
 transform = Transform3D(0.05654829, 0, 0.03612934, 0.002531178, 0.08230312, -0.003961703, -0.03604057, 0.0057802573, 0.056409337, 0.59333426, 1.6468275, -0.36257315)
 
 [node name="note" parent="island1" unique_id=463558559 instance=ExtResource("15_note")]
 transform = Transform3D(-0.09534083, -0.002023514, -0.033865336, -0.008004863, 0.099506356, 0.016590348, 0.03296784, 0.018309088, -0.093908094, 0.32199496, 2.1182375, -1.1575713)
 
+[node name="fence" parent="island1" unique_id=1452254616 instance=ExtResource("16_2jinp")]
+transform = Transform3D(0.15590373, -0.00060344225, 0.091850325, 0.0001388034, 0.18094724, 0.000953194, -0.09185219, -0.00075080176, 0.15590198, 10.7586155, 4.0829954, 0.22177336)
+
+[node name="fence7" parent="island1" unique_id=755565887 instance=ExtResource("16_2jinp")]
+transform = Transform3D(0.15590373, -0.00060344225, 0.091850325, 0.0001388034, 0.18094724, 0.000953194, -0.09185219, -0.00075080176, 0.15590198, 10.176108, 3.9959507, -0.7670661)
+
+[node name="fence2" parent="island1" unique_id=181483111 instance=ExtResource("16_2jinp")]
+transform = Transform3D(0.115795456, -0.0006034422, 0.13904627, -0.0001907805, 0.18094726, 0.0009441653, -0.13904743, -0.00075080176, 0.11579318, 11.549748, 3.8916705, 0.94753206)
+
+[node name="fence3" parent="island1" unique_id=1431331732 instance=ExtResource("16_2jinp")]
+transform = Transform3D(0.08442302, -0.0006034422, 0.16004752, -0.00038254278, 0.18094727, 0.00088402844, -0.16004819, -0.00075080176, 0.08442054, 12.459324, 3.8779519, 1.4105111)
+
+[node name="fence4" parent="island1" unique_id=866293317 instance=ExtResource("16_2jinp")]
+transform = Transform3D(-0.012619689, -0.0006034422, 0.18050817, -0.0007910623, 0.18094729, 0.000549605, -0.18050744, -0.0007508017, -0.012622163, 13.459026, 3.7182612, 1.3986349)
+
+[node name="fence5" parent="island1" unique_id=631258341 instance=ExtResource("16_2jinp")]
+transform = Transform3D(-0.005401499, -0.0006034422, 0.18086813, -0.0007684843, 0.18094729, 0.00058075564, -0.1808675, -0.0007508017, -0.0054039997, 14.485827, 3.7213876, 1.3268352)
+
+[node name="fence6" parent="island1" unique_id=206910083 instance=ExtResource("16_2jinp")]
+transform = Transform3D(-0.005401499, -0.07566089, 0.16428353, -0.0007684843, 0.16436495, 0.07567306, -0.18086751, 0.0015612002, -0.005227769, 15.661322, 4.098099, 1.2717049)
+
 [node name="island2" parent="." unique_id=1615275776 instance=ExtResource("11_erw1m")]
 transform = Transform3D(0.0022811368, 0, -0.1383796, 0, 0.1383984, 0, 0.1383796, 0, 0.0022811368, 13.654629, 0.2917428, -1.395613)
 
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 12.968742, -0.8947029, 14.535828)
-
-[node name="fence" parent="." unique_id=1452254616 instance=ExtResource("18_2jinp")]
-transform = Transform3D(0.16500679, 0.012683233, 0.18866691, -9.313226e-10, 0.2503996, -0.016833244, -0.18909274, 0.011067688, 0.1646352, 11.780048, 3.8776975, 0.9599121)
-
-[node name="fence2" parent="." unique_id=2026009469 instance=ExtResource("18_2jinp")]
-transform = Transform3D(0.21622762, -0.00083693216, 0.12738998, 0.00019251066, 0.25096124, 0.0013220136, -0.12739259, -0.0010413097, 0.2162252, 10.723906, 4.053551, 0.001974523)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
