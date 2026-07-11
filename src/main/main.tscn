@@ -1017,7 +1017,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.935749e-08, 2.4819608, 0.033337507, 3.8728828, 0.012121356, -2.8005993, 0.04610162, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935749e-08, 2.4819608, 0.033337507, 3.872883, 0.012121356, -2.8005993, 0.046101622, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1103,7 +1103,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-transform = Transform3D(-1.1491821, 7.935749e-08, 2.4819608, 0.033337507, 3.872883, 0.012121356, -2.8005993, 0.046101622, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.93575e-08, 2.4819608, 0.033337507, 3.8728833, 0.012121356, -2.8005993, 0.046101622, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1189,7 +1189,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-transform = Transform3D(-1.1491821, 7.935749e-08, 2.4819608, 0.033337507, 3.872883, 0.012121356, -2.8005993, 0.046101622, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.93575e-08, 2.4819608, 0.033337507, 3.8728833, 0.012121356, -2.8005993, 0.046101622, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1259,7 +1259,7 @@ transform = Transform3D(0.6946261, 0, 0, 0, 0.6946261, 0, 0, 0, 0.6946261, -5.71
 transform = Transform3D(-8.70715e-09, 0, -0.19919637, 0, 0.19919637, 0, 0.19919637, 0, -8.70715e-09, -21.635447, 10.48594, -1.7321739)
 
 [node name="island4" parent="." unique_id=291031492 instance=ExtResource("4_6iek0")]
-transform = Transform3D(-0.07068988, 0, 0.48581702, 0, 0.49093303, 0, -0.48581702, 0, -0.07068988, -7.1487737, 0, 13.411375)
+transform = Transform3D(-0.07068988, 0, 0.48581702, 0, 0.49093303, 0, -0.48581702, 0, -0.07068988, -6.1507583, 0, 13.411375)
 
 [node name="enemy" type="Node3D" parent="." unique_id=244553395]
 
