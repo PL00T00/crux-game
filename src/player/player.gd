@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 	
 # checks for notes
 
-func check_note_interation() -> void:
+func check_note_interaction() -> void:
 	if interaction_ray.is_colliding():
 		var target = interaction_ray.get_collider()
 		if target and target.has_method("Interact"):
