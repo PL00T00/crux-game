@@ -3,14 +3,15 @@
 [ext_resource type="Script" uid="uid://b2ra2gj0fghwc" path="res://src/main/main.gd" id="1_3eh75"]
 [ext_resource type="Texture2D" uid="uid://bm7rkrw4y5m8" path="res://ast/models/islands/textures/island1.png" id="2_ab7mr"]
 [ext_resource type="Environment" uid="uid://c41gu0xs8q63x" path="res://res/env/env_main.tres" id="3_ab7mr"]
+[ext_resource type="VoxelGIData" uid="uid://cuww2ycn0vmi1" path="res://res/voxelgi/main.VoxelGI_data.res" id="3_g523h"]
 [ext_resource type="Script" uid="uid://cs7vbnkib0mr6" path="res://src/main/gamesequence.gd" id="3_nqfqj"]
 [ext_resource type="PackedScene" uid="uid://b57u88ln7xkfw" path="res://ast/actors/islands/island4.tscn" id="4_6iek0"]
 [ext_resource type="PackedScene" uid="uid://brbtya6kw0w2m" path="res://src/grass/grass4.tscn" id="4_30cu5"]
 [ext_resource type="PackedScene" uid="uid://h15b8tpej1mo" path="res://src/grass/grass2.tscn" id="5_jkpqq"]
 [ext_resource type="PackedScene" uid="uid://dmwlyfu7t1htk" path="res://src/cutscenes/cutscene 1/cutscene_1.tscn" id="6_6iek0"]
 [ext_resource type="PackedScene" uid="uid://ca6bvcywib78g" path="res://src/grass/grass3.tscn" id="6_jqarl"]
-[ext_resource type="PackedScene" uid="uid://cifhni2hwt4pr" path="res://ast/actors/rocks/rock_1.tscn" id="7_frqgp"]
-[ext_resource type="PackedScene" uid="uid://dsti02es4bfwp" path="res://ast/env/trees/pine/pinetree.tscn" id="8_frqgp"]
+[ext_resource type="PackedScene" uid="uid://cifhni2hwt4pr" path="res://ast/actors/env/rocks/rock_1.tscn" id="7_frqgp"]
+[ext_resource type="PackedScene" uid="uid://dsti02es4bfwp" path="res://ast/actors/env/trees/pine/pinetree.tscn" id="8_frqgp"]
 [ext_resource type="PackedScene" uid="uid://cv1psfwtltsas" path="res://src/player/player.tscn" id="9_2nke2"]
 [ext_resource type="PackedScene" uid="uid://d4b2x266lv7at" path="res://ast/actors/structures/shacks/shack.tscn" id="10_km7bn"]
 [ext_resource type="PackedScene" uid="uid://d2uj5pmw8aqgd" path="res://ast/actors/islands/island2.tscn" id="11_erw1m"]
@@ -19,9 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
 [ext_resource type="PackedScene" uid="uid://b06qwdvuh2dmg" path="res://ast/actors/islands/island3.tscn" id="17_hmxxs"]
 [ext_resource type="PackedScene" uid="uid://dkc0eaagsq61a" path="res://src/wad/enemy.tscn" id="18_2jinp"]
-[ext_resource type="PackedScene" uid="uid://5xe85ph6ag4x" path="res://ast/actors/bridge/bridge_part.tscn" id="19_6iek0"]
-[ext_resource type="PackedScene" uid="uid://bflgybv8enrx4" path="res://ast/actors/bridge/bridge_posts.tscn" id="19_v0ijp"]
+[ext_resource type="PackedScene" uid="uid://5xe85ph6ag4x" path="res://ast/actors/structures/bridge/bridge_part.tscn" id="19_6iek0"]
+[ext_resource type="PackedScene" uid="uid://bflgybv8enrx4" path="res://ast/actors/structures/bridge/bridge_posts.tscn" id="19_v0ijp"]
 [ext_resource type="Material" uid="uid://dyqd6c2dr2n7x" path="res://res/shad mat/grass_dessert.tres" id="20_v0ijp"]
+[ext_resource type="Material" uid="uid://c6qa5abjfa0n2" path="res://res/shad mat/grass_forrest.tres" id="22_lpaod"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -158,6 +160,18 @@ height = 0.001
 radial_segments = 664
 rings = 173
 
+[sub_resource type="SphereMesh" id="SphereMesh_jf15o"]
+radius = 2.84
+height = 0.001
+radial_segments = 664
+rings = 173
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kiguc"]
+flip_faces = true
+size = Vector2(1, 1)
+subdivide_width = 100
+subdivide_depth = 100
+
 [node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1")]
 script = ExtResource("1_3eh75")
 fade = NodePath("gamesequence/sequence/fade")
@@ -170,11 +184,17 @@ environment = ExtResource("3_ab7mr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="env" unique_id=386701490]
 transform = Transform3D(-0.987897, -0.11951556, 0.09887195, 6.547344e-08, 0.63742393, 0.7705133, -0.15511161, 0.76118773, -0.62970906, 0, 0, 0)
+light_bake_mode = 1
 shadow_enabled = true
 directional_shadow_mode = 0
 directional_shadow_fade_start = 0.0
 directional_shadow_max_distance = 0.0
 directional_shadow_pancake_size = 0.0
+
+[node name="VoxelGI" type="VoxelGI" parent="env" unique_id=1730109337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2543945, -15.729736, 7.3222656)
+size = Vector3(33.32129, 51.459473, 30.304688)
+data = ExtResource("3_g523h")
 
 [node name="gamesequence" type="Node3D" parent="." unique_id=2138326765]
 script = ExtResource("3_nqfqj")
@@ -203,7 +223,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." unique_id=228418535 instance=ExtResource("9_2nke2")]
-transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, -0.011306167, 2.800168, -0.8012066)
+transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 0.39857975, 2.9855986, 0.8566302)
 
 [node name="cutscenelayer" type="CanvasLayer" parent="." unique_id=1773736947]
 
@@ -370,6 +390,9 @@ transform = Transform3D(0.004232641, -1.7049948, 0, 1.7049948, 0.004232641, 0, 0
 [node name="rock3" parent="island2" unique_id=907146308 instance=ExtResource("7_frqgp")]
 transform = Transform3D(0.004232641, -1.7049948, 0, 1.7049948, 0.004232641, 0, 0, 0, 1.705, -5.9417853, 26.162565, 19.598299)
 
+[node name="rock6" parent="island2" unique_id=1289111100 instance=ExtResource("7_frqgp")]
+transform = Transform3D(-0.0028752268, 1.158201, 1.2512345, 1.7049946, 0.004232639, -3.156077e-18, -0.0031061736, 1.2512307, -1.1582046, -16.627077, 22.514862, 25.561775)
+
 [node name="rock4" parent="island2" unique_id=1391629357 instance=ExtResource("7_frqgp")]
 transform = Transform3D(0.004232641, -1.1207988, 1.2848413, 1.7049947, 0.002782377, -0.0031896117, -2.3283064e-10, 1.2848452, 1.1208023, 1.5869691, 27.253418, 16.548574)
 
@@ -379,8 +402,123 @@ transform = Transform3D(0.004232641, -1.1207988, 1.2848413, 1.7049947, 0.0027823
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 11.445716, -1.80333, 15.163294)
 
+[node name="grass" type="Node3D" parent="island3" unique_id=113798700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.284666, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="island3/grass" unique_id=652047748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60871124, -0.34307957, -8.539915)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="island3/grass" unique_id=157067416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6686573, -0.34307957, -6.3540955)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="island3/grass" unique_id=518713776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6668968, -0.17429829, -5.341442)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="island3/grass" unique_id=757498643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6686573, -0.6914787, -0.32159805)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="island3/grass" unique_id=733201082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66690063, -0.11641216, 0.6910553)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="island3/grass" unique_id=1511209986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.337552, -0.5657654, 3.991601)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="island3/grass" unique_id=1456425426]
+transform = Transform3D(0.99326843, -0.11583565, 0, 0.11583565, 0.99326843, 0, 0, 0, 1, 8.890621, -0.23190683, 3.4394662)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="island3/grass" unique_id=1889769356]
+transform = Transform3D(0.9732218, -0.22918035, -0.017768161, 0.22986808, 0.9703101, 0.075227335, 0, -0.07729721, 0.99700814, 8.926555, -0.38404197, -1.4529253)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="island3/grass" unique_id=123161186]
+transform = Transform3D(0.9985699, -0.044417262, -0.029752774, 0.04782854, 0.9908807, 0.12596813, 0.023886291, -0.12721099, 0.99158806, 8.134883, -0.7701162, -5.45911)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="island3/grass" unique_id=1007674856]
+transform = Transform3D(0.9988438, -0.048069067, 0.00076213013, 0.046647754, 0.9652319, -0.25719947, 0.011627703, 0.2569376, 0.96635807, 0.1966551, -0.61692274, 4.5750003)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="island3/grass" unique_id=1384735876]
+transform = Transform3D(0.99115187, -0.13273284, 0, 0.13179085, 0.9841177, 0.118926525, -0.015785456, -0.11787425, 0.99290305, -3.7706413, -0.3715992, -1.9131317)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="island3/grass" unique_id=1375309318]
+transform = Transform3D(0.98960555, -0.14311226, 0.014129284, 0.14278747, 0.989513, 0.021811418, -0.017102592, -0.019567221, 0.9996623, -3.1449108, -0.6780777, -5.2710304)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("SphereMesh_jf15o")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="island3/grass" unique_id=1816049603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1418772, 0.18028224, 1.4492108)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("PlaneMesh_kiguc")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="island3/grass" unique_id=2129810764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1418772, -0.26515213, 2.732636)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("PlaneMesh_kiguc")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="island3/grass" unique_id=1368555791]
+transform = Transform3D(1, 0, 0, 0, 0.9570069, -0.29006523, 0, 0.29006523, 0.9570069, -4.516646, -0.44750303, 2.7397168)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("PlaneMesh_kiguc")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="island3/grass" unique_id=620570753]
+transform = Transform3D(1, 0, 0, 0, 0.9570069, -0.29006523, 0, 0.29006523, 0.9570069, -4.516646, 0.06799955, 1.466986)
+material_override = ExtResource("22_lpaod")
+cast_shadow = 0
+visibility_range_end = 20.0
+mesh = SubResource("PlaneMesh_kiguc")
+
 [node name="island4" parent="." unique_id=291031492 instance=ExtResource("4_6iek0")]
-transform = Transform3D(0.49093303, 0, 0, 0, 0.49093303, 0, 0, 0, 0.49093303, -3.4113407, 0, 13.411375)
+transform = Transform3D(-0.07068988, 0, 0.48581702, 0, 0.49093303, 0, -0.48581702, 0, -0.07068988, -3.4113407, 0, 13.411375)
 
 [node name="enemy" type="Node3D" parent="." unique_id=244553395]
 

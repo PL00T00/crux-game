@@ -33,7 +33,7 @@ data = PackedVector3Array(0.5115, -0.5955, 0.1091, 0.6458, -0.6744, 0.0019999999
 
 [node name="island3" unique_id=1131798287 instance=ExtResource("1_t1ewa")]
 
-[node name="Icosphere" parent="." index="0" unique_id=1825410543]
+[node name="Icosphere" parent="." index="0" unique_id=613582640]
 material_override = SubResource("StandardMaterial3D_gla2c")
 cast_shadow = 0
 

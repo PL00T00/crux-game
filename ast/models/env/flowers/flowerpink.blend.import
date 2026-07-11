@@ -3,21 +3,19 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://th0niwnbajp2"
-path="res://.godot/imported/efa.blend-56b2f8fa988ff9e16fb30d31f92308b9.scn"
+uid="uid://ckffu3csgvey0"
+path="res://.godot/imported/flowerpink.blend-7a2c185b139ca3096c0bd4f3fae54741.scn"
 
 [deps]
 
-source_file="res://ast/env/beep/efa.blend"
-dest_files=["res://.godot/imported/efa.blend-56b2f8fa988ff9e16fb30d31f92308b9.scn"]
+source_file="res://ast/models/env/flowers/flowerpink.blend"
+dest_files=["res://.godot/imported/flowerpink.blend-7a2c185b139ca3096c0bd4f3fae54741.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
-mesh_library/use_node_names_as_mesh_names=false
-array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -46,11 +44,10 @@ blender/nodes/punctual_lights=true
 blender/nodes/cameras=true
 blender/nodes/custom_properties=true
 blender/nodes/modifiers=1
-blender/meshes/vertex_colors=1
+blender/meshes/colors=false
 blender/meshes/uvs=true
 blender/meshes/normals=true
 blender/meshes/export_geometry_nodes_instances=false
-blender/meshes/gpu_instances=false
 blender/meshes/tangents=true
 blender/meshes/skins=2
 blender/meshes/export_bones_deforming_mesh_only=false
@@ -59,5 +56,4 @@ blender/materials/export_materials=1
 blender/animation/limit_playback=true
 blender/animation/always_sample=true
 blender/animation/group_tracks=true
-gltf/naming_version=2
-gltf/texture_map_mode=1
+gltf/naming_version=0
