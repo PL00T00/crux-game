@@ -13,7 +13,8 @@ var current_spawn_position = null
 var yaw: float = 0.0
 var pitch: float = 0.0
 
-
+# Raycasting stuff
+@onready var interaction_ray: RayCast3D = $raycast
 
 #mouse capture
 func _ready() -> void:
@@ -32,7 +33,9 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed('ui_shift'):
 		speed_timser = 2
-	
+	else:
+		speed_timser = 1
+		
 	if direction != Vector3.ZERO:
 		velocity.x = direction.x * SPEED * speed_timser
 		velocity.z = direction.z * SPEED * speed_timser
@@ -41,9 +44,23 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, SPEED)
 		
 	move_and_slide()
+	
+	check_note_interaction()
+	
+# checks for notes
+
+func check_note_interation() -> void:
+	if interaction_ray.is_colliding():
+		var target = interaction_ray.get_collider()
+		if target and target.has_method("Interact"):
+			if Input.is_action_just_pressed("Interact"):
+				target.interact()
 
 #See if mouse move and change where look
 func _unhandled_input(event):
+	if get_tree().paused:
+		return
+		
 	if event is InputEventMouseMotion:
 		yaw -= event.relative.x * mouse_sensitivity
 		pitch -= event.relative.y * mouse_sensitivity
