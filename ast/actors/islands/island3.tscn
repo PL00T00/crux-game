@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bfeu7067uva0n" path="res://ast/actors/env/trees/normal/tree1.tscn" id="3_tcmpl"]
 [ext_resource type="PackedScene" uid="uid://cifhni2hwt4pr" path="res://ast/actors/env/rocks/rock_1.tscn" id="4_e8uoy"]
 [ext_resource type="PackedScene" uid="uid://c855wuotwp7n7" path="res://ast/models/env/shrubs/shrub1.blend" id="5_hupic"]
+[ext_resource type="PackedScene" uid="uid://vr2n2608idow" path="res://ast/models/env/shrubs/shrub5.blend" id="6_namxx"]
+[ext_resource type="PackedScene" uid="uid://c4tnwf0fy8niv" path="res://ast/models/env/shrubs/shrub2.blend" id="7_qcl8k"]
+[ext_resource type="PackedScene" uid="uid://msjke6ojohhp" path="res://ast/models/env/shrubs/shrub6.blend" id="8_u2xbe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gla2c"]
 diffuse_mode = 3
@@ -57,14 +60,35 @@ shape = SubResource("ConcavePolygonShape3D_tcmpl")
 [node name="tree1" parent="." index="2" unique_id=890076586 instance=ExtResource("3_tcmpl")]
 transform = Transform3D(0.22968203, 0, 0, 0, 0.22968203, 0, 0, 0, 0.22968203, -1.7301021, 15.336922, -2.1739178)
 
-[node name="tree2" parent="." index="3" unique_id=555956544 instance=ExtResource("3_tcmpl")]
+[node name="tree3" parent="." index="3" unique_id=867981286 instance=ExtResource("3_tcmpl")]
+transform = Transform3D(0.22968203, 0, 0, 0, 0.22968203, 0, 0, 0, 0.22968203, 10.164755, 15.61561, 4.1315594)
+
+[node name="tree2" parent="." index="4" unique_id=555956544 instance=ExtResource("3_tcmpl")]
 transform = Transform3D(-1.003972e-08, 0.22968203, 0, -0.22968203, -1.003972e-08, 0, 0, 0, 0.22968203, 3.0178947, 14.930313, -2.1739178)
 
-[node name="rock1" parent="." index="4" unique_id=1455276671 instance=ExtResource("4_e8uoy")]
+[node name="rock1" parent="." index="5" unique_id=1455276671 instance=ExtResource("4_e8uoy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.694815, 13.754812, -1.1595249)
 
-[node name="rock2" parent="." index="5" unique_id=659521132 instance=ExtResource("4_e8uoy")]
+[node name="rock2" parent="." index="6" unique_id=659521132 instance=ExtResource("4_e8uoy")]
 transform = Transform3D(-0.7523171, -8.881784e-16, 0.65880114, 0.27521664, -0.90856034, 0.31428325, 0.5985606, 0.41775367, 0.68352544, 9.178952, 15.093409, -0.8731186)
 
-[node name="shrub1" parent="." index="6" unique_id=156251602 instance=ExtResource("5_hupic")]
+[node name="shrub1" parent="." index="7" unique_id=156251602 instance=ExtResource("5_hupic")]
 transform = Transform3D(0.6083791, 0, 0, 0, 0.35762063, 0, 0, 0, 0.6083791, 0.91820306, 15.403263, 1.2755629)
+
+[node name="shrub2" parent="." index="8" unique_id=1602405527 instance=ExtResource("5_hupic")]
+transform = Transform3D(0.6083791, 0, 0, 0, 0.43031415, 0, 0, 0, 0.6083791, 5.785358, 14.920798, 3.170452)
+
+[node name="shrub5" parent="." index="9" unique_id=670570591 instance=ExtResource("6_namxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1313444, 15.193489, 3.3717675)
+
+[node name="shrub6" parent="." index="10" unique_id=43402782 instance=ExtResource("6_namxx")]
+transform = Transform3D(0.87273014, 0, -0.48820293, 0, 1, 0, 0.48820293, 0, 0.87273014, 0.1313444, 15.2096195, -3.4598079)
+
+[node name="shrub7" parent="." index="11" unique_id=403973502 instance=ExtResource("6_namxx")]
+transform = Transform3D(0.87273014, 0, -0.48820293, 0, 1, 0, 0.48820293, 0, 0.87273014, 3.0985405, 15.547043, -7.230454)
+
+[node name="shrub4" parent="." index="12" unique_id=1589195055 instance=ExtResource("7_qcl8k")]
+transform = Transform3D(0.7350421, 0, 0, 0, 0.7350421, 0, 0, 0, 0.7350421, 8.006473, 14.95137, -6.633665)
+
+[node name="shrub8" parent="." index="13" unique_id=1379795519 instance=ExtResource("8_u2xbe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.747774, 15.501987, 0.19263116)

@@ -162,7 +162,7 @@ height = 0.001
 radial_segments = 664
 rings = 173
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_jf15o"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_w0ps7"]
 viewport_path = NodePath("interactablecomponent/Contents/UI/SubViewport")
 
 [sub_resource type="SphereMesh" id="SphereMesh_jf15o"]
@@ -356,7 +356,7 @@ resource_name = "Material"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(1, 0.5411765, 0.101960786, 1)
+albedo_color = Color(0, 0.45866036, 0.08023632, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2pn40"]
@@ -411,7 +411,7 @@ resource_name = "Material.006"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.6591897, 0.41756207, 0.02466027, 1)
+albedo_color = Color(0.43529412, 0.49803922, 0.011764706, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pj0de"]
@@ -466,7 +466,7 @@ resource_name = "Material.007"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.67355835, 0.49027336, 0, 1)
+albedo_color = Color(0.27450982, 0.49019608, 0, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_uwm55"]
@@ -568,7 +568,7 @@ resource_name = "Material.006"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.74466985, 0.47294563, 0.030346438, 1)
+albedo_color = Color(0.43137255, 0.6313726, 0.03137255, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lurby"]
@@ -854,7 +854,7 @@ idx = 2
 
 [node name="UI" parent="island2/note2/interactablecomponent/Contents" parent_id_path=PackedInt32Array(1177371846, 2114968064) index="0" unique_id=897521712]
 transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, -0.4295025, 0.1793548, -0.07945037)
-texture = SubResource("ViewportTexture_jf15o")
+texture = SubResource("ViewportTexture_w0ps7")
 
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 11.445716, -1.80333, 15.163294)
@@ -1021,7 +1021,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.935746e-08, 2.4819608, 0.033337507, 3.8728817, 0.012121356, -2.8005993, 0.046101604, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935748e-08, 2.4819608, 0.033337507, 3.8728824, 0.012121356, -2.8005993, 0.04610161, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1057,7 +1057,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 3.740382e-08, 1.1438187, 0.0153637845, 1.7848533, 0.0055861613, -1.2906724, 0.021246353, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.5741426e-08, 1.1438187, 0.015363782, 1.7848533, 0.0055861613, -1.2906724, 0.02124635, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1070,6 +1070,12 @@ mesh = SubResource("ArrayMesh_3gfcj")
 
 [node name="owl" parent="." unique_id=2117577853 instance=ExtResource("25_jf15o")]
 visible = false
+
+[node name="rock1" parent="." unique_id=296104989 instance=ExtResource("7_frqgp")]
+transform = Transform3D(-0.9678892, 0, 0.25137734, 0, 1, 0, -0.25137734, 0, -0.9678892, 14.281361, 3.6515293, 10.89251)
+
+[node name="rock2" parent="." unique_id=1894763755 instance=ExtResource("7_frqgp")]
+transform = Transform3D(0.8650711, 0.09507775, 0.49255666, 0.03915388, -0.99167633, 0.122657076, 0.50011873, -0.08682163, -0.86159325, 11.033632, 5.1719823, 10.013067)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 
