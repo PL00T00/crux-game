@@ -316,7 +316,7 @@ graph_offset = Vector2(-180.277, 49)
 
 [node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_f6vo5")]
 script = ExtResource("2_ojfib")
-game_scene_path = "res://examples/scenes/game_scene/game_ui.tscn"
+game_scene_path = "uid://yuab7pujov7d"
 options_packed_scene = ExtResource("3_gtqgk")
 credits_packed_scene = ExtResource("4_wd3ic")
 
@@ -339,6 +339,9 @@ text = "Crux Game"
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
 modulate = Color(1, 1, 1, 0)
+
+[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
+text = "Memory"
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" parent_id_path=PackedInt32Array(1532800992) index="0" unique_id=580041505]
 modulate = Color(1, 1, 1, 0)

@@ -43,6 +43,6 @@ func _on_mimic_raycast_box_area_entered(area: Area3D) -> void:
 	if area.is_in_group(&"player_raycast"):
 		mimic_raycast_box_active = true
 
-func _on_mimic_raycast_box_area_exited(atrea: Area3D) -> void:
+func _on_mimic_raycast_box_area_exited(area: Area3D) -> void:
 	if area.is_in_group(&"player_raycast"):
 		mimic_raycast_box_active = false
