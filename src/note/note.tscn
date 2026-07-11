@@ -5,11 +5,22 @@
 [ext_resource type="PackedScene" uid="uid://b851jlcy6oc5e" path="res://ast/models/props/nail.blend" id="4_l04sq"]
 [ext_resource type="PackedScene" uid="uid://tljq7w2osh4g" path="res://ast/models/props/note.blend" id="4_nb3pe"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1i3hq"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_m2f1o"]
+sky_material = SubResource("ProceduralSkyMaterial_1i3hq")
+
+[sub_resource type="Environment" id="Environment_e3mdf"]
+background_mode = 2
+sky = SubResource("Sky_m2f1o")
+
 [sub_resource type="InputEventAction" id="InputEventAction_75gw0"]
 action = &"Interact"
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_l04sq"]
-viewport_path = NodePath("Contents/UI/SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_2akpw"]
+viewport_path = NodePath("interactablecomponent/Contents/UI/SubViewport")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1i3hq"]
 size = Vector3(7, 5, 7)
@@ -36,6 +47,13 @@ _surfaces = [{
 [node name="note" type="Node3D" unique_id=463558559]
 script = ExtResource("1_bljn1")
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=374193033]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1085629439]
+environment = SubResource("Environment_e3mdf")
+
 [node name="interactablecomponent" type="Node3D" parent="." unique_id=1973211502 node_paths=PackedStringArray("Contents_Node", "UI_Sprite_Node", "SubViewport_Node")]
 script = ExtResource("2_nb3pe")
 Contents_Node = NodePath("Contents")
@@ -50,7 +68,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 billboard = 1
 no_depth_test = true
 render_priority = 1
-texture = SubResource("ViewportTexture_l04sq")
+texture = SubResource("ViewportTexture_2akpw")
 
 [node name="SubViewport" type="SubViewport" parent="interactablecomponent/Contents/UI" unique_id=1051459148]
 transparent_bg = true
@@ -78,7 +96,8 @@ shape = SubResource("BoxShape3D_1i3hq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004302904, 0.004043594, 0.021759063)
 shape = SubResource("BoxShape3D_m2f1o")
 
-[node name="writing" type="Decal" parent="." unique_id=155244082]
+[node name="note" parent="." unique_id=1500033932 instance=ExtResource("4_nb3pe")]
+transform = Transform3D(-2.8282647e-08, 0, 0.64703155, 0, 0.64703155, 0, -0.64703155, 0, -2.8282647e-08, 0, 0, -0.07189748)
 
 [node name="nail" parent="." unique_id=1797461265 instance=ExtResource("4_l04sq")]
 transform = Transform3D(0.9152708, -0.38911265, -0.104262434, 0, 0.25881907, -0.9659258, 0.40283906, 0.8840837, 0.23688954, 0.06779741, 0.4672398, -0.23076123)
@@ -86,9 +105,6 @@ transform = Transform3D(0.9152708, -0.38911265, -0.104262434, 0, 0.25881907, -0.
 [node name="MeshInstance3D" type="MeshInstance3D" parent="nail/Cube" parent_id_path=PackedInt32Array(1797461265, 2070352725) index="0" unique_id=1523671101]
 material_override = SubResource("StandardMaterial3D_hc2u7")
 mesh = SubResource("ArrayMesh_nb3pe")
-
-[node name="note" parent="." unique_id=1500033932 instance=ExtResource("4_nb3pe")]
-transform = Transform3D(-2.8282647e-08, 0, 0.64703155, 0, 0.64703155, 0, -0.64703155, 0, -2.8282647e-08, 0, 0, -0.07189748)
 
 [connection signal="body_entered" from="interactablecomponent/Contents/playerareabox" to="interactablecomponent" method="_on_player_area_box_body_entered"]
 [connection signal="body_exited" from="interactablecomponent/Contents/playerareabox" to="interactablecomponent" method="_on_player_area_box_body_exited"]
