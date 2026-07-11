@@ -1401,5 +1401,6 @@ shape = SubResource("CylinderShape3D_ky84g")
 [connection signal="body_entered" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_entered"]
 [connection signal="body_exited" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_exited"]
 
+[editable path="island2"]
 [editable path="island2/note"]
 [editable path="island2/note/nail"]
