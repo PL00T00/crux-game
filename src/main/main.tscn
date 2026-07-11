@@ -399,6 +399,10 @@ transform = Transform3D(0.004232641, -1.1207988, 1.2848413, 1.7049947, 0.0027823
 [node name="rock5" parent="island2" unique_id=1299013634 instance=ExtResource("7_frqgp")]
 transform = Transform3D(0.004232641, -1.1207988, 1.2848413, 1.7049947, 0.002782377, -0.0031896117, -2.3283064e-10, 1.2848452, 1.1208023, -2.6459858, 24.25739, -18.42595)
 
+[node name="note2" parent="island2" unique_id=1177371846 instance=ExtResource("15_note")]
+transform = Transform3D(0.4789936, 0.07383996, -0.54751, -0.04923311, 0.7274625, 0.05503725, 0.55026877, 0.00081117434, 0.48151654, -5.214367, 31.008778, 20.59167)
+idx = 2
+
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 11.445716, -1.80333, 15.163294)
 
