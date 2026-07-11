@@ -54,6 +54,7 @@ func _physics_process(delta: float) -> void:
 #See if mouse move and change where look
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
+		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		yaw -= event.relative.x * mouse_sensitivity
 		pitch -= event.relative.y * mouse_sensitivity
 		pitch = clamp(pitch, min_pitch, max_pitch)

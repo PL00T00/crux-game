@@ -4,5 +4,8 @@
 
 [node name="owl" unique_id=2117577853 instance=ExtResource("1_lvc7t")]
 
-[node name="metarig" parent="." index="6" unique_id=1676567469]
+[node name="Light" parent="." index="0" unique_id=364771980]
+visible = false
+
+[node name="metarig" parent="." index="4" unique_id=1773560039]
 visible = false
