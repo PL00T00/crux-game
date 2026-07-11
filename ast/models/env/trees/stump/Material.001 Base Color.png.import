@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0x5w4pf0gwje"
-path.s3tc="res://.godot/imported/Material.001 Base Color.png-869800894e3d845f83c47b63f3fa5194.s3tc.ctex"
+path.s3tc="res://.godot/imported/Material.001 Base Color.png-f1d8f2d6a1f1d9b00befda89d5e811b9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://ast/models/trees/stump/Material.001 Base Color.png"
-dest_files=["res://.godot/imported/Material.001 Base Color.png-869800894e3d845f83c47b63f3fa5194.s3tc.ctex"]
+source_file="res://ast/models/env/trees/stump/Material.001 Base Color.png"
+dest_files=["res://.godot/imported/Material.001 Base Color.png-f1d8f2d6a1f1d9b00befda89d5e811b9.s3tc.ctex"]
 
 [params]
 

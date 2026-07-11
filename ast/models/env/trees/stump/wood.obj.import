@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://hisjuqlppefl"
-path="res://.godot/imported/wood.obj-307c02e6df396edf103dcb4a211e7756.mesh"
+path="res://.godot/imported/wood.obj-443bb0f73f9e8bdb147c546b32445be4.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wood.obj-307c02e6df396edf103dcb4a211e7756.mesh"]
+files=["res://.godot/imported/wood.obj-443bb0f73f9e8bdb147c546b32445be4.mesh"]
 
-source_file="res://ast/models/trees/stump/wood.obj"
-dest_files=["res://.godot/imported/wood.obj-307c02e6df396edf103dcb4a211e7756.mesh", "res://.godot/imported/wood.obj-307c02e6df396edf103dcb4a211e7756.mesh"]
+source_file="res://ast/models/env/trees/stump/wood.obj"
+dest_files=["res://.godot/imported/wood.obj-443bb0f73f9e8bdb147c546b32445be4.mesh", "res://.godot/imported/wood.obj-443bb0f73f9e8bdb147c546b32445be4.mesh"]
 
 [params]
 
