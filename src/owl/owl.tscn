@@ -3,8 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://y4tcd7co4a5a" path="res://ast/actors/owl.blend" id="1_lvc7t"]
 [ext_resource type="Script" uid="uid://c7oaddm4d0pvq" path="res://src/owl/owl.gd" id="2_vrsl7"]
 
-[node name="owl" unique_id=2117577853 instance=ExtResource("1_lvc7t")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vrsl7"]
+size = Vector3(2.1936035, 2.3135986, 1.7597656)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mxbt5"]
+size = Vector3(0.8654174, 1.2773132, 0.0962525)
+
+[node name="owl" unique_id=2117577853 node_paths=PackedStringArray("Contents_Node", "UI_Sprite_Node") instance=ExtResource("1_lvc7t")]
 script = ExtResource("2_vrsl7")
+Contents_Node = NodePath("Contents")
+UI_Sprite_Node = NodePath("")
 
 [node name="Light" parent="." index="0" unique_id=364771980]
 visible = false
@@ -17,3 +25,22 @@ visible = false
 
 [node name="metarig" parent="." index="4" unique_id=1773560039]
 visible = false
+
+[node name="Contents" type="Node3D" parent="." index="5" unique_id=1454349698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.060235888, 0)
+
+[node name="Label3D" type="Label3D" parent="Contents" index="0" unique_id=755238240]
+text = "[E]"
+
+[node name="playerareabox" type="Area3D" parent="Contents" index="1" unique_id=612458171]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Contents/playerareabox" index="0" unique_id=1136852839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13049316, 0.17730713, -0.12939453)
+shape = SubResource("BoxShape3D_vrsl7")
+
+[node name="raycastbox" type="Area3D" parent="Contents" index="2" unique_id=863901055]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Contents/raycastbox" index="0" unique_id=1378372292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004302904, 0.004043594, 0.021759063)
+shape = SubResource("BoxShape3D_mxbt5")
