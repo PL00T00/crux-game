@@ -11,10 +11,14 @@ config_version=5
 [application]
 
 config/name="Crux Game"
-config/version="v0.0.1"
-run/main_scene="uid://yuab7pujov7d"
+config/version="0.0.1"
+run/main_scene="uid://vbdknh4l1ydq"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://cilojgvyo1tjc"
+
+[audio]
+
+buses/default_bus_layout="uid://srx40t0urnsx"
 
 [autoload]
 
@@ -26,6 +30,14 @@ CutsceneUi="*uid://wv4m8djm2xq"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
+
+[gui]
+
+theme/custom="res://examples/resources/themes/orangetheme.tres"
 
 [input]
 
@@ -74,11 +86,22 @@ ui_g={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+
 [layer_names]
 
 3d_physics/layer_1="objects"
 3d_physics/layer_2="player"
 3d_physics/layer_8="checkpoints"
+
+[maaacks_game_template]
+
+disable_install_audio_busses=true
+disable_update_check=false
+disable_install_wizard=true
+copy_path="res://examples/"
 
 [physics]
 

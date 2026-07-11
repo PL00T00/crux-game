@@ -45,7 +45,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_e60i5"]
 resource_name = "main"
-length = 14.0
+length = 11.61
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
