@@ -161,7 +161,7 @@ height = 0.001
 radial_segments = 664
 rings = 173
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_w0ps7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_jf15o"]
 viewport_path = NodePath("interactablecomponent/Contents/UI/SubViewport")
 
 [sub_resource type="SphereMesh" id="SphereMesh_jf15o"]
@@ -412,7 +412,7 @@ idx = 2
 
 [node name="UI" parent="island2/note2/interactablecomponent/Contents" parent_id_path=PackedInt32Array(1177371846, 2114968064) index="0" unique_id=897521712]
 transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, -0.4295025, 0.1793548, -0.07945037)
-texture = SubResource("ViewportTexture_w0ps7")
+texture = SubResource("ViewportTexture_jf15o")
 
 [node name="island3" parent="." unique_id=1131798287 instance=ExtResource("17_hmxxs")]
 transform = Transform3D(0.45519558, 0, 0, 0, 0.45519558, 0, 0, 0, 0.45519558, 11.445716, -1.80333, 15.163294)
