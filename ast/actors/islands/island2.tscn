@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ctfed8awaov23" path="res://ast/models/islands/island2.blend" id="1_jusbg"]
 [ext_resource type="Texture2D" uid="uid://bmkyaphffuns0" path="res://ast/models/islands/textures/island2.png" id="2_c1hc2"]
+[ext_resource type="PackedScene" uid="uid://dg3tmddwea1av" path="res://ast/actors/structures/fence/fence.tscn" id="3_uy137"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0wra"]
 diffuse_mode = 3
@@ -57,7 +58,7 @@ _surfaces = [{
 
 [node name="island2" unique_id=1615275776 instance=ExtResource("1_jusbg")]
 
-[node name="Icosphere" parent="." index="0" unique_id=901051324]
+[node name="Icosphere" parent="." index="0" unique_id=1393296736]
 material_override = SubResource("StandardMaterial3D_w0wra")
 cast_shadow = 0
 
@@ -74,10 +75,34 @@ shape = SubResource("ConcavePolygonShape3D_uy137")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Icosphere/StaticBody3D" index="1" unique_id=78605343]
 shape = SubResource("ConcavePolygonShape3D_c1hc2")
 
-[node name="Torus" parent="." index="1" unique_id=622796748]
+[node name="Torus" parent="." index="1" unique_id=1302608906]
 material_override = SubResource("StandardMaterial3D_uiq76")
 cast_shadow = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Torus" index="0" unique_id=823187397]
 material_override = SubResource("StandardMaterial3D_kuvay")
 mesh = SubResource("ArrayMesh_c1hc2")
+
+[node name="fence" parent="." index="2" unique_id=1452254616 instance=ExtResource("3_uy137")]
+transform = Transform3D(-0.6450223, -0.0054960605, 1.1372582, 0.0010029264, 1.3074375, 0.00688732, -1.137271, 0.004270174, -0.645009, 10.027199, 27.393764, 21.834297)
+
+[node name="fence7" parent="." index="3" unique_id=1729054791 instance=ExtResource("3_uy137")]
+transform = Transform3D(-0.6450223, -0.0054960605, 1.1372582, 0.0010029264, 1.3074375, 0.00688732, -1.137271, 0.004270174, -0.645009, 2.81392, 26.76482, 25.924873)
+
+[node name="fence8" parent="." index="4" unique_id=578438752 instance=ExtResource("3_uy137")]
+transform = Transform3D(-1.0738298, -0.12732908, 0.73492646, 0.0010029264, 1.2880163, 0.22461957, -0.74587435, 0.18504663, -1.0577661, -3.4648933, 26.428148, 30.176224)
+
+[node name="fence2" parent="." index="5" unique_id=806898496 instance=ExtResource("3_uy137")]
+transform = Transform3D(-0.99076253, -0.0054960605, 0.8531115, -0.0013784879, 1.3074377, 0.006822083, -0.853128, 0.0042701736, -0.9907545, 15.364687, 26.011341, 16.205162)
+
+[node name="fence3" parent="." index="6" unique_id=928186244 instance=ExtResource("3_uy137")]
+transform = Transform3D(-1.1462196, -0.0054960605, 0.62895983, -0.0027640697, 1.3074378, 0.0063875634, -0.62897784, 0.0042701736, -1.146215, 18.817822, 25.912218, 9.689041)
+
+[node name="fence4" parent="." index="7" unique_id=1174873951 instance=ExtResource("3_uy137")]
+transform = Transform3D(-1.3055853, -0.00549606, -0.06969186, -0.005715835, 1.3074379, 0.003971181, 0.069674075, 0.0042701736, -1.3055909, 18.851078, 24.758371, 2.4652328)
+
+[node name="fence5" parent="." index="8" unique_id=24337759 instance=ExtResource("3_uy137")]
+transform = Transform3D(-1.3073269, -0.00549606, -0.017501114, -0.005552697, 1.3074379, 0.00419626, 0.017483123, 0.0042701736, -1.3073318, 18.454645, 24.78096, -4.9614716)
+
+[node name="fence6" parent="." index="9" unique_id=990150868 instance=ExtResource("3_uy137")]
+transform = Transform3D(-1.307327, 0.0022682035, -0.01820305, -0.005552697, 1.1876218, 0.546777, 0.01748312, 0.54680073, -1.1874948, 18.196348, 27.502897, -13.460442)
