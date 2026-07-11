@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://b3102qfuggd1u"]
 
-[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="1_k445i"]
+[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://res/font/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="1_k445i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0sbc"]
 content_margin_left = 4.0

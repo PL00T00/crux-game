@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://hp3i8pghs1q2"
-path="res://.godot/imported/FacultyGlyphic-Regular.ttf-182bcba1888c105bf4b268ff72366f21.fontdata"
+path="res://.godot/imported/FacultyGlyphic-Regular.ttf-cd0079b54805bb7e8128650fe22c7b8c.fontdata"
 
 [deps]
 
-source_file="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf"
-dest_files=["res://.godot/imported/FacultyGlyphic-Regular.ttf-182bcba1888c105bf4b268ff72366f21.fontdata"]
+source_file="res://res/font/Faculty_Glyphic/FacultyGlyphic-Regular.ttf"
+dest_files=["res://.godot/imported/FacultyGlyphic-Regular.ttf-cd0079b54805bb7e8128650fe22c7b8c.fontdata"]
 
 [params]
 
