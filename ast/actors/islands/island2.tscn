@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ctfed8awaov23" path="res://ast/models/islands/island2.blend" id="1_jusbg"]
 [ext_resource type="Texture2D" uid="uid://bmkyaphffuns0" path="res://ast/models/islands/textures/island2.png" id="2_c1hc2"]
 [ext_resource type="PackedScene" uid="uid://dg3tmddwea1av" path="res://ast/actors/structures/fence/fence.tscn" id="3_uy137"]
+[ext_resource type="PackedScene" uid="uid://c8sq4f78xx6ip" path="res://ast/actors/env/trees/cactus/cactus.tscn" id="4_vbfjy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0wra"]
 diffuse_mode = 3
@@ -101,3 +102,27 @@ transform = Transform3D(-1.3073269, -0.00549606, -0.017501114, -0.005552697, 1.3
 
 [node name="fence6" parent="." index="9" unique_id=990150868 instance=ExtResource("3_uy137")]
 transform = Transform3D(-1.307327, 0.0022682035, -0.01820305, -0.005552697, 1.1876218, 0.546777, 0.01748312, 0.54680073, -1.1874948, 18.196348, 27.502897, -13.460442)
+
+[node name="cactus" parent="." index="10" unique_id=1308372263 instance=ExtResource("4_vbfjy")]
+transform = Transform3D(0.82010406, 0, 0.5939061, 0, 1.3354297, 0, -0.79274863, 0, 0.6144, -4.4625206, 25.903717, 19.702406)
+
+[node name="cactus2" parent="." index="11" unique_id=1908544417 instance=ExtResource("4_vbfjy")]
+transform = Transform3D(-0.47660452, 0, -0.77635074, 0, 1.2343004, 0, 1.0362767, 0, -0.35705927, -11.1136055, 24.601593, 10.363891)
+
+[node name="cactus4" parent="." index="12" unique_id=1545957318 instance=ExtResource("4_vbfjy")]
+transform = Transform3D(0.6791582, 0, -0.6865326, 0, 1.2343004, 0, 0.9163872, 0, 0.5088071, -1.5610504, 24.601593, -0.069506645)
+
+[node name="cactus7" parent="." index="13" unique_id=575357604 instance=ExtResource("4_vbfjy")]
+transform = Transform3D(0.6791582, 0, -0.6865326, 0, 1.2343004, 0, 0.9163872, 0, 0.5088071, 9.88763, 23.828514, -6.1065893)
+
+[node name="cactus8" parent="." index="14" unique_id=1390464169 instance=ExtResource("4_vbfjy")]
+transform = Transform3D(0.25538898, 0, 0.8328291, 0, 1.2343004, 0, -1.1116645, 0, 0.19133049, -10.408762, 22.647274, -0.7795191)
+
+[node name="cactus5" parent="." index="15" unique_id=26309283 instance=ExtResource("4_vbfjy")]
+transform = Transform3D(0.069581814, -1.2278054, -0.07033731, 0.048307598, 0.10487927, -0.85066444, 1.1374735, 0.07065346, 0.04042977, 12.291929, 24.128273, 6.755911)
+
+[node name="cactus6" parent="." index="16" unique_id=324839165 instance=ExtResource("4_vbfjy")]
+transform = Transform3D(-0.85351706, 0.81823003, 0.0211478, 0.048307613, 0.10487928, -0.8506646, -0.7551135, -0.9181491, -0.07832416, -9.748587, 21.979416, -5.622012)
+
+[node name="cactus3" parent="." index="17" unique_id=2040709608 instance=ExtResource("4_vbfjy")]
+transform = Transform3D(0.2711616, 0, 0.830026, 0, 1.2343004, 0, -1.1079227, 0, 0.20314698, 3.0499191, 25.874462, 16.282711)

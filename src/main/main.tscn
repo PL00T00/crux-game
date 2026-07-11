@@ -202,7 +202,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." unique_id=228418535 instance=ExtResource("9_2nke2")]
-transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, -0.011306167, 16.92138, 15.782049)
+transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 0.39857975, 2.9855986, 0.8566302)
 
 [node name="cutscenelayer" type="CanvasLayer" parent="." unique_id=1773736947]
 
