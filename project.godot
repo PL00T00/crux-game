@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Global="*uid://wd4k3tsb5dlg"
 NotesManager="*uid://cqvygvoo2n2go"
 CutsceneUi="*uid://wv4m8djm2xq"
 

@@ -7,18 +7,17 @@ var min_pitch: float = deg_to_rad(-80)
 var max_pitch: float = deg_to_rad(80)
 var mouse_sensitivity = 0.002
 var speed_timser = 1
-
-@export var health: int = 100
-@export var attack: int = 10
+var current_spawn_position : Vector3 = Vector3(0.568, 2.419, -0.59)
 
 # Don't change
 var yaw: float = 0.0
 var pitch: float = 0.0
 
-@export var raycast: Area3D
+
 
 #mouse capture
 func _ready() -> void:
+	Global.checkpoint = global_position
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 #Movement
@@ -34,9 +33,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed('ui_shift'):
 		speed_timser = 2
-	else:
-		speed_timser = 1
-		
+	
 	if direction != Vector3.ZERO:
 		velocity.x = direction.x * SPEED * speed_timser
 		velocity.z = direction.z * SPEED * speed_timser
@@ -45,12 +42,14 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, SPEED)
 		
 	move_and_slide()
+	
+	
+	
+	if Input.is_action_pressed('ui_p'):
+		Global.checkpoint = self.global_position
 
 #See if mouse move and change where look
 func _unhandled_input(event):
-	if get_tree().paused:
-		return
-		
 	if event is InputEventMouseMotion:
 		yaw -= event.relative.x * mouse_sensitivity
 		pitch -= event.relative.y * mouse_sensitivity
@@ -66,7 +65,9 @@ func _input(event):
 signal player_died
 # Die. What more is there to say
 func die():
-	queue_free()
+	print("im dieded cro")
 	player_died.emit()
+	# queue_free()
 	await get_tree().create_timer(2.0).timeout
-	get_tree().reload_current_scene() # Restart the level
+	self.global_position = Global.checkpoint
+	velocity.y = 0

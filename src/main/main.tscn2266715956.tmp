@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://cv1psfwtltsas" path="res://src/player/player.tscn" id="9_2nke2"]
 [ext_resource type="PackedScene" uid="uid://d4b2x266lv7at" path="res://ast/actors/structures/shacks/shack.tscn" id="10_km7bn"]
 [ext_resource type="PackedScene" uid="uid://d2uj5pmw8aqgd" path="res://ast/actors/islands/island2.tscn" id="11_erw1m"]
-[ext_resource type="PackedScene" uid="uid://b6hnk77pbjfcd" path="res://src/note/note.tscn" id="15_note"]
 [ext_resource type="Script" uid="uid://4n8aumpb7ff0" path="res://src/main/checkpoint_1.gd" id="12_w0wra"]
 [ext_resource type="Script" uid="uid://crwoibkih3mw1" path="res://src/main/death_zone.gd" id="13_ibsor"]
 [ext_resource type="PackedScene" uid="uid://nxd6iqegtlbx" path="res://ast/models/trees/wood.blend" id="14_hc2u7"]
@@ -101,7 +100,7 @@ directional_shadow_max_distance = 0.0
 directional_shadow_pancake_size = 0.0
 
 [node name="Player" parent="." unique_id=228418535 instance=ExtResource("9_2nke2")]
-transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 0.64962196, 4.7901726, -0.1570425)
+transform = Transform3D(0.2638876, 0, 0, 0, 0.2638876, 0, 0, 0, 0.2638876, 25.464903, 4.7901726, -2.974163)
 
 [node name="Checkpoint1" type="Area3D" parent="." unique_id=1321416240]
 collision_layer = 128
@@ -191,9 +190,6 @@ transform = Transform3D(0.13501792, 0, 0, 0, 0.13501792, 0, 0, 0, 0.13501792, -0
 
 [node name="shack" parent="Node3D/island1" unique_id=1734746455 instance=ExtResource("10_km7bn")]
 transform = Transform3D(0.05654829, 0, 0.03612934, 0.002531178, 0.08230312, -0.003961703, -0.03604057, 0.0057802573, 0.056409337, 0.59333426, 1.6468275, -0.36257315)
-
-[node name="note" parent="Node3D/island1" unique_id=463558559 instance=ExtResource("15_note")]
-transform = Transform3D(-0.09534083, -0.002023514, -0.033865336, -0.008004863, 0.099506356, 0.016590348, 0.03296784, 0.018309088, -0.093908094, 0.32199496, 2.1182375, -1.1575713)
 
 [node name="island2" parent="Node3D" unique_id=1615275776 instance=ExtResource("11_erw1m")]
 transform = Transform3D(0.0022811368, 0, -0.1383796, 0, 0.1383984, 0, 0.1383796, 0, 0.0022811368, 25.315926, -2.5544505, -1.395613)
