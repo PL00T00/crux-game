@@ -235,6 +235,15 @@ mesh = SubResource("ArrayMesh_30cu5")
 [node name="rock1" parent="island1" unique_id=1455276671 instance=ExtResource("7_frqgp")]
 transform = Transform3D(0.34118226, 0, 0, 0, 0.34118226, 0, 0, 0, 0.34118226, -0.7341784, 1.438517, -1.1756892)
 
+[node name="rock2" parent="island1" unique_id=1828115442 instance=ExtResource("7_frqgp")]
+transform = Transform3D(-0.24125229, 0.24125229, 0, -0.24125229, -0.24125229, 0, 0, 0, 0.34118226, -0.05054742, 1.7120769, 1.4996251)
+
+[node name="rock3" parent="island1" unique_id=830561701 instance=ExtResource("7_frqgp")]
+transform = Transform3D(-0.24125229, 0.24125229, 0, -0.24125229, -0.24125229, 0, 0, 0, 0.34118226, -0.10230476, 1.5939726, -0.79444516)
+
+[node name="rock4" parent="island1" unique_id=1794836414 instance=ExtResource("7_frqgp")]
+transform = Transform3D(-0.24125227, -0.2412523, 0, 0.2412523, -0.24125227, 0, 0, 0, 0.34118223, 0.6622169, 1.6695246, -1.166361)
+
 [node name="grass2" parent="island1" unique_id=2102496936 instance=ExtResource("4_30cu5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2575223, 1.503423, -2.007791)
 
@@ -294,6 +303,9 @@ transform = Transform3D(0.15590373, -0.00060344225, 0.091850325, 0.0001388034, 0
 
 [node name="fence7" parent="island1" unique_id=755565887 instance=ExtResource("16_2jinp")]
 transform = Transform3D(0.15590373, -0.00060344225, 0.091850325, 0.0001388034, 0.18094724, 0.000953194, -0.09185219, -0.00075080176, 0.15590198, 10.176108, 3.9959507, -0.7670661)
+
+[node name="fence8" parent="island1" unique_id=1267595684 instance=ExtResource("16_2jinp")]
+transform = Transform3D(0.10076424, -0.025897134, 0.14804971, 0.00013880339, 0.17825937, 0.031086985, -0.15029758, -0.017197631, 0.099285915, 9.573485, 3.9493558, -1.6262279)
 
 [node name="fence2" parent="island1" unique_id=181483111 instance=ExtResource("16_2jinp")]
 transform = Transform3D(0.115795456, -0.0006034422, 0.13904627, -0.0001907805, 0.18094726, 0.0009441653, -0.13904743, -0.00075080176, 0.11579318, 11.549748, 3.8916705, 0.94753206)
