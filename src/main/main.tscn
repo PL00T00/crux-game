@@ -203,7 +203,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2839347, 1.5268586, 1.36503
 shape = SubResource("BoxShape3D_f6ep0")
 
 [node name="SpawnPoint" type="Marker3D" parent="Checkpoint1" unique_id=1239087369]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56834507, 2.4188356, -0.591542)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0167958, 1.9339067, -0.5580823)
 
 [node name="DeathZone" type="Area3D" parent="." unique_id=482318359]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.770046, 0, 0)
