@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dceb8x6ju87k2"]
 
 [ext_resource type="Script" uid="uid://cwc5vc3hsglqx" path="res://src/cutscenes/cutscene 3/cutscene3.gd" id="1_3xfnr"]
-[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://ast/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_fikqc"]
+[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://res/font/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="2_fikqc"]
 
 [sub_resource type="Animation" id="Animation_8ax1y"]
 length = 0.001

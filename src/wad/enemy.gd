@@ -30,13 +30,13 @@ func _physics_process(delta: float) -> void:
 			var input_dir = Vector3(0, 1, 0)
 			var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 			if pushback == false:
-				velocity.x = -direction.x * SPEED* 0.1
-				velocity.z = -direction.z * SPEED* 0.1
+				velocity.x = -direction.x * SPEED* 0.2
+				velocity.z = -direction.z * SPEED* 0.2
 			else:
 				velocity -= get_gravity() * delta 
-				velocity.x = direction.x * SPEED* 0.2
-				velocity.z = direction.z * SPEED* 0.2
-				velocity.y = direction.y * SPEED* 0.8
+				velocity.x = direction.x * SPEED * 0.3
+				velocity.z = direction.z * SPEED * 0.3
+				velocity.y = direction.y * SPEED * 1.2
 
 		move_and_slide()
 

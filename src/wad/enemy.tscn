@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dkc0eaagsq61a"]
 
 [ext_resource type="Script" uid="uid://ljnkritrth7" path="res://src/wad/enemy.gd" id="1_7y8tt"]
-[ext_resource type="Texture2D" uid="uid://dk81nli4w7aht" path="res://icon.svg" id="2_2q7ve"]
+[ext_resource type="PackedScene" uid="uid://uxiro8sb102a" path="res://ast/models/blob/blob.blend" id="2_oyd63"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyd63"]
+radius = 1.4094238
+height = 2.8188477
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ky84g"]
 height = 18.302795
@@ -19,11 +21,11 @@ collision_mask = 131
 script = ExtResource("1_7y8tt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="enemysmol" unique_id=358319476]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.01303711, 0)
 shape = SubResource("CapsuleShape3D_oyd63")
 
-[node name="Sprite3D" type="Sprite3D" parent="enemysmol" unique_id=398815822]
-texture = ExtResource("2_2q7ve")
+[node name="blob" parent="enemysmol" unique_id=1816979697 instance=ExtResource("2_oyd63")]
+transform = Transform3D(-1.3190647e-08, 0, 0.3017668, 0, 0.3017668, 0, -0.3017668, 0, -1.3190647e-08, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="enemysmol" unique_id=1943936155]
 collision_layer = 131

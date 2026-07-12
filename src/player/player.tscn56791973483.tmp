@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cv1psfwtltsas"]
+
+[ext_resource type="Script" uid="uid://w8etymur1nmf" path="res://src/player/player.gd" id="1_4anbu"]
+[ext_resource type="Texture2D" uid="uid://88h5uq5r1kt4" path="res://ast/textures/hand-modified.png" id="2_rxibo"]
+[ext_resource type="PackedScene" uid="uid://bcweiufv3h0nj" path="res://ast/models/props/sword/Untitled.blend" id="3_mf2ua"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfyas"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sb4vr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sb4vr"]
+size = Vector3(0.05, 0.05, 4.5302734)
+
+[sub_resource type="SphereMesh" id="SphereMesh_8xryq"]
+
+[sub_resource type="Curve3D" id="Curve3D_rxibo"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0.007760219, -0.023281097, 0, 0, 0, 0, 0, 0, -0.032104492, 0.025756836, -0.6067734),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ky84g"]
+
+[node name="Player" type="CharacterBody3D" unique_id=228418535 node_paths=PackedStringArray("camera") groups=["player_body"]]
+collision_layer = 2
+collision_mask = 129
+script = ExtResource("1_4anbu")
+camera = NodePath("Camera")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=588349903]
+shape = SubResource("CapsuleShape3D_wfyas")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=696841266]
+visible = false
+mesh = SubResource("CapsuleMesh_sb4vr")
+
+[node name="Camera" type="Camera3D" parent="." unique_id=326084241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9551823, 0)
+
+[node name="raycast" type="Area3D" parent="Camera" unique_id=1782305286 groups=["player_raycast"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera/raycast" unique_id=355197411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3772619)
+shape = SubResource("BoxShape3D_sb4vr")
+
+[node name="hudlayer" type="CanvasLayer" parent="Camera" unique_id=1314478079]
+
+[node name="Control" type="Control" parent="Camera/hudlayer" unique_id=255940996]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Camera/hudlayer/Control" unique_id=247128358]
+position = Vector2(4.9999704, 5.000001)
+scale = Vector2(4.003116, 4.001604)
+mesh = SubResource("SphereMesh_8xryq")
+
+[node name="Path3D" type="Path3D" parent="." unique_id=1475349851]
+curve = SubResource("Curve3D_rxibo")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=943549759]
+transform = Transform3D(0.9984882, 0.0016910944, 0.054912146, 2.910379e-10, 0.9995259, -0.030781765, -0.054938108, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
+
+[node name="fists" type="Area3D" parent="Path3D/PathFollow3D" unique_id=904130234]
+transform = Transform3D(0.999854, 5.8207675e-11, -0.017092397, -0.0002898888, 0.9998563, -0.016957624, 0.017089939, 0.016960101, 0.9997102, -0.00039792978, -0.008153896, 0.023142736)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/fists" unique_id=238822417]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_ky84g")
+
+[node name="Node3D" type="Node3D" parent="Path3D/PathFollow3D/fists" unique_id=787800864]
+transform = Transform3D(0.50000006, -5.820766e-11, 0, 0, 0.5, -1.1175871e-08, 0, 1.3038516e-08, 0.50000006, 0.014416944, 0.73964304, 0.9620177)
+
+[node name="Sprite3D3" type="Sprite3D" parent="Path3D/PathFollow3D/fists/Node3D" unique_id=800800159]
+transform = Transform3D(0.10000003, -1.4551915e-11, 4.656613e-10, 0, 0.1, -1.3969839e-09, -1.3969839e-09, 9.313226e-10, 0.10000003, 0.4593955, -0.06816281, -1.4345449)
+flip_h = true
+texture = ExtResource("2_rxibo")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Path3D/PathFollow3D/fists/Node3D" unique_id=1768802804]
+transform = Transform3D(0.100000024, -1.4551915e-11, 4.656613e-10, 1.4551915e-11, 0.1, -1.3969839e-09, -9.313226e-10, 9.313226e-10, 0.100000024, -0.34651044, -0.070277564, -1.4650307)
+texture = ExtResource("2_rxibo")
+
+[node name="Node3D2" type="Node3D" parent="Path3D/PathFollow3D/fists" unique_id=998327108]
+
+[node name="Untitled" parent="Path3D/PathFollow3D/fists/Node3D2" unique_id=1298264808 instance=ExtResource("3_mf2ua")]
+transform = Transform3D(0.28480706, 0.95845264, -0.015960213, 0.89343286, -0.27144518, -0.35790837, -0.34737098, 0.0876752, -0.9336209, -0.049267657, 0.8637225, 1.4401162)
+
+[node name="collidereadewxd" type="Area3D" parent="." unique_id=721214766]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collidereadewxd" unique_id=522919377]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_wfyas")
+
+[connection signal="area_entered" from="collidereadewxd" to="." method="_on_collidereadewxd_area_entered"]
+[connection signal="body_entered" from="collidereadewxd" to="." method="_on_collidereadewxd_body_entered"]

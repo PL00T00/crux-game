@@ -1,17 +1,17 @@
 extends CharacterBody3D
 
-@export var SPEED = 1.5
-@export var ACCELERATION = 10.0
-@export var DECELERATION = 12.0
-@export var JUMP_VELOCITY = 3.0
-@export var GRAVITY = 9.76
+var SPEED = 1.5
+var ACCELERATION = 10.0
+var DECELERATION = 12.0
+var JUMP_VELOCITY = 3.0
+var GRAVITY = 9.76
 var min_pitch: float = deg_to_rad(-80)
 var max_pitch: float = deg_to_rad(80)
 var mouse_sensitivity = 0.002
 var speed_timser = 1
 var current_spawn_position : Vector3 = Vector3(0.568, 2.419, -0.59)
 var allowed_push = true
-
+var spinning = false
 
 
 @export var camera: Camera3D
@@ -28,26 +28,27 @@ func _ready() -> void:
 
 #Movement
 func _physics_process(delta: float) -> void:
+	print(Global.player_weapon)
 	if Global.char_move == true:
 		if not is_on_floor():
-			velocity.y -= GRAVITY * delta
+			velocity.y -= 9.76 * delta
 			
 		if Input.is_action_just_pressed("Jump") and is_on_floor():
-			velocity.y = JUMP_VELOCITY
+			velocity.y = 3
 
 		var input_dir := Input.get_vector("Left", "Right", "Forward", "Back")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		
 		speed_timser = 2 if Input.is_action_pressed("ui_shift") else 1
-		var target_speed : float = SPEED * speed_timser
+		var target_speed : float = 1.5 * speed_timser
 		var target_velocity := direction * target_speed
 		
 		if direction != Vector3.ZERO:
-			velocity.x = move_toward(velocity.x, target_velocity.x, ACCELERATION * delta)
-			velocity.z = move_toward(velocity.z, target_velocity.z, ACCELERATION * delta)
+			velocity.x = move_toward(velocity.x, target_velocity.x, 10 * delta)
+			velocity.z = move_toward(velocity.z, target_velocity.z, 10 * delta)
 		else:
-			velocity.x = move_toward(velocity.x, 0.0, DECELERATION * delta)
-			velocity.z = move_toward(velocity.z, 0.0, DECELERATION * delta)
+			velocity.x = move_toward(velocity.x, 0.0, 12 * delta)
+			velocity.z = move_toward(velocity.z, 0.0, 12 * delta)
 			
 		move_and_slide()
 		Global.character_pos = self.global_position
@@ -56,14 +57,25 @@ func _physics_process(delta: float) -> void:
 		#if Input.is_action_pressed('ui_p'):
 			#Global.checkpoint = self.global_position
 		
+		if spinning == true:
+			$Path3D/PathFollow3D/fists/Node3D2.rotation_degrees.y += ((delta/0.6) * 360)
+		
+		
 		if Input.is_action_just_pressed('ui_g'):
 			if allowed_push == true:
 				allowed_push = false
-				$Path3D/PathFollow3D.progress_ratio = 0.9999999
-				await get_tree().create_timer(0.6).timeout
-				$Path3D/PathFollow3D.progress_ratio = 0.0
-				await get_tree().create_timer(1).timeout
-				allowed_push = true
+				if Global.player_weapon == '':
+					$Path3D/PathFollow3D.progress_ratio = 0.9999999
+					await get_tree().create_timer(0.6).timeout
+					$Path3D/PathFollow3D.progress_ratio = 0.0
+					await get_tree().create_timer(1).timeout
+					allowed_push = true
+				elif Global.player_weapon == 'sword':
+					spinning = true
+					await get_tree().create_timer(0.6).timeout
+					spinning = false
+					await get_tree().create_timer(1).timeout
+					allowed_push = true
 
 #See if mouse move and change where look
 func _unhandled_input(event):
@@ -77,9 +89,9 @@ func _unhandled_input(event):
 			camera.rotation = Vector3(pitch, 0, 0)
 
 #STop mouse capture
-#func _input(event):
-	#if event.is_action_pressed("ui_cancel"):
-		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 signal player_died
 # Die. What more is there to say
