@@ -13,4 +13,4 @@ func _on_body_entered(body: Node3D) -> void:
 
 func sacrifice():
 	print("game_won")
-	$"../Camera3D".make_current()
+	$WinLose.game_won()0
