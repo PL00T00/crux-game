@@ -18,14 +18,6 @@ func _physics_process(delta: float) -> void:
 			plane_normal = Vector3(0,1,0)
 			self.look_at(target_pos, plane_normal)
 			
-			
-			
-			
-			
-			
-			
-
-
 			# Get the input direction and handle the movement/deceleration.
 			var input_dir = Vector3(0, 1, 0)
 			var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
