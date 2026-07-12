@@ -8,9 +8,12 @@ var char_in_area = false
 var pushback = false
 var health = 10
 
+signal died
+
 func _physics_process(delta: float) -> void:
 	if Global.char_move == true:
 		if health == 0:
+			died.emit()
 			queue_free()
 		if not is_on_floor():
 				velocity += get_gravity() * delta

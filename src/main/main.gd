@@ -13,3 +13,7 @@ func _ready() -> void:
 func _on_bossenablearea_body_entered(body: Node3D) -> void:
 	if body.is_in_group(&"player_body"):
 		$boss.process_mode = Node.PROCESS_MODE_INHERIT
+
+
+func _on_enemyboss_died() -> void:
+	await get_tree().create_timer(1.5).timeout
