@@ -1025,7 +1025,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.935762e-08, 2.4819608, 0.033337507, 3.8728893, 0.012121356, -2.8005993, 0.046101697, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.9357626e-08, 2.4819608, 0.033337507, 3.8728895, 0.012121356, -2.8005993, 0.046101697, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1061,7 +1061,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 3.1585447e-08, 1.1438187, 0.015363753, 1.7848533, 0.005586154, -1.2906724, 0.02124631, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.075425e-08, 1.1438187, 0.01536375, 1.7848533, 0.005586154, -1.2906724, 0.021246308, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1111,7 +1111,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-transform = Transform3D(-1.1491821, 7.935762e-08, 2.4819608, 0.033337507, 3.872889, 0.012121356, -2.8005993, 0.046101693, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935762e-08, 2.4819608, 0.033337507, 3.8728893, 0.012121356, -2.8005993, 0.046101697, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1147,7 +1147,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 3.075425e-08, 1.1438187, 0.01536375, 1.7848533, 0.005586154, -1.2906724, 0.021246308, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363748, 1.7848533, 0.005586154, -1.2906724, 0.021246305, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1197,7 +1197,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-transform = Transform3D(-1.1491821, 7.935762e-08, 2.4819608, 0.033337507, 3.872889, 0.012121356, -2.8005993, 0.046101693, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935762e-08, 2.4819608, 0.033337507, 3.8728893, 0.012121356, -2.8005993, 0.046101697, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1233,7 +1233,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 3.075425e-08, 1.1438187, 0.01536375, 1.7848533, 0.005586154, -1.2906724, 0.021246308, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363748, 1.7848533, 0.005586154, -1.2906724, 0.021246305, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1391,6 +1391,8 @@ script = ExtResource("30_40g5d")
 transform = Transform3D(-4.371139e-08, -1, 0, -4.371139e-08, 1.9106855e-15, 1, -1, 4.371139e-08, -4.371139e-08, 0.07074642, -0.41661072, -0.04919529)
 
 [node name="collliswordujw" type="Area3D" parent="Node3D" unique_id=1222147998]
+collision_layer = 4607
+collision_mask = 12799
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/collliswordujw" unique_id=1904143322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010565758, -0.79346466, 0.016806602)

@@ -70,7 +70,7 @@ mesh = SubResource("SphereMesh_8xryq")
 curve = SubResource("Curve3D_rxibo")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=943549759]
-transform = Transform3D(0.9984881, 0.0016910944, 0.054912146, 2.9103786e-10, 0.9995259, -0.030781765, -0.054938104, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
+transform = Transform3D(0.998488, 0.0016910944, 0.054912146, 2.9103783e-10, 0.9995259, -0.030781765, -0.0549381, 0.030735277, 0.99801636, 0, 0.007760219, -0.023281097)
 
 [node name="fists" type="Area3D" parent="Path3D/PathFollow3D" unique_id=904130234]
 transform = Transform3D(0.999854, 5.8207675e-11, -0.017092397, -0.0002898888, 0.9998563, -0.016957624, 0.017089939, 0.016960101, 0.9997102, -0.00039792978, -0.008153896, 0.023142736)
@@ -95,6 +95,7 @@ texture = ExtResource("2_rxibo")
 
 [node name="Untitled" parent="Path3D/PathFollow3D/fists/Node3D2" unique_id=1298264808 instance=ExtResource("3_mf2ua")]
 transform = Transform3D(0.28480706, 0.95845264, -0.015960213, 0.89343286, -0.27144518, -0.35790837, -0.34737098, 0.0876752, -0.9336209, -0.049267657, 0.8637225, 1.4401162)
+visible = false
 
 [node name="collidereadewxd" type="Area3D" parent="." unique_id=721214766]
 

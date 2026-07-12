@@ -28,7 +28,6 @@ func _ready() -> void:
 
 #Movement
 func _physics_process(delta: float) -> void:
-	print(Global.player_weapon)
 	if Global.char_move == true:
 		if not is_on_floor():
 			velocity.y -= 9.76 * delta
@@ -71,9 +70,11 @@ func _physics_process(delta: float) -> void:
 					await get_tree().create_timer(1).timeout
 					allowed_push = true
 				elif Global.player_weapon == 'sword':
+					$Path3D/PathFollow3D/fists/Node3D2/Untitled.visible = true
 					spinning = true
 					await get_tree().create_timer(0.6).timeout
 					spinning = false
+					$Path3D/PathFollow3D/fists/Node3D2/Untitled.visible = false
 					await get_tree().create_timer(1).timeout
 					allowed_push = true
 
