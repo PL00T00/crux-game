@@ -60,7 +60,7 @@ func _physics_process(delta: float) -> void:
 			$Path3D/PathFollow3D/fists/Node3D2.rotation_degrees.y += ((delta/0.6) * 360)
 		
 		
-		if Input.is_action_just_pressed('ui_g'):
+		if Input.is_action_just_pressed("ui_lef"):
 			if allowed_push == true:
 				allowed_push = false
 				if Global.player_weapon == '':
@@ -97,7 +97,6 @@ func _input(event):
 signal player_died
 # Die. What more is there to say
 func die():
-	print("im dieded cro")
 	player_died.emit()
 	# queue_free()
 	#await get_tree().create_timer(2.0).timeout

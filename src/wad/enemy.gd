@@ -18,14 +18,6 @@ func _physics_process(delta: float) -> void:
 			plane_normal = Vector3(0,1,0)
 			self.look_at(target_pos, plane_normal)
 			
-			
-			
-			
-			
-			
-			
-
-
 			# Get the input direction and handle the movement/deceleration.
 			var input_dir = Vector3(0, 1, 0)
 			var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -55,13 +47,11 @@ func _physics_process(delta: float) -> void:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		char_in_area = true
-		print('enetr')
 
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name == "Player":
 		char_in_area = false
-		print('exit')
 
 
 func _on_area_3d_area_entered(_area: Area3D) -> void:
@@ -73,7 +63,6 @@ func _on_collide_with_pusher_area_entered(area: Area3D) -> void:
 		pass
 	elif area.name == "fists":
 		health -= 1
-		print('yes')
 		pushback = true
 		await get_tree().create_timer(1).timeout
 		pushback = false

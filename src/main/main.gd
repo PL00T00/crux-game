@@ -8,3 +8,8 @@ extends Node3D
 
 func _ready() -> void:
 	Global.world = $"."
+
+
+func _on_bossenablearea_body_entered(body: Node3D) -> void:
+	if body.is_in_group(&"player_body"):
+		$boss.process_mode = Node.PROCESS_MODE_INHERIT

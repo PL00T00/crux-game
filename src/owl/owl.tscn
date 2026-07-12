@@ -2,9 +2,102 @@
 
 [ext_resource type="PackedScene" uid="uid://y4tcd7co4a5a" path="res://ast/actors/owl.blend" id="1_lvc7t"]
 [ext_resource type="Script" uid="uid://c7oaddm4d0pvq" path="res://src/owl/owl.gd" id="2_vrsl7"]
+[ext_resource type="FontFile" uid="uid://hp3i8pghs1q2" path="res://res/font/Faculty_Glyphic/FacultyGlyphic-Regular.ttf" id="3_mxbt5"]
 
-[node name="owl" unique_id=2117577853 instance=ExtResource("1_lvc7t")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vrsl7"]
+size = Vector3(2.1936035, 2.3135986, 1.7597656)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mxbt5"]
+size = Vector3(0.8654174, 1.2773132, 0.0962525)
+
+[sub_resource type="Animation" id="Animation_8ax1y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_e60i5"]
+resource_name = "main"
+length = 11.62
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5.9333334, 7.79),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Hello, I exist now apparently.", "I would've been telling you what happened but I think I'm in the wrong timeline", "uh yeah look around for notes and watch out for the green guys", "oh yeah also ur an orphan but I think you knew that already"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 2, 2.5, 3, 3.5, 5.4333334, 5.9333334, 6.5, 7.466666, 10.433333, 11.066667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 11.566667, 11.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mxbt5"]
+_data = {
+&"RESET": SubResource("Animation_8ax1y"),
+&"main": SubResource("Animation_e60i5")
+}
+
+[node name="owl" unique_id=2117577853 node_paths=PackedStringArray("Contents_Node") instance=ExtResource("1_lvc7t")]
 script = ExtResource("2_vrsl7")
+Contents_Node = NodePath("Contents")
 
 [node name="Light" parent="." index="0" unique_id=364771980]
 visible = false
@@ -17,3 +110,65 @@ visible = false
 
 [node name="metarig" parent="." index="4" unique_id=1773560039]
 visible = false
+
+[node name="Contents" type="Node3D" parent="." index="5" unique_id=1454349698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.060235888, 0)
+
+[node name="Label3D" type="Label3D" parent="Contents" index="0" unique_id=755238240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.302683, 0.18621036)
+billboard = 2
+text = "[E]"
+font = ExtResource("3_mxbt5")
+font_size = 18
+outline_size = 6
+
+[node name="playerareabox" type="Area3D" parent="Contents" index="1" unique_id=612458171]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Contents/playerareabox" index="0" unique_id=1136852839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13049316, 0.17730713, -0.12939453)
+shape = SubResource("BoxShape3D_vrsl7")
+
+[node name="raycastbox" type="Area3D" parent="Contents" index="2" unique_id=863901055]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Contents/raycastbox" index="0" unique_id=1378372292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004302904, 0.15303095, 0.021759063)
+shape = SubResource("BoxShape3D_mxbt5")
+
+[node name="owlcutscene" type="Control" parent="." index="6" unique_id=1985923996]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="owlcutscene" index="0" unique_id=1719469036]
+visible = false
+layout_mode = 0
+offset_left = -5.0
+offset_top = 497.0
+offset_right = 35.0
+offset_bottom = 546.6666
+scale = Vector2(28.88, 3.0000012)
+
+[node name="Label" type="Label" parent="owlcutscene" index="1" unique_id=963052102]
+custom_maximum_size = Vector2(1148, 198)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 501.0
+offset_right = 1167.0
+offset_bottom = 699.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mxbt5")
+theme_override_font_sizes/font_size = 49
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="owlcutscene" index="2" unique_id=1048495477]
+libraries/ = SubResource("AnimationLibrary_mxbt5")
+
+[connection signal="body_entered" from="Contents/playerareabox" to="." method="_on_player_area_box_body_entered"]
+[connection signal="body_exited" from="Contents/playerareabox" to="." method="_on_player_area_box_body_exited"]
+[connection signal="area_entered" from="Contents/raycastbox" to="." method="_on_mimic_raycast_box_area_entered"]
+[connection signal="area_exited" from="Contents/raycastbox" to="." method="_on_mimic_raycast_box_area_exited"]
