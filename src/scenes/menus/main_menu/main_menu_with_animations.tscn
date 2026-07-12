@@ -330,9 +330,9 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -150.0
+offset_left = -238.0
 offset_top = 1.0
-offset_right = 164.0
+offset_right = 238.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -355,7 +355,7 @@ text = "Islands of Memory"
 modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
-text = "Memory"
+text = "The Alpha..?"
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" parent_id_path=PackedInt32Array(1532800992) index="0" unique_id=580041505]
 modulate = Color(1, 1, 1, 0)

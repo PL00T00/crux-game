@@ -1,22 +1,27 @@
 [gd_scene format=3 uid="uid://bf6jjai5bul76"]
 
-[ext_resource type="PackedScene" uid="uid://c3yrsl2ykgi4c" path="res://ast/examples/scenes/credits/scrolling_credits.tscn" id="1_fofem"]
-[ext_resource type="Script" uid="uid://bkjm6g1kntw01" path="res://ast/examples/scenes/end_credits/end_credits.gd" id="2_v3xly"]
+[ext_resource type="PackedScene" uid="uid://c3yrsl2ykgi4c" path="res://src/scenes/credits/scrolling_credits.tscn" id="1_fofem"]
+[ext_resource type="Script" uid="uid://bkjm6g1kntw01" path="res://src/scenes/end_credits/end_credits.gd" id="2_v3xly"]
+[ext_resource type="Texture2D" uid="uid://c251pyi2aijbk" path="res://ast/models/islands/textures/island2_snow.png" id="3_3spb1"]
 [ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="3_53wi1"]
+[ext_resource type="AudioStream" uid="uid://c5fp04t41cxe2" path="res://ast/audio/DEAF KEV - Invincible _ Glitch Hop _ NCS - Copyright Free Music.mp3" id="5_1eirk"]
 
 [node name="EndCredits" unique_id=241213605 instance=ExtResource("1_fofem")]
 script = ExtResource("2_v3xly")
 main_menu_scene_path = "res://examples/scenes/menus/main_menu/main_menu_with_animations.tscn"
 force_mouse_mode_visible = false
+scroll_paused = true
 
 [node name="BackgroundColor" type="ColorRect" parent="." index="0" unique_id=1680337145]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.9490196, 0.9411765, 0.9490196, 1)
 
 [node name="BackgroundTextureRect" type="TextureRect" parent="." index="1" unique_id=1403514687]
 layout_mode = 1
@@ -25,8 +30,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("3_3spb1")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="ScrollContainer" parent="." index="2" unique_id=1826061058]
+scroll_vertical = 1755
+
+[node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="0" unique_id=1055754816]
+custom_minimum_size = Vector2(0, 648)
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="1" unique_id=951333631]
+custom_minimum_size = Vector2(1152, 0)
+
+[node name="FooterSpace" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="2" unique_id=1487637013]
+custom_minimum_size = Vector2(0, 648)
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="3" unique_id=1516904581]
 layout_mode = 0
@@ -38,7 +56,6 @@ mouse_filter = 2
 
 [node name="EndMessagePanel" type="Panel" parent="CenterContainer" index="0" unique_id=213736646]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(360, 120)
 layout_mode = 2
 
@@ -80,6 +97,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5" unique_id=980180656]
+stream = ExtResource("5_1eirk")
+autoplay = true
 
 [connection signal="pressed" from="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
