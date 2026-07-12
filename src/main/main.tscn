@@ -1085,11 +1085,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-<<<<<<< Updated upstream
-transform = Transform3D(-1.1491821, 7.935767e-08, 2.4819608, 0.033337507, 3.8728917, 0.012121356, -2.8005993, 0.046101723, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
-=======
-transform = Transform3D(-1.1491821, 7.935766e-08, 2.4819608, 0.033337507, 3.8728914, 0.012121356, -2.8005993, 0.04610172, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
->>>>>>> Stashed changes
+transform = Transform3D(-1.1491821, 7.9357676e-08, 2.4819608, 0.033337507, 3.872892, 0.012121356, -2.8005993, 0.046101727, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1125,7 +1121,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 2.7429467e-08, 1.1438187, 0.015363739, 1.7848533, 0.005586152, -1.2906724, 0.021246294, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363742, 1.7848533, 0.005586152, -1.2906724, 0.021246297, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1175,11 +1171,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-<<<<<<< Updated upstream
-transform = Transform3D(-1.1491821, 7.935766e-08, 2.4819608, 0.033337507, 3.8728914, 0.012121356, -2.8005993, 0.04610172, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
-=======
-transform = Transform3D(-1.1491821, 7.935766e-08, 2.4819608, 0.033337507, 3.8728912, 0.012121356, -2.8005993, 0.04610172, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
->>>>>>> Stashed changes
+transform = Transform3D(-1.1491821, 7.935767e-08, 2.4819608, 0.033337507, 3.8728917, 0.012121356, -2.8005993, 0.046101723, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1215,7 +1207,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 2.659827e-08, 1.1438187, 0.015363736, 1.7848533, 0.005586152, -1.2906724, 0.021246292, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.7429467e-08, 1.1438187, 0.015363739, 1.7848533, 0.005586152, -1.2906724, 0.021246294, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1265,11 +1257,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-<<<<<<< Updated upstream
-transform = Transform3D(-1.1491821, 7.935766e-08, 2.4819608, 0.033337507, 3.8728914, 0.012121356, -2.8005993, 0.04610172, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
-=======
-transform = Transform3D(-1.1491821, 7.935766e-08, 2.4819608, 0.033337507, 3.8728912, 0.012121356, -2.8005993, 0.04610172, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
->>>>>>> Stashed changes
+transform = Transform3D(-1.1491821, 7.935767e-08, 2.4819608, 0.033337507, 3.8728917, 0.012121356, -2.8005993, 0.046101723, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1305,7 +1293,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 2.659827e-08, 1.1438187, 0.015363736, 1.7848533, 0.005586152, -1.2906724, 0.021246292, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.7429467e-08, 1.1438187, 0.015363739, 1.7848533, 0.005586152, -1.2906724, 0.021246294, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1516,7 +1504,6 @@ debug_color = Color(0.9882353, 0, 0.32156864, 1)
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/secondbridge" to="spawnpoints" method="_on_secondbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/thirdbridge" to="spawnpoints" method="_on_thirdbridge_body_entered"]
-[connection signal="died" from="boss/enemyboss" to="." method="_on_enemyboss_died"]
 [connection signal="body_entered" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_entered"]
 [connection signal="body_exited" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_exited"]
 [connection signal="body_entered" from="bossenablearea" to="." method="_on_bossenablearea_body_entered"]
@@ -1525,4 +1512,3 @@ debug_color = Color(0.9882353, 0, 0.32156864, 1)
 [editable path="island2/note"]
 [editable path="island2/note/nail"]
 [editable path="island3"]
-[editable path="boss"]
