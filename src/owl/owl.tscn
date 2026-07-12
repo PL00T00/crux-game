@@ -59,10 +59,10 @@ tracks/0/path = NodePath("Label:text")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5, 5.9333334, 8.066667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2.5, 5.9333334, 7.5, 8.966666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": ["Hello, I exist now apparently.", "I would've been telling you what happened but I think I'm in the wrong timeline", "uh yeah look around for notes and watch out for the green clankers", "oh yeah also ur an orphan but I think you knew that already"]
+"values": ["Hello, I exist now apparently.", "I would've been telling you what happened but I think I'm in the wrong timeline", "uh yeah look around for notes and watch out for the green clankers", "oh yeah also ur an orphan but I think you knew that already", "Sometimes sacrificing urself is the way to go in life."]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
