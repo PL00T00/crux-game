@@ -687,10 +687,10 @@ _data = {
 size = Vector3(9.212221, 3.534668, 8.906494)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sb4vr"]
-size = Vector3(10.907715, 9.816345, 1)
+size = Vector3(10.907715, 16.661728, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_re3n7"]
-size = Vector3(8.544189, 9.816345, 1)
+size = Vector3(8.544189, 15.764496, 1)
 
 [node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1", "cutscene_2", "cutscene_3")]
 script = ExtResource("1_3eh75")
@@ -1123,7 +1123,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363742, 1.7848533, 0.005586152, -1.2906724, 0.021246297, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.659827e-08, 1.1438187, 0.015363738, 1.7848533, 0.005586152, -1.2906724, 0.021246294, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1209,7 +1209,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 2.7429467e-08, 1.1438187, 0.015363739, 1.7848533, 0.005586152, -1.2906724, 0.021246294, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.659827e-08, 1.1438187, 0.015363735, 1.7848533, 0.0055861515, -1.2906724, 0.021246288, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1295,7 +1295,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 2.7429467e-08, 1.1438187, 0.015363739, 1.7848533, 0.005586152, -1.2906724, 0.021246294, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.659827e-08, 1.1438187, 0.015363735, 1.7848533, 0.0055861515, -1.2906724, 0.021246288, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1485,17 +1485,17 @@ collision_layer = 512
 collision_mask = 256
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2025057545]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.524477, 3.368225, 7.005492)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.524477, 3.8692703, 7.005492)
 shape = SubResource("BoxShape3D_sb4vr")
 debug_color = Color(0.9882353, 0, 0.32156864, 1)
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1643422074]
-transform = Transform3D(-4.369641e-08, -1.1442308e-09, -1, -0.02617695, 0.99965733, 0, 0.99965733, 0.02617695, -4.371139e-08, -1.1979759, 3.3947883, 11.658039)
+transform = Transform3D(-4.369641e-08, -1.1442308e-09, -1, -0.02617695, 0.99965733, 0, 0.99965733, 0.02617695, -4.371139e-08, -1.1979759, 6.3154335, 11.734519)
 shape = SubResource("BoxShape3D_sb4vr")
 debug_color = Color(0.9882353, 0, 0.32156864, 1)
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=1881664230]
-transform = Transform3D(0.99938756, 0.015987115, 0.031129193, -0.019566134, 0.9927861, 0.11829214, -0.029013485, -0.11882873, 0.9924909, -5.7049656, 3.3716657, 18.593176)
+transform = Transform3D(0.99938756, 0.015987115, 0.031129193, -0.019566134, 0.9927861, 0.11829214, -0.029013485, -0.11882873, 0.9924909, -5.6574187, 6.3242865, 18.23977)
 shape = SubResource("BoxShape3D_re3n7")
 debug_color = Color(0.9882353, 0, 0.32156864, 1)
 
@@ -1508,6 +1508,7 @@ debug_color = Color(0.9882353, 0, 0.32156864, 1)
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/secondbridge" to="spawnpoints" method="_on_secondbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/thirdbridge" to="spawnpoints" method="_on_thirdbridge_body_entered"]
+[connection signal="died" from="boss/enemyboss" to="." method="_on_enemyboss_died"]
 [connection signal="body_entered" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_entered"]
 [connection signal="body_exited" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_exited"]
 [connection signal="body_entered" from="bossenablearea" to="." method="_on_bossenablearea_body_entered"]
@@ -1516,3 +1517,4 @@ debug_color = Color(0.9882353, 0, 0.32156864, 1)
 [editable path="island2/note"]
 [editable path="island2/note/nail"]
 [editable path="island3"]
+[editable path="boss"]

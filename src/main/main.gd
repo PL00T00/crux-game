@@ -16,6 +16,7 @@ func _on_bossenablearea_body_entered(body: Node3D) -> void:
 
 
 func _on_enemyboss_died() -> void:
+	print("boss die")
 	await get_tree().create_timer(1.5).timeout
 	
 	$WinLose.game_won()
