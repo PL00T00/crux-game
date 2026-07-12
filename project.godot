@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Crux Game"
+config/name="Islands of Memory"
 config/version="0.0.1"
 run/main_scene="uid://vbdknh4l1ydq"
 config/features=PackedStringArray("4.7", "GL Compatibility")
