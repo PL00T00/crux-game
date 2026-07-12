@@ -6,7 +6,7 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var char_in_area = false
 var pushback = false
-var health = 10
+var health = 15
 
 signal died
 
