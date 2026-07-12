@@ -669,6 +669,9 @@ _data = {
 &"end": SubResource("Animation_x5f78")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8xryq"]
+size = Vector3(9.212221, 3.534668, 8.906494)
+
 [node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1", "cutscene_2", "cutscene_3")]
 script = ExtResource("1_3eh75")
 fade = NodePath("gamesequence/sequence/fade")
@@ -1064,7 +1067,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.87289, 0.012121356, -2.8005993, 0.046101704, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935764e-08, 2.4819608, 0.033337507, 3.8728902, 0.012121356, -2.8005993, 0.046101708, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1100,7 +1103,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 2.9923054e-08, 1.1438187, 0.015363749, 1.7848533, 0.0055861543, -1.2906724, 0.021246307, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363748, 1.7848533, 0.005586154, -1.2906724, 0.021246305, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1150,7 +1153,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.8728898, 0.012121356, -2.8005993, 0.0461017, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.87289, 0.012121356, -2.8005993, 0.046101704, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1186,7 +1189,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363746, 1.7848533, 0.005586154, -1.2906724, 0.021246303, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363745, 1.7848533, 0.0055861534, -1.2906724, 0.021246301, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1236,7 +1239,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.8728898, 0.012121356, -2.8005993, 0.0461017, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.87289, 0.012121356, -2.8005993, 0.046101704, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1272,7 +1275,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363746, 1.7848533, 0.005586154, -1.2906724, 0.021246303, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363745, 1.7848533, 0.0055861534, -1.2906724, 0.021246301, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1446,12 +1449,20 @@ script = ExtResource("33_re3n7")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=610432073]
 libraries/ = SubResource("AnimationLibrary_xrg3v")
 
+[node name="bossenablearea" type="Area3D" parent="." unique_id=2119533691]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bossenablearea" unique_id=1185729266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.682106, 8.057832, 12.727738)
+shape = SubResource("BoxShape3D_8xryq")
+
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/secondbridge" to="spawnpoints" method="_on_secondbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/thirdbridge" to="spawnpoints" method="_on_thirdbridge_body_entered"]
 [connection signal="body_entered" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_entered"]
 [connection signal="body_exited" from="Node3D/collliswordujw" to="Node3D" method="_on_collliswordujw_body_exited"]
+[connection signal="body_entered" from="bossenablearea" to="." method="_on_bossenablearea_body_entered"]
 
 [editable path="island2"]
 [editable path="island2/note"]
