@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://yuab7pujov7d"]
+[gd_scene format=4 uid="uid://bmw88a4m6cn8p"]
 
 [ext_resource type="Script" uid="uid://b2ra2gj0fghwc" path="res://src/main/main.gd" id="1_3eh75"]
 [ext_resource type="Texture2D" uid="uid://bm7rkrw4y5m8" path="res://ast/models/islands/textures/island1.png" id="2_ab7mr"]
@@ -1067,7 +1067,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.935764e-08, 2.4819608, 0.033337507, 3.8728902, 0.012121356, -2.8005993, 0.046101708, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935765e-08, 2.4819608, 0.033337507, 3.8728907, 0.012121356, -2.8005993, 0.04610171, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1103,7 +1103,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363748, 1.7848533, 0.005586154, -1.2906724, 0.021246305, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363746, 1.7848533, 0.005586154, -1.2906724, 0.021246303, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1153,7 +1153,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.87289, 0.012121356, -2.8005993, 0.046101704, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935765e-08, 2.4819608, 0.033337507, 3.8728905, 0.012121356, -2.8005993, 0.046101708, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1189,7 +1189,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363745, 1.7848533, 0.0055861534, -1.2906724, 0.021246301, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.0153637435, 1.7848533, 0.005586153, -1.2906724, 0.0212463, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1239,7 +1239,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.87289, 0.012121356, -2.8005993, 0.046101704, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935765e-08, 2.4819608, 0.033337507, 3.8728905, 0.012121356, -2.8005993, 0.046101708, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1275,7 +1275,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.015363745, 1.7848533, 0.0055861534, -1.2906724, 0.021246301, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 2.9091858e-08, 1.1438187, 0.0153637435, 1.7848533, 0.005586153, -1.2906724, 0.0212463, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1437,6 +1437,8 @@ script = ExtResource("30_40g5d")
 transform = Transform3D(-4.371139e-08, -1, 0, -4.371139e-08, 1.9106855e-15, 1, -1, 4.371139e-08, -4.371139e-08, 0.07074642, -0.41661072, -0.04919529)
 
 [node name="collliswordujw" type="Area3D" parent="Node3D" unique_id=1222147998]
+collision_layer = 247
+collision_mask = 4295
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/collliswordujw" unique_id=1904143322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010565758, -0.79346466, 0.016806602)
