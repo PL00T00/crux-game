@@ -97,7 +97,6 @@ func _input(event):
 signal player_died
 # Die. What more is there to say
 func die():
-	print("im dieded cro")
 	player_died.emit()
 	# queue_free()
 	#await get_tree().create_timer(2.0).timeout
