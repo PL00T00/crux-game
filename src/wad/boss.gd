@@ -1,0 +1,73 @@
+extends CharacterBody3D
+
+var target_pos = Vector3(0,1,0)
+var plane_normal = Vector3(0,1,0)
+const SPEED = 5.0
+const JUMP_VELOCITY = 4.5
+var char_in_area = false
+var pushback = false
+var health = 10
+
+func _physics_process(delta: float) -> void:
+	if Global.char_move == true:
+		if health == 0:
+			queue_free()
+		if not is_on_floor():
+				velocity += get_gravity() * delta
+		if char_in_area == true:
+			target_pos = Global.character_pos
+			plane_normal = Vector3(0,1,0)
+			self.look_at(target_pos, plane_normal)
+			
+			# Get the input direction and handle the movement/deceleration.
+			var input_dir = Vector3(0, 1, 0)
+			var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+			if pushback == false:
+				velocity.x = -direction.x * SPEED* 0.2
+				velocity.z = -direction.z * SPEED* 0.2
+			else:
+				velocity -= get_gravity() * delta 
+				velocity.x = direction.x * SPEED * 0.3
+				velocity.z = direction.z * SPEED * 0.3
+				velocity.y = direction.y * SPEED * 1.2
+
+		move_and_slide()
+
+
+	
+#
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta
+#
+	#Vector3.UP.rotated(Vector3.UP, self.rotation) 
+	#velocity.x = 0.01 * SPEED
+#
+	#move_and_slide()
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		char_in_area = true
+
+
+func _on_area_3d_body_exited(body: Node3D) -> void:
+	if body.name == "Player":
+		char_in_area = false
+
+
+func _on_area_3d_area_entered(_area: Area3D) -> void:
+	pass
+
+
+func _on_collide_with_pusher_area_entered(area: Area3D) -> void:
+	if (area.name == "sword"):
+		pass
+	elif area.name == "fists":
+		health -= 1
+		pushback = true
+		await get_tree().create_timer(1).timeout
+		pushback = false
+
+
+func _on_collide_with_pusher_area_exited(_area: Area3D) -> void:
+	pass # Replace with function body.
