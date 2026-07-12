@@ -30,6 +30,9 @@
 [ext_resource type="PackedScene" uid="uid://dawtnx5f1pcud" path="res://ast/actors/structures/bridge/bridge_single.tscn" id="28_4iboa"]
 [ext_resource type="Script" uid="uid://ct7xo7ftjwkee" path="res://src/main/spawnpoints.gd" id="29_dsb4l"]
 [ext_resource type="Script" uid="uid://bmlwpkrav3q56" path="res://addons/maaacks_game_template/extras/scripts/win_lose_manager.gd" id="30_wt2p2"]
+[ext_resource type="Script" uid="uid://4l1c614npyc" path="res://src/main/boss_sacrifice_zone.gd" id="31_40g5d"]
+[ext_resource type="Script" uid="uid://4p84plo3xmma" path="res://src/main/boss_zone.gd" id="32_ts88a"]
+[ext_resource type="Script" uid="uid://bju1t3qhly7qa" path="res://src/main/camera_3d.gd" id="33_re3n7"]
 
 [sub_resource type="Animation" id="Animation_4tqcc"]
 resource_name = "main"
@@ -625,6 +628,49 @@ _surfaces = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_ky84g"]
 size = Vector3(1.5460205, 3.4320068, 4.371521)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_3lb3d"]
+size = Vector3(16.90393, 8.615715, 18.410345)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wfyas"]
+size = Vector3(20.07898, 18.641602, 20.543884)
+
+[sub_resource type="Animation" id="Animation_23icf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(5.9797363, 1.8103027, 5.6403565)]
+}
+
+[sub_resource type="Animation" id="Animation_x5f78"]
+resource_name = "end"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(5.9797363, 1.8103027, 5.6403565), Vector3(5.98, 30, 5.64)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xrg3v"]
+_data = {
+&"RESET": SubResource("Animation_23icf"),
+&"end": SubResource("Animation_x5f78")
+}
+
 [node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1", "cutscene_2", "cutscene_3")]
 script = ExtResource("1_3eh75")
 fade = NodePath("gamesequence/sequence/fade")
@@ -1023,7 +1069,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.9357584e-08, 2.4819608, 0.033337507, 3.8728874, 0.012121356, -2.8005993, 0.04610167, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.9357584e-08, 2.4819608, 0.033337507, 3.8728876, 0.012121356, -2.8005993, 0.046101674, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1059,7 +1105,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree" unique_id=332492370]
-transform = Transform3D(-0.5296072, 3.491023e-08, 1.1438187, 0.015363761, 1.7848533, 0.005586155, -1.2906724, 0.021246323, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363759, 1.7848533, 0.005586155, -1.2906724, 0.02124632, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1109,7 +1155,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-transform = Transform3D(-1.1491821, 7.935758e-08, 2.4819608, 0.033337507, 3.8728871, 0.012121356, -2.8005993, 0.04610167, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.9357584e-08, 2.4819608, 0.033337507, 3.8728874, 0.012121356, -2.8005993, 0.04610167, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1145,7 +1191,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree2" unique_id=1452071777]
-transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363758, 1.7848533, 0.0055861543, -1.2906724, 0.021246318, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363757, 1.7848533, 0.005586154, -1.2906724, 0.021246316, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1195,7 +1241,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-transform = Transform3D(-1.1491821, 7.935758e-08, 2.4819608, 0.033337507, 3.8728871, 0.012121356, -2.8005993, 0.04610167, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.9357584e-08, 2.4819608, 0.033337507, 3.8728874, 0.012121356, -2.8005993, 0.04610167, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1231,7 +1277,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
 
 [node name="Circle_004" type="MeshInstance3D" parent="island3/PineTree3" unique_id=41098903]
-transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363758, 1.7848533, 0.0055861543, -1.2906724, 0.021246318, -0.46928155, -0.0333171, 8.25276, 0.0119055)
+transform = Transform3D(-0.5296072, 3.4079033e-08, 1.1438187, 0.015363757, 1.7848533, 0.005586154, -1.2906724, 0.021246316, -0.46928155, -0.0333171, 8.25276, 0.0119055)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8ii8e")
@@ -1381,10 +1427,44 @@ script = ExtResource("30_wt2p2")
 main_menu_scene_path = "uid://bqiki5gx5m2wg"
 ending_scene_path = "uid://bf6jjai5bul76"
 
+[node name="BossZone" type="Area3D" parent="." unique_id=739884379 node_paths=PackedStringArray("boss_sacrifice_zone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2397003, 5.974618, 11.142014)
+collision_mask = 2
+script = ExtResource("32_ts88a")
+boss_sacrifice_zone = NodePath("../BossSacrificeZone")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossZone" unique_id=2012258600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06427002, 3.2829018, 1.5503511)
+shape = SubResource("BoxShape3D_3lb3d")
+
+[node name="can sacrifice timer" type="Timer" parent="BossZone" unique_id=1587410491]
+wait_time = 30.0
+one_shot = true
+
+[node name="BossSacrificeZone" type="Area3D" parent="." unique_id=2094660115 node_paths=PackedStringArray("boss_zone")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.552199, 0, 11.467465)
+collision_mask = 2
+script = ExtResource("31_40g5d")
+boss_zone = NodePath("../BossZone")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossSacrificeZone" unique_id=1850400626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9291382, -6.9994354, 1.7728567)
+shape = SubResource("BoxShape3D_wfyas")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=755889459]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.9797363, 1.8103027, 5.6403565)
+script = ExtResource("33_re3n7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=610432073]
+libraries/ = SubResource("AnimationLibrary_xrg3v")
+
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/secondbridge" to="spawnpoints" method="_on_secondbridge_body_entered"]
 [connection signal="body_entered" from="spawnpoints/thirdbridge" to="spawnpoints" method="_on_thirdbridge_body_entered"]
+[connection signal="body_entered" from="BossZone" to="BossZone" method="_on_body_entered"]
+[connection signal="timeout" from="BossZone/can sacrifice timer" to="BossZone" method="_on_timer_timeout"]
+[connection signal="body_entered" from="BossSacrificeZone" to="BossSacrificeZone" method="_on_body_entered"]
 
 [editable path="island2/note2"]
 [editable path="island2/note2/nail"]
