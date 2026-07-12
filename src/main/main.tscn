@@ -633,7 +633,7 @@ height = 3.284668
 radius = 0.62890625
 
 [sub_resource type="Animation" id="Animation_23icf"]
-length = 0.001
+length = 20.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -641,10 +641,22 @@ tracks/0/path = NodePath("Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 3, 4, 5, 6, 7.5, 9.007458, 11.007458),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(5.9797363, 1.8103027, 5.6403565)]
+"values": [Vector3(5.9797363, 1.8103027, 5.6403565), Vector3(5.9797363, 29.099976, 5.6403565), Vector3(1.4999695, 2.2128906, -0.631958), Vector3(4.760132, 3.2197475, -0.56132895), Vector3(8.471741, 4.055197, -0.5613289), Vector3(12.669739, 4.055197, -0.5613289), Vector3(12.669739, 6.630148, 10.528072), Vector3(12.669739, 13.421135, 10.528072)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.02, 4, 7.5, 11.007458),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5707964, -1.5707964, 0), Vector3(-1.5707964, 0, 0.05235988), Vector3(0, -1.5707964, 0), Vector3(0, -3.1415927, 0), Vector3(-1.5707964, 3.1415927, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_x5f78"]
@@ -1064,7 +1076,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree" unique_id=2105446468]
-transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.87289, 0.012121356, -2.8005993, 0.046101704, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935764e-08, 2.4819608, 0.033337507, 3.8728902, 0.012121356, -2.8005993, 0.046101708, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1150,7 +1162,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree2" unique_id=363094243]
-transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.8728898, 0.012121356, -2.8005993, 0.0461017, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.87289, 0.012121356, -2.8005993, 0.046101704, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1236,7 +1248,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_gw1k5")
 
 [node name="Circle_001" type="MeshInstance3D" parent="island3/PineTree3" unique_id=422893028]
-transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.8728898, 0.012121356, -2.8005993, 0.0461017, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
+transform = Transform3D(-1.1491821, 7.935763e-08, 2.4819608, 0.033337507, 3.87289, 0.012121356, -2.8005993, 0.046101704, -1.0182893, 0.0020671189, 3.9395695, -0.020348845)
 cast_shadow = 0
 visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_1ww4k")
@@ -1266,7 +1278,7 @@ visibility_range_end = 70.0
 mesh = SubResource("ArrayMesh_8vn5l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="island3/PineTree3/Circle_003" unique_id=1107568762]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.910383e-11, 0.021126913, 0)
+transform = Transform3D(1, 1.8626451e-09, 0, -9.313226e-10, 1, -5.820766e-11, 0, -1.1641532e-10, 1, 1.9073486e-06, 0.021126747, 0)
 material_override = SubResource("StandardMaterial3D_f50q2")
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_v0mn1")
@@ -1440,7 +1452,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010565758, -0.79346466, 0.
 shape = SubResource("CylinderShape3D_ky84g")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=755889459]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.9797363, 1.8103027, 5.6403565)
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 5.9797363, 1.8103027, 5.6403565)
 script = ExtResource("33_re3n7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=610432073]
