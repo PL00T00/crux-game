@@ -59,11 +59,10 @@ tracks/0/path = NodePath("Label:text")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5, 5.9333334),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 2.5, 5.9333334, 7.79),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": ["The spirit of the islands feels... different", "We are not sure what caused it but the
-south island is now covered in snow.", "That must have something to do with it."]
+"values": ["Hello, I exist now apparently.", "I would've been telling you what happened but I think I'm in the wrong timeline", "uh yeah look around for notes and watch out for the green guys", "oh yeah also ur an orphan but I think you knew that already"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -96,10 +95,9 @@ _data = {
 &"main": SubResource("Animation_e60i5")
 }
 
-[node name="owl" unique_id=2117577853 node_paths=PackedStringArray("Contents_Node", "UI_Sprite_Node") instance=ExtResource("1_lvc7t")]
+[node name="owl" unique_id=2117577853 node_paths=PackedStringArray("Contents_Node") instance=ExtResource("1_lvc7t")]
 script = ExtResource("2_vrsl7")
 Contents_Node = NodePath("Contents")
-UI_Sprite_Node = NodePath("")
 
 [node name="Light" parent="." index="0" unique_id=364771980]
 visible = false
@@ -134,10 +132,11 @@ shape = SubResource("BoxShape3D_vrsl7")
 [node name="raycastbox" type="Area3D" parent="Contents" index="2" unique_id=863901055]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Contents/raycastbox" index="0" unique_id=1378372292]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004302904, 0.004043594, 0.021759063)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004302904, 0.15303095, 0.021759063)
 shape = SubResource("BoxShape3D_mxbt5")
 
 [node name="owlcutscene" type="Control" parent="." index="6" unique_id=1985923996]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

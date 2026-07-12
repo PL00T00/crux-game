@@ -5,10 +5,8 @@ var player_area_box_active : bool = false
 var mimic_raycast_box_active : bool = false
 
 @export var Contents_Node : Node3D
-@export var UI_Sprite_Node : Sprite3D
-#@export var SubViewport_Node : SubViewport
-
-#@export var ActionToPress : InputEventAction
+#@export var UI_Sprite_Node : Sprite3D
+@onready var owlcutscene: Control = $owlcutscene
 
 func _ready() -> void:
 	toggle_interacting(false)
@@ -26,7 +24,10 @@ func _unhandled_input(_event: InputEvent) -> void:
 			action_triggered.emit()
 			Global.char_move = false
 			print('hii you talk to me now')
-			await $AnimationPlayer.animation_finished
+			owlcutscene.show()
+			$owlcutscene/AnimationPlayer.play("main")
+			
+			await $owlcutscene/AnimationPlayer.animation_finished
 			Global.char_move = true
 
 func _on_player_area_box_body_entered(body: Node3D) -> void:
@@ -47,5 +48,5 @@ func _on_mimic_raycast_box_area_exited(area: Area3D) -> void:
 	if area.is_in_group(&"player_raycast"):
 		mimic_raycast_box_active = false
 
-
-	
+#func _process(delta: float) -> void:
+	#look_at(Global.character_pos)
