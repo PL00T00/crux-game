@@ -684,6 +684,9 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_8xryq"]
 size = Vector3(9.212221, 3.534668, 8.906494)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sb4vr"]
+size = Vector3(10.907715, 9.816345, 1)
+
 [node name="world" type="Node3D" unique_id=1243497675 node_paths=PackedStringArray("fade", "cutscene_1", "cutscene_2", "cutscene_3")]
 script = ExtResource("1_3eh75")
 fade = NodePath("gamesequence/sequence/fade")
@@ -1469,6 +1472,28 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bossenablearea" unique_id=1185729266]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.682106, 8.057832, 12.727738)
 shape = SubResource("BoxShape3D_8xryq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=313714511]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2025057545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.524477, 3.368225, 7.005492)
+shape = SubResource("BoxShape3D_sb4vr")
+debug_color = Color(0.9882353, 0, 0.32156864, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1643422074]
+transform = Transform3D(0.024179872, 0.32757223, -0.9445167, -0.02529718, 0.94469094, 0.326985, 0.99938756, 0.015987158, 0.031129159, -2.7344353, 3.3947883, 11.658039)
+shape = SubResource("BoxShape3D_sb4vr")
+debug_color = Color(0.9882353, 0, 0.32156864, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=1881664230]
+transform = Transform3D(0.99938756, 0.015987115, 0.031129193, -0.019566134, 0.9927861, 0.11829214, -0.029013485, -0.11882873, 0.9924909, -2.7344353, 3.3947883, 18.86227)
+shape = SubResource("BoxShape3D_sb4vr")
+debug_color = Color(0.9882353, 0, 0.32156864, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=13799395]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.589851, 4.4081726, 11.53001)
+shape = SubResource("BoxShape3D_sb4vr")
+debug_color = Color(0.9882353, 0, 0.32156864, 1)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 [connection signal="body_entered" from="spawnpoints/firstbridge" to="spawnpoints" method="_on_firstbridge_body_entered"]
